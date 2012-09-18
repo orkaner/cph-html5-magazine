@@ -1,4 +1,12 @@
 Jaywebmag::Application.routes.draw do
+  resources :grids
+
+  resources :templates
+
+  resources :articles
+
+  resources :magazines
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
