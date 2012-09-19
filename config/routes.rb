@@ -1,7 +1,7 @@
 Jaywebmag::Application.routes.draw do
-  resources :grids
+  resources :magtemplates
 
-  resources :templates
+  resources :grids
 
   resources :articles
 

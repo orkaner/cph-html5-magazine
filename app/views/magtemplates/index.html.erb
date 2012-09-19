@@ -1,0 +1,25 @@
+<h1>Listing magtemplates</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Path</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @magtemplates.each do |magtemplate| %>
+  <tr>
+    <td><%= magtemplate.name %></td>
+    <td><%= magtemplate.path %></td>
+    <td><%= link_to 'Show', magtemplate %></td>
+    <td><%= link_to 'Edit', edit_magtemplate_path(magtemplate) %></td>
+    <td><%= link_to 'Destroy', magtemplate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Magtemplate', new_magtemplate_path %>

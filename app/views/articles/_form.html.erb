@@ -40,11 +40,18 @@
     <%= f.text_area :text %>
   </div>
   
-  <div class="feild">
+  <div class="field">
   	<%= f.label :magazine_id %><br />
   	<%= f.select :magazine_id, Magazine.find(:all, :order => "date").collect{|s|
   		[(s.date), s.id]} %>
   </div>
+
+  <div class="field">
+    <%= f.label :grid_id %><br />
+    <%= f.select :grid_id, Grid.find(:all, :order => "name").collect{|s|
+        [(s.name), s.id]} %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
