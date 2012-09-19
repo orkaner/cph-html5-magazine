@@ -80,4 +80,11 @@ class MagazinesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # Naoufal: Allow reading the selected magazine
+  def read
+    @magazine = Magazine.find(params[:id])
+  end
 end
+
+

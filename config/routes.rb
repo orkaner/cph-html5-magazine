@@ -5,7 +5,13 @@ Jaywebmag::Application.routes.draw do
 
   resources :articles
 
-  resources :magazines
+  resources :magazines do
+    member do
+      get 'read'
+    end
+  end
+
+  #map.resources :magazines, :collection => {:read => :get}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -57,6 +63,9 @@ Jaywebmag::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+
+  # Naoufal: Set the default homepage to magazines
+  root :to => "magazines#index"
 
   # See how all your routes lay out with "rake routes"
 

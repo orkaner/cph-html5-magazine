@@ -42,8 +42,8 @@
   
   <div class="field">
   	<%= f.label :magazine_id %><br />
-  	<%= f.select :magazine_id, Magazine.find(:all, :order => "date").collect{|s|
-  		[(s.date), s.id]} %>
+  	<%= f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
+  		[(s.name + " " + s.date.to_s), s.id]} %>
   </div>
 
   <div class="field">

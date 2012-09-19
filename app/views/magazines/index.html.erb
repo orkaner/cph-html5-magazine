@@ -19,6 +19,9 @@
     <td><%= magazine.volume %></td>
     <td><%= magazine.number %></td>
     <td><%= magazine.status %></td>
+    <!-- Naoufal -->
+    <td><%= link_to 'Read', read_magazine_path(magazine) %></td>
+    <!-- end Naoufal -->
     <td><%= link_to 'Show', magazine %></td>
     <td><%= link_to 'Edit', edit_magazine_path(magazine) %></td>
     <td><%= link_to 'Destroy', magazine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
