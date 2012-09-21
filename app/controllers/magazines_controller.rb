@@ -92,6 +92,11 @@ class MagazinesController < ApplicationController
     #gridToUse = "ts_test"
   end
 
+  # Naoufal: Create the magazine's Table Of Content (TOC)
+  def createTOC
+    @magazine = Magazine.find(params[:id])
+  end
+
 =begin
   private
 

@@ -1,6 +1,8 @@
-<!-- % content_for :head do % >
-    <link rel="resources" href="/ts_test_resources.html"/ -->
-<!-- % end % -->
+<% content_for :head do %>
+    <%= stylesheet_link_tag("treesaver/ts_test") %>
+    <link rel="resources" href="/resources.html"/>
+    <%= javascript_include_tag("treesaver/treesaver") %>
+<% end %>
 
 <p>Reading <%= @magazine.name %>, volume <%= @magazine.volume %>,
   No <%= @magazine.number %>, <%= @magazine.date %></p>
@@ -28,5 +30,6 @@
 
     </figure>
     <p> <%= article.text %> </p>
+
 <% end %>
 <!--%= link_to 'New Magazine', new_magazine_path % -->
