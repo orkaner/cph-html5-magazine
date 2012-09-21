@@ -1,4 +1,9 @@
 class MagazinesController < ApplicationController
+
+  #gridToUse = ""
+
+  layout "ts_test"#:chosenGrid
+
   # GET /magazines
   # GET /magazines.json
   def index
@@ -84,7 +89,20 @@ class MagazinesController < ApplicationController
   # Naoufal: Allow reading the selected magazine
   def read
     @magazine = Magazine.find(params[:id])
+    #gridToUse = "ts_test"
   end
+
+=begin
+  private
+
+    def gridToUse=(v)
+      @gridToUse = v
+    end
+
+    def chosenGrid
+        gridToUse
+    end
+=end
 end
 
 

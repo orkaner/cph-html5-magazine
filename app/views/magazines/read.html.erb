@@ -1,5 +1,32 @@
-<h1>Reading <%= @magazine.name %>, <%= @magazine.volume %>,
-  <%= @magazine.number %>, <%= @magazine.date %></h1>
+<!-- % content_for :head do % >
+    <link rel="resources" href="/ts_test_resources.html"/ -->
+<!-- % end % -->
+
+<p>Reading <%= @magazine.name %>, volume <%= @magazine.volume %>,
+  No <%= @magazine.number %>, <%= @magazine.date %></p>
+
+<% for article in @magazine.articles %>
+    <figure> <!-- h3>Articles</h3>
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Headline</th>
+        </tr -->
+        <!-- % for article in @magazine.articles %>
+            <tr>
+              <td --><!-- %= article.title %></td>
+              <td --><!-- %= article.headline %></td>
+            </tr -->
+        <!-- % end %>
+      </table -->
+      <!-- % article = @magazine.articles.find(1) % -->
+      <h2 data-sizes="title fallback">
+        <span class="chapter"><%= article.title %></span>
+        <%= article.headline %>
+      </h2>
 
 
+    </figure>
+    <p> <%= article.text %> </p>
+<% end %>
 <!--%= link_to 'New Magazine', new_magazine_path % -->
