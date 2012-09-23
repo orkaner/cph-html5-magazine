@@ -2,11 +2,11 @@
 
 <% content_for :head do %>
 
-    <%= stylesheet_link_tag("treesaver/ts_test") %>
+    <%= stylesheet_link_tag("ts_test") %>
     <link rel="resources" href="/resources.html"/>
     <link rel="contents" href="<%= url_for(toc_magazine_path(current_magazine)) %>"/>
 
-    <%= javascript_include_tag("treesaver/treesaver") %>
+    <%= javascript_include_tag("treesaver") %>
 <% end %>
 
 <!--p>Reading <!--%= current_magazine.name %>, volume <!--%= current_magazine.volume %>,
