@@ -1,4 +1,9 @@
 class ArticlesController < ApplicationController
+
+  # TODO: Change the following line to load the layout dynamically
+  #       depending on the template associated to the magazine
+  layout "ts_test"
+
   # GET /articles
   # GET /articles.json
   def index
@@ -79,5 +84,11 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url }
       format.json { head :no_content }
     end
+  end
+
+  # Naoufal: Allow reading the selected magazine
+  def read
+    @article = Article.find(params[:id])
+
   end
 end

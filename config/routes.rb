@@ -3,11 +3,16 @@ Jaywebmag::Application.routes.draw do
 
   resources :grids
 
-  resources :articles
+  resources :articles do
+    member do
+      get 'read'
+    end
+  end
 
   resources :magazines do
     member do
       get 'read'
+      get 'toc'
     end
   end
 

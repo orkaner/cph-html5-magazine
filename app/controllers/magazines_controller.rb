@@ -1,7 +1,8 @@
 class MagazinesController < ApplicationController
 
-  #gridToUse = ""
 
+  # TODO: Change the following line to load the layout dynamically
+  #       depending on the template associated to the magazine
   layout "ts_test"#:chosenGrid
 
   # GET /magazines
@@ -93,7 +94,7 @@ class MagazinesController < ApplicationController
   end
 
   # Naoufal: Create the magazine's Table Of Content (TOC)
-  def createTOC
+  def toc
     @magazine = Magazine.find(params[:id])
   end
 

@@ -1,0 +1,25 @@
+<% current_magazine = @article.magazine %>
+
+<% content_for :head do %>
+
+    <%= stylesheet_link_tag("treesaver/ts_test") %>
+    <link rel="resources" href="/resources.html"/>
+    <link rel="contents" href="<%= url_for(toc_magazine_path(current_magazine)) %>"/>
+
+    <%= javascript_include_tag("treesaver/treesaver") %>
+<% end %>
+
+<!--p>Reading <!--%= current_magazine.name %>, volume <!--%= current_magazine.volume %>,
+  No <!--%= current_magazine.number %>, <!--%= current_magazine.date %></p -->
+
+    <figure>
+      <h2 data-sizes="title fallback">
+        <span class="chapter"><%= @article.title %></span>
+        <%= @article.headline %>
+      </h2>
+
+
+    </figure>
+    <p> <%= @article.text %> </p>
+
+<!--%= link_to 'New Magazine', new_magazine_path % -->
