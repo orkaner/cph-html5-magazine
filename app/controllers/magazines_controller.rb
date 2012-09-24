@@ -2,7 +2,7 @@ class MagazinesController < ApplicationController
 
   #gridToUse = ""
 
-  layout "ts_test"#:chosenGrid
+  #layout "ts_test"#:chosenGrid
 
   # GET /magazines
   # GET /magazines.json
@@ -14,6 +14,7 @@ class MagazinesController < ApplicationController
       format.json { render json: @magazines }
     end
   end
+  
 
   # GET /magazines/1
   # GET /magazines/1.json
@@ -92,17 +93,6 @@ class MagazinesController < ApplicationController
     #gridToUse = "ts_test"
   end
 
-=begin
-  private
-
-    def gridToUse=(v)
-      @gridToUse = v
-    end
-
-    def chosenGrid
-        gridToUse
-    end
-=end
 end
 
 

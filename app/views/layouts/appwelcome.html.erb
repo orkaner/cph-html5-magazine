@@ -15,19 +15,21 @@
     <header class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
-			<%= render 'nav/navigation' %>
+			
          
         </div>
       </nav>
     </header>
     <div id="main" role="main">
-      <div class="container-fluid">
+      <div class="container-fluid" >
 		<div class="row-fluid">
-			<div class="span4">
+			<div class="span5" >
 			<!--Sidebar content-->
-			<%= render 'nav/navigationside' %>
+			
+			<%= render 'magazines/indexmag' %>
+			
 			</div>
-			<div class="span8">
+			<div class="span7">
 			<%= yield %>
 			<!--Body content-->
 			</div>

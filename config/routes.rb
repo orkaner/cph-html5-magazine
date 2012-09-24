@@ -1,9 +1,13 @@
 Jaywebmag::Application.routes.draw do
+  get "welcome/index"
+
   resources :magtemplates
 
   resources :grids
 
   resources :articles
+  
+  resources :welcome
 
   resources :magazines do
     member do
@@ -65,7 +69,8 @@ Jaywebmag::Application.routes.draw do
   # root :to => 'welcome#index'
 
   # Naoufal: Set the default homepage to magazines
-  root :to => "magazines#index"
+  # Orkun: A new Welcome action/view created and rooted as default to be used as welcome interface
+  root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,0 +1,15 @@
+<a href="#" class="btn btn-medium">Home</a>
+
+<div class="dropdown">
+  <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+    Dropdown
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li><a href="/magazines/new" class="btn btn-medium">New Magazine</a></li>
+    <li><a href="/articles/new" class="btn btn-medium">New Article</a></li>
+    <li><a href="/magazines/" class="btn btn-medium">Show Magazines</a></li>    
+    <li><a href="/articles/" class="btn btn-medium">Show Articles</a>
+</ul>
+</div>
+

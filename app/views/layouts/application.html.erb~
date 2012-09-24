@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
-    <meta name="description" content="trial">
-    <meta name="author" content="Orkun">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -15,27 +15,19 @@
     <header class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
-			<%= render 'nav/navigation' %>
-         
+          <%= render 'nav/navigation' %>
         </div>
       </nav>
     </header>
     <div id="main" role="main">
-      <div class="container-fluid">
-		<div class="row-fluid">
-			<div class="span4">
-			<!--Sidebar content-->
-			<%= render 'nav/navigationside' %>
-			</div>
-			<div class="span8">
-			<%= yield %>
-			<!--Body content-->
-			</div>
-		</div>
-		</div>
-        </div>
-          
-          
+      <div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span12">
+              
+              <%= yield %>
+            </div>
+          </div>
           <footer>
           </footer>
         </div>
@@ -43,3 +35,4 @@
     </div> <!--! end of #main -->
   </body>
 </html>
+
