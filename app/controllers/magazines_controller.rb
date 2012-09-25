@@ -2,7 +2,7 @@ class MagazinesController < ApplicationController
 
   #gridToUse = ""
 
-  #layout "ts_test"#:chosenGrid
+  layout "ts_test"#:chosenGrid
 
   # GET /magazines
   # GET /magazines.json

@@ -22,7 +22,5 @@ layout 'appwelcome'
       format.json { render json: @magazine }
     end
   end
-  def admin
-   
-  end
+  
 end
