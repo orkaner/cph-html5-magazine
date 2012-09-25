@@ -6,12 +6,13 @@
 
   <title>Jaywebmag</title>
   <!--%= stylesheet_link_tag    "ts_test", :media => "all" % -->
-  <%= stylesheet_link_tag("ts_test") %>
-  <%= javascript_include_tag("treesaver.js") %>
-  <link rel="resources" href="/ts_test_resources.html"/>
+  <!--%= stylesheet_link_tag("ts_test") %>
+  <link rel="resources" href="/resources.html"/-->
+  <!--%= javascript_include_tag("treesaver.js") %-->
+
   <!-- script src="javascripts/treesaver.js"></script-->
   <!--%= javascript_include_tag "application" % -->
-  <!--%= yield :head %-->
+  <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>
 <body>

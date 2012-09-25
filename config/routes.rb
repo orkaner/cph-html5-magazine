@@ -5,13 +5,22 @@ Jaywebmag::Application.routes.draw do
 
   resources :grids
 
+<<<<<<< HEAD
   resources :articles
   
   resources :welcome
+=======
+  resources :articles do
+    member do
+      get 'read'
+    end
+  end
+>>>>>>> ea618b55a3dabac7ec70f3e08e2ccaba5c12cf9b
 
   resources :magazines do
     member do
       get 'read'
+      get 'toc'
     end
   end
 

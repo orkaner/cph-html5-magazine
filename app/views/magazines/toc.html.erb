@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<div itemscope data-properties="self">
+  <h1 itemprop="title">
+    <!-- a href="toc.html" itemprop="url">The Daily Gazette</a-->
+    <%= link_to "TOC", toc_magazine_path(@magazine), :itemprop => "url" %>
+  </h1>
+</div>
+
+<% for article in @magazine.articles %>
+<div itemscope>
+  <h3 itemprop="title"><%= link_to article.title, read_article_path(article), {:itemprop => "url", :magazine => @magazine} %></h3>
+  <p itemprop="byline"><%= article.author %></p>
+</div>
+    <% end %>
+
+</body>
+</html>
