@@ -21,9 +21,12 @@
     <td><%= magazine.number %></td>
     <td><%= magazine.status %></td>
     <!-- Naoufal -->
-
-    <td><%= link_to 'Read', read_article_path(magazine.articles[0]) %></td><!-- Start reading from the first article -->
-
+    <!-- TODO: Add condition to show the Read link only if the magazine has at least one article-->
+    <% if magazine.articles[0] != nil %>
+        <td><%= link_to 'Read', read_article_path(magazine.articles[0]) %></td><!-- Start reading from the first article -->
+    <% else %>
+        <td>Empty</td>
+    <% end %>
     <td><%= link_to 'TOC', toc_magazine_path(magazine) %></td>
     <!-- end Naoufal -->
     <td><%= link_to 'Show', magazine %></td>

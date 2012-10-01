@@ -1,6 +1,18 @@
+<% content_for :head do %>
+    <title><%= @title || "Jaywebmag" %></title>
+    <meta name="description" content="trial">
+    <meta name="author" content="Orkun">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+
+<% end %>
+
+<% content_for :nontreesaver do %>
 <h1>Editing article</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @article %> |
 <%= link_to 'Back', articles_path %>
+
+<% end %>

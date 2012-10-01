@@ -15,10 +15,44 @@
   <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+<header class="navbar navbar-fixed-top">
+  <nav class="navbar-inner">
+    <div class="container">
+      <%= render 'nav/navigation' %>
+
+    </div>
+  </nav>
+</header>
+<div id="main" role="main">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span4">
+        <!--Sidebar content-->
+        <%= render 'nav/navigationside' %>
+      </div>
+      <div class="span8">
+        <%= yield :nontreesaver %>
+        <!--Body content-->
+        <div class="container">
+          <%= debug(params) if Rails.env.development? %>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
-<%= yield %>
+<footer>
+</footer>
+</div>
+</div> <!--! end of .container -->
+</div> <!--! end of #main -->
+
+<%= yield :treesaver %>
 
 </body>
 </html>

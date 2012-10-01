@@ -1,3 +1,13 @@
+<% content_for :head do %>
+    <title><%= @title || "Jaywebmag" %></title>
+    <meta name="description" content="trial">
+    <meta name="author" content="Orkun">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+
+<% end %>
+
+<% content_for :nontreesaver do %>
 <h1>Listing articles</h1>
 
 <table>
@@ -33,3 +43,4 @@
 <br />
 
 <%= link_to 'New Article', new_article_path %>
+<% end %>
