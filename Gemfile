@@ -34,6 +34,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'factory_girl_rails'
 end
+gem 'devise', '~>1.4.3'
 
 
 # To use ActiveModel has_secure_password
