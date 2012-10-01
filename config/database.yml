@@ -18,7 +18,7 @@ development:
   database: jaywebmag_development
   pool: 5
   username: jaywebmag
-  password:
+  password: ""
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -38,13 +38,13 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
   database: jaywebmag_test
   pool: 5
   username: jaywebmag
-  password:
+  password: ""
 
 production:
   adapter: postgresql
@@ -52,4 +52,7 @@ production:
   database: jaywebmag_production
   pool: 5
   username: jaywebmag
-  password:
+  password: ""
+
+cucumber:
+  <<: *test

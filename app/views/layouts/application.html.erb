@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
+   <title><%= @title || "Jaywebmag" %></title>
     <meta name="description" content="trial">
     <meta name="author" content="Orkun">
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -30,7 +30,12 @@
 			<div class="span8">
 			<%= yield %>
 			<!--Body content-->
+			<div class="container">
+			   <%= debug(params) if Rails.env.development? %>
+         
+               </div>
 			</div>
+			
 		</div>
 		</div>
         </div>
