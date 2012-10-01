@@ -1,5 +1,3 @@
-/* Treesaver test Style sheet */
-
 .treesaver body {
   /* Hide scrollbars */
   overflow: hidden;
@@ -28,6 +26,7 @@
   bottom: 40px;
   left: 0;
   right: 0;
+  background-color: #cccccc;/*Naoufal*/
 }
 
 .grid {
@@ -38,17 +37,48 @@
   min-height: 30px;
 }
 
-.cols-2 {
+/* Naoufal: */
+.w1cols-1, .w2cols-1{
+  width: 280px;
+}
+
+/*Naoufal: Added .wcols-2 and w1cols-2*/
+.cols-2, .wcols-2, .w1cols-2 {
   width: 590px;
+}
+
+/* Naoufal: */
+.w1cols-3 {
+  width: 910px;
+}
+
+/* Naoufal:*/
+.w2cols-3{
+  width: 910px;
+}
+
+/* Naoufal: */
+.chap2{
+  background-color: rgba(205, 213, 235, 0.62);
+}
+
+/* Naoufal: */
+.chap1{
+  background-color: rgba(112, 91, 235, 0.60);
 }
 
 .cols-3 {
   width: 910px;
 }
-.column, .container {
+.column, .container{
   width: 280px;
   top: 15px;
   bottom: 15px;
+  left: 0px;
+}
+
+/* Naoufal: */
+.col-1 {
   left: 0px;
 }
 
@@ -60,10 +90,30 @@
   left: 615px;
 }
 
+/* Naoufal:*/
+.container.col-1 {
+  width: 290px;
+}
 
 .container.cols-2 {
   width: 600px;
 
+}
+
+/* Naoufal: */
+.container.wcols-2 {
+  width: 600px;
+
+}
+
+/* Naoufal: */
+.container.w1cols-3 {
+  width: 920px;
+}
+
+/* Naoufal: */
+.container.w2cols-3 {
+  width: 920px;
 }
 
 .container.cols-3 {
@@ -120,14 +170,14 @@ h2 {
   line-height: 48px;
   font-weight: normal;
   margin: 24px 0;
-  color: #666;
+  color: #effa47;
 }
 
 h2 .chapter {
   display: block;
   font-size: 16px;
   line-height: 24px;
-  color: #999;
+  color: rgba(239, 250, 71, 0.43);
 }
 
 p {
@@ -140,5 +190,5 @@ hr {
   border: none;
   padding: 0;
   height: 24px;
-  /* background: url('../tut1/img/horizontal-rule.png') 50% 50% no-repeat;*/
+  background: url('../tut1/img/horizontal-rule.png') 50% 50% no-repeat;
 }
