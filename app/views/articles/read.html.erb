@@ -1,25 +1,32 @@
+
 <% current_magazine = @article.magazine %>
 
 <% content_for :head do %>
-
-    <%= stylesheet_link_tag("ts_test") %>
+    <!-- meta http-equiv="refresh"/-->
+    <title><%= @article.headline %></title>
+    <%= stylesheet_link_tag(current_magazine.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
+    <!--link rel="resources" href="<!--%= url_for(:controller => 'resources', :artid => @article) %>"/ -->
+    <!--link rel="resources" href="<!--%= url_for(:controller => 'resources') %>"/ -->
     <link rel="contents" href="<%= url_for(toc_magazine_path(current_magazine)) %>"/>
 
     <%= javascript_include_tag("treesaver") %>
+    <meta http-equiv="refresh"/>
 <% end %>
+
 
 <!--p>Reading <!--%= current_magazine.name %>, volume <!--%= current_magazine.volume %>,
   No <!--%= current_magazine.number %>, <!--%= current_magazine.date %></p -->
+<article data-grids="<%= @article.grid.name %>">
+    <figure>
+      <h2 data-sizes="title fallback">
+        <span class="chapter"><%= @article.title %></span>
+        <%= @article.headline %>
+      </h2>
 
-<figure>
-  <h2 data-sizes="title fallback">
-    <span class="chapter"><%= @article.title %></span>
-    <%= @article.headline %>
-  </h2>
 
-
-</figure>
-<p> <%= @article.text %> </p>
+    </figure>
+    <p> <%= @article.text %> </p>
+</article>
 
 <!--%= link_to 'New Magazine', new_magazine_path % -->

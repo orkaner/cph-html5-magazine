@@ -1,8 +1,9 @@
 class ArticlesController < ApplicationController
 
-  # TODO: Change the following line to load the layout dynamically
+  # Naoufal: TODO: Change the following line to load the layout dynamically
   #       depending on the template associated to the magazine
   layout "ts_test"
+
 
   # GET /articles
   # GET /articles.json
@@ -91,7 +92,11 @@ class ArticlesController < ApplicationController
 
   # Naoufal: Allow reading the selected magazine
   def read
-    @article = Article.find(params[:id])
+    # Naoufal: Force sweeping the any cached resources file
+    # expire_page :controller => 'resources', :action => 'index' # Doesn't work
 
+    @article = Article.find(params[:id])
+    # Naoufal: Testing reloading the resources file
+    #redirect_to url_for(:controller => 'resources', :artid => @article.id )# Doesn't work!
   end
 end

@@ -20,6 +20,7 @@ Jaywebmag::Application.routes.draw do
     end
   end
 
+
   #map.resources :magazines, :collection => {:read => :get}
 
   # The priority is based upon order of creation:
