@@ -1,0 +1,15 @@
+Given /^I have a Welcome page$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+When /^I load the page$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see Magazines$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see Admin button$/ do
+  pending # express the regexp above with the code you wish you had
+end
