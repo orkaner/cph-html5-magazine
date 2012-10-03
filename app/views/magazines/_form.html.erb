@@ -28,9 +28,11 @@
     <%= f.number_field :number %>
   </div>
 
+  <% status_list = {'Not Published' => 'Not Published', 'Published' => 'Published'} %>
   <div class="field">
     <%= f.label :status %><br />
-    <%= f.text_field :status %>
+    <!--%= f.text_field :status %-->
+    <%= f.select :status, status_list %>
   </div>
 
     <div class="field">

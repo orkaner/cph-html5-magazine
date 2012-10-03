@@ -31,9 +31,12 @@
     <%= f.label :version %><br />
     <%= f.text_field :version %>
   </div>
+
+  <% status_list = {'Draft' => 'Draft', 'Approved' => 'Approved', 'Published' => 'Published'} %>
   <div class="field">
     <%= f.label :status %><br />
-    <%= f.text_field :status %>
+    <!--%= f.text_field :status %-->
+    <%= f.select :status, status_list %>
   </div>
   <div class="field">
     <%= f.label :text %><br />
