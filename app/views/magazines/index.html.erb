@@ -23,7 +23,8 @@
     <!-- Naoufal -->
     <!-- TODO: Add condition to show the Read link only if the magazine has at least one article-->
     <% if magazine.articles[0] != nil %>
-        <td><%= link_to 'Read', read_article_path(magazine.articles[0]) %></td><!-- Start reading from the first article -->
+        <td><%= link_to 'Read', cover_magazine_path(magazine) %></td>
+        <!--td><!--%= link_to 'Read', read_article_path(magazine.articles[0]) %></td><!-- Start reading from the first article -->
     <% else %>
         <td>Empty</td>
     <% end %>

@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  # Naoufal: TODO: It is perhaps a good idea to add a toc action?!
+
   # Naoufal: TODO: Change the following line to load the layout dynamically
   #       depending on the template associated to the magazine
   layout "ts_test"

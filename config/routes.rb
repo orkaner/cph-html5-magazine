@@ -17,6 +17,7 @@ Jaywebmag::Application.routes.draw do
     member do
       get 'read'
       get 'toc'
+      get 'cover'
     end
   end
 

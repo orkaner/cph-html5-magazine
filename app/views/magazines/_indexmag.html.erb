@@ -20,8 +20,13 @@
     <td><%= magazine.number %></td>
     <td><%= magazine.status %></td>
     <!-- Naoufal -->
+    <% if magazine.articles[0] != nil %>
+        <td><%= link_to 'Read', cover_magazine_path(magazine) %></td>
+        <!--td><!--%= link_to 'Read', read_article_path(magazine.articles[0]) %></td><!-- Start reading from the first article -->
+    <% else %>
+        <td></td>
+    <% end %>
 
-    <td><%= link_to 'Read', read_article_path(magazine.articles[0]) %></td> <!-- Start reading from the first article -->
 
     <td><%= link_to 'TOC', toc_magazine_path(magazine) %></td>
     <!-- end Naoufal -->

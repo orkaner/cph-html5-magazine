@@ -1,22 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-<div itemscope data-properties="self">
-  <h1 itemprop="title">
-    <!-- a href="toc.html" itemprop="url">The Daily Gazette</a-->
-    <%= link_to "TOC", toc_magazine_path(@magazine), :itemprop => "url" %>
-  </h1>
-</div>
+<% content_for :head do %>
 
-<% for article in @magazine.articles %>
-<div itemscope>
-  <h3 itemprop="title"><%= link_to article.title, read_article_path(article), {:itemprop => "url", :magazine => @magazine} %></h3>
-  <p itemprop="byline"><%= article.author %></p>
-</div>
-    <% end %>
+    <title><%= @magazine.name %> | TOC</title>
+    <%= stylesheet_link_tag(@magazine.magtemplate.path) %>
+    <link rel="resources" href="/resources.html"/>
 
-</body>
-</html>
+    <link rel="contents self" href="<%= url_for(toc_magazine_path(@magazine)) %>"/>
+
+    <%= javascript_include_tag("treesaver") %>
+
+<% end %>
+
+<% content_for :treesaver do %>
+    <article data-grids="toc">
+
+      <div itemscope>
+        <h1 itemprop="title">
+          <%= link_to "", cover_magazine_path(@magazine), :itemprop => "url" %>
+        </h1>
+      </div>
+
+      <div itemscope data-properties="self">
+        <h1 itemprop="title">
+          <!-- a href="toc.html" itemprop="url">The Daily Gazette</a-->
+          <%= link_to @magazine.name, toc_magazine_path(@magazine), :itemprop => "url" %>
+        </h1>
+      </div>
+
+      <% for article in @magazine.articles %>
+          <div itemscope>
+            <h3 itemprop="title"><%= link_to article.title, read_article_path(article), {:itemprop => "url", :magazine => @magazine} %></h3>
+            <p itemprop="byline"><%= article.author %></p>
+          </div>
+      <% end %>
+
+    </article>
+
+
+<% end %>

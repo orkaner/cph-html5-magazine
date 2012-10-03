@@ -2,16 +2,13 @@
 <% current_magazine = @article.magazine %>
 
 <% content_for :head do %>
-    <!-- meta http-equiv="refresh"/-->
+
     <title><%= @article.headline %></title>
     <%= stylesheet_link_tag(current_magazine.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
-    <!--link rel="resources" href="<!--%= url_for(:controller => 'resources', :artid => @article) %>"/ -->
-    <!--link rel="resources" href="<!--%= url_for(:controller => 'resources') %>"/ -->
     <link rel="contents" href="<%= url_for(toc_magazine_path(current_magazine)) %>"/>
-
     <%= javascript_include_tag("treesaver") %>
-    <meta http-equiv="refresh"/>
+
 <% end %>
 
 
