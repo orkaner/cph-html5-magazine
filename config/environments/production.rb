@@ -47,8 +47,9 @@ Jaywebmag::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  # config.assets.precompile += %w( *.css *.js ) # For all .js and .css files
-  config.assets.precompile += %w( application.js, application.css, treesaver.js, ts_test.css )
+  # config.assets.precompile += %w( *.css *.js ) # For all .js and .css files. But gives a problem with Bootstrap due
+  #                                                the way css files are split.
+  config.assets.precompile += %w( application.js, application.css, treesaver.js, book.css, book2.css )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
