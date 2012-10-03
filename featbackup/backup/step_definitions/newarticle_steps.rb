@@ -28,7 +28,7 @@ find(:css, "input[id$='title']").set("Capybara Article Test")
 find(:css, "input[id$='author']").set("Capybara")
 find(:css, "input[id$='headline']").set("Capybara Test")
 find(:css, "input[id$='version']").set("1")
-find(:css, "input[id$='status']").set("Draft")
+page.select("Draft", :from => "Status")
 fill_in 'Text', :with=> 'Test Data'
 click_button 'Create Article'
 page.should have_content('Article was successfully created.')

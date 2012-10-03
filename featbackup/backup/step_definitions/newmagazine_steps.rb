@@ -27,7 +27,7 @@ visit '/magazines/new'
 find(:css, "input[id$='name']").set("Capybara Test")
 find(:css, "input[id$='volume']").set("1.1")
 find(:css, "input[id$='number']").set("1")
-find(:css, "input[id$='status']").set("Draft")
+page.select("Not Published", :from => "Status")
   
  click_button 'Create Magazine'
 
