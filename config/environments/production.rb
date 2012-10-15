@@ -50,7 +50,7 @@ Jaywebmag::Application.configure do
   # config.assets.precompile += %w( *.css *.js ) # For all .js and .css files. But gives a problem with Bootstrap due
   #                                                the way css files are split.
   # Naoufal: Don't put commas between file names!
-  config.assets.precompile += %w( application.js treesaver.js application.css book2.css book.css )
+  config.assets.precompile += %w( application.js treesaver.js application.css book2.css book.css texteditor.js jHtmlArea-0.7.5.js jHtmlArea.css)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
