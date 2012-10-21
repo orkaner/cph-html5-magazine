@@ -51,3 +51,8 @@ gem 'devise', '~>1.4.3'
 
 # To use debugger
 # gem 'debugger'
+
+
+# Naoufal: These gems are required to enable proper HTML text truncation
+gem "nokogiri"
+gem "html_truncator", "~>0.2"
