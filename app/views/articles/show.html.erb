@@ -42,7 +42,10 @@
 
 <p>
   <b>Text:</b>
-  <%= @article.text %>
+  <div class="well">
+    <%= truncate(@article.text, :length => 500).html_safe %>
+  </div>
+
 </p>
 
 
