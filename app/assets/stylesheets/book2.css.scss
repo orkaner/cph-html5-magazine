@@ -230,3 +230,13 @@ hr {
   height: 24px;
   background: url('../tut1/img/horizontal-rule.png') 50% 50% no-repeat;
 }
+
+strong {
+  color: #8b0000;
+  outline: dotted 1px;
+}
+
+em {
+  color: #006400;
+  text-decoration: underline;
+}

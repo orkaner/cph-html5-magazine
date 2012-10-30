@@ -42,11 +42,12 @@
 
 <p>
   <b>Text:</b>
+</p>
   <div class="well">
     <%= sanitize HTML_Truncator.truncate(@article.text, 50) %>
   </div>
 
-</p>
+
 
 
 <%= link_to 'Edit', edit_article_path(@article) %> |

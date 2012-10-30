@@ -1,10 +1,10 @@
 <% content_for :head do %>
 
     <!--title></title -->
-    <%= stylesheet_link_tag("jHtmlArea") %>
-    <%= javascript_include_tag("jHtmlArea-0.7.5") %>
-    <%= javascript_include_tag("texteditor") %>
-
+    <%= javascript_include_tag "/ckeditor/ckeditor.js" %><!-- Load the mandatory text editor engine -->
+    <%= javascript_include_tag "/ckeditor/ckeditor_browser_support.js" %><!-- Load a browser compatibility checker -->
+    <!--%= javascript_include_tag "/ckeditor/config.js" %><!-- Load the text editor configuration. If omitted, the default
+     settings will apply -->
 <% end %>
 
 
@@ -51,7 +51,7 @@
   </div>
   <div class="field">
     <%= f.label :text %><br />
-    <%= f.text_area(:text, :rows => 20, :class => '.span8') %>
+    <%= f.text_area(:text, :rows => 20, :class => 'ckeditor .span8') %>
   </div>
   
   <div class="field">

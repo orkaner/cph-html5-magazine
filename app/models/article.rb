@@ -14,7 +14,7 @@ class Article < ActiveRecord::Base
     Article.content_columns.each do |column|
       if column.name == 'text'
         if !self[column.name].nil? # strip html from string if it's not empty
-          self[column.name] = sanitize(self[column.name]) # was strip_tags(self[column.name])
+          #self[column.name] = sanitize(self[column.name]) # was strip_tags(self[column.name])
         end
       end
     end
