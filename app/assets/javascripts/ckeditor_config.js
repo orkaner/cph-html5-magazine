@@ -16,13 +16,17 @@ CKEDITOR.editorConfig = function( config )
     // config.language = 'fr';
     // config.uiColor = '#AADC6E';
 
-    // Naoufal:-------------------------------
+    // Naoufal:---------------------------------------------------------------------------------------------------------
     // Language
     // config.language = 'da';  // Set the language of the text editor to danish.
 
     // Toolbars
+    // Set the toolbar to use. Note that the name of the toolbar is token from the definition name of the toolbar.
+    // For example: if the toolbar is defined like config.toolbar_MyToolbar = [...], then to use it :
+    // config.toolbar = 'MyToolbar'
     config.toolbar = 'Custom';
 
+    // A customized toolbar to suits the needs of the application
     config.toolbar_Custom =
         [
             { name: 'document', items : [ 'Source','-','Save'] },
@@ -37,6 +41,7 @@ CKEDITOR.editorConfig = function( config )
 
         ];
 
+    // The full toolbar with all the default buttons and dialog windows
     config.toolbar_Full =
         [
             { name: 'document', items : [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
@@ -56,6 +61,15 @@ CKEDITOR.editorConfig = function( config )
             { name: 'tools', items : [ 'Maximize', 'ShowBlocks','-','About' ] }
         ];
 
-    // TODO: Customise the paragraph formatting list
+    // Customise the paragraph formatting list
     config.format_tags = 'p;h1;h2;h3;pre';
+
+    // Naoufal: Experimentation =============================================
+    // To load non-default plugins. If there is a need for more than one then add as a comma-separated list like:
+    // config.extraPlugins = 'plugin1, plugin2, plugin3'
+    /*config.extraPlugins = 'pics';
+    config.toolbar_exp = [
+        [ 'Source', 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
+        [ 'Timestamp', '-', 'Pics' ]
+    ];*/
 };

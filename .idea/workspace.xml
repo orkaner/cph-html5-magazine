@@ -2,128 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29a19955-c02c-4196-8b46-e4b37ed0e18d" name="Default" comment="Added support for HTML rendering for the text of articles.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/texteditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/_bootstrap-69a77c57937116dccfd88fc0d664310f.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/_bootstrap-69a77c57937116dccfd88fc0d664310f.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/_bootstrap-responsive-b964e9945c1df507a3d31aa3b9c76935.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/_bootstrap-responsive-b964e9945c1df507a3d31aa3b9c76935.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2d3edff787f5aef309a14b5e9f876884.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2d3edff787f5aef309a14b5e9f876884.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-7c5883ebbb0c53b2aa2d78a477969e83.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-7c5883ebbb0c53b2aa2d78a477969e83.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/articles-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/articles-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/articles-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/articles-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book-affe5d520713390e3bf008c50ff182fb.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book-affe5d520713390e3bf008c50ff182fb.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book2-8ecc1a41dc32e0615f94590bca36ee0e.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book2-8ecc1a41dc32e0615f94590bca36ee0e.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/book2.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-ab4f5b21ad6b3e9361672fd779cb7e50.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-ab4f5b21ad6b3e9361672fd779cb7e50.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-affix-63010af84cfecb82b07e30b2f9cd7a7a.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-affix-63010af84cfecb82b07e30b2f9cd7a7a.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-alert-0c321a3d4cea215914f02b8726e36a32.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-alert-0c321a3d4cea215914f02b8726e36a32.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-button-d771eb52416aa7f4a2ba2b2b43f2c869.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-button-d771eb52416aa7f4a2ba2b2b43f2c869.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-carousel-b83d79a66437fa40ff1f4399e8f32f34.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-carousel-b83d79a66437fa40ff1f4399e8f32f34.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-collapse-805b275ccfac3248f133503cfec8172a.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-collapse-805b275ccfac3248f133503cfec8172a.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-dropdown-847377c697946dc80b92a4636679a34c.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-dropdown-847377c697946dc80b92a4636679a34c.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-modal-377540de2cdf91672eca2f94adda0998.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-modal-377540de2cdf91672eca2f94adda0998.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-popover-761548673e5d0fd4389e9d4f839b09bb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-popover-761548673e5d0fd4389e9d4f839b09bb.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-scrollspy-503b3597d50ae66aaeabf893e20aafc2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-scrollspy-503b3597d50ae66aaeabf893e20aafc2.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-tab-eacd4194db0dfea3cf060fd1897df829.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-tab-eacd4194db0dfea3cf060fd1897df829.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-tooltip-31f63b99208eb43122e13dc78d304530.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-tooltip-31f63b99208eb43122e13dc78d304530.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-transition-fc2b3d16e6e9acedbbb75463ab514ec2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-transition-fc2b3d16e6e9acedbbb75463ab514ec2.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-typeahead-8e33164c738c01caf11396f359e3f811.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap-typeahead-8e33164c738c01caf11396f359e3f811.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap_and_overrides-4d2074e5f35346b7e8388eabe0c38837.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/bootstrap_and_overrides-4d2074e5f35346b7e8388eabe0c38837.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/disk-b543599a12feb85f0e0fdaf1969fe068.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/disk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-ab3144065a860d198f1d7d9a4882640c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/grids-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/grids-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/grids-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/grids-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea-0.7.5-20adb4a547809bee44f0fc539839e5cd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea-0.7.5-20adb4a547809bee44f0fc539839e5cd.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea-0.7.5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea-0.7.5.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea-31c5800e78a75b8722fbecb6ab0c6a93.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea-d2ff7ae41834aa763bb557df1d7e2bee.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea-d2ff7ae41834aa763bb557df1d7e2bee.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea_Toolbar_Group_BG-4524e8dc59cac40b8642108d3a9cac89.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea_Toolbar_Group_BG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea_Toolbar_Group__Btn_Select_BG-29bf54cdfea6cb680a2a83d882bd8112.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jHtmlArea_Toolbar_Group__Btn_Select_BG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magazines-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magazines-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magazines-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magazines-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magtemplates-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magtemplates-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magtemplates-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/magtemplates-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails-be8732dac73d845ac5b142c8fb5f9fb0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/scaffolds-0149f820dbdd285aa65e241569d8c256.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/scaffolds-0149f820dbdd285aa65e241569d8c256.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/texteditor-2496d1a22711ca9135a402f79d3fd0d3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/texteditor-2496d1a22711ca9135a402f79d3fd0d3.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/texteditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/texteditor.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/treesaver-fcba7510d9c6ec6aec681588d341d415.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/treesaver-fcba7510d9c6ec6aec681588d341d415.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/treesaver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/treesaver.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/ts_test-afcc095d477e779da11eabd701bb3660.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/ts_test-afcc095d477e779da11eabd701bb3660.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/ts_test.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/ts_test.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/welcome-3af39f1da6f167c2cbf453ed74daff3d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/welcome-3af39f1da6f167c2cbf453ed74daff3d.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/welcome-7270767b2a9e9fff880aa5de378ca791.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/welcome-7270767b2a9e9fff880aa5de378ca791.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jHtmlArea-0.7.5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/disk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/jHtmlArea.Editor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/jHtmlArea.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/jHtmlArea.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/jHtmlArea_Toolbar_Group_BG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/jHtmlArea_Toolbar_Group__Btn_Select_BG.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/book2.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/book2.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.rb" afterPath="$PROJECT_DIR$/app/models/article.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="jaywebmag.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -146,51 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/articles/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="8" selection-start="285" selection-end="285" vertical-scroll-proportion="-3.2">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ckeditor_config.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="31" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.9085714">
+            <state line="73" column="8" selection-start="3680" selection-end="3680" vertical-scroll-proportion="1.5314286">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preview.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/preview/preview.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/styles/styles/default.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/ckeditor/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="59" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -208,11 +49,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/articles/read.html.erb" />
-        <option value="$PROJECT_DIR$/lib/truncate_html/truncate_html_helper.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/views/articles/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/article.rb" />
         <option value="$PROJECT_DIR$/app/views/articles/edit.html.erb" />
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/jHtmlArea-0.7.5.js" />
@@ -221,9 +57,14 @@
         <option value="$PROJECT_DIR$/app/views/articles/_form.html.erb" />
         <option value="$PROJECT_DIR$/public/ckeditor/config.js" />
         <option value="$PROJECT_DIR$/public/ckeditor/plugins/styles/styles/default.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/book2.css.scss" />
+        <option value="$PROJECT_DIR$/public/ckeditor/plugins/timestamp/plugin.js" />
+        <option value="$PROJECT_DIR$/public/ckeditor/plugins/abbr/plugin.js" />
+        <option value="$PROJECT_DIR$/public/ckeditor/plugins/pics/plugin.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js" />
+        <option value="$PROJECT_DIR$/public/resources.html" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" />
       </list>
     </option>
   </component>
@@ -307,65 +148,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,11 +202,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/public/ckeditor/plugins/pics/images" />
+      <recent name="$PROJECT_DIR$/public/ckeditor/plugins/abbr/images" />
+      <recent name="$PROJECT_DIR$/public/ckeditor/plugins/timestamp/images" />
       <recent name="$PROJECT_DIR$/lib/truncate_html" />
-      <recent name="$PROJECT_DIR$/vendor/assets/stylesheets" />
-      <recent name="$PROJECT_DIR$/vendor/assets/images" />
-      <recent name="$PROJECT_DIR$/vendor/assets/javascripts" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/ckeditor" />
@@ -752,12 +535,12 @@
     <frame x="0" y="22" width="1440" height="824" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6712517" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23098996" sideWeight="0.42365888" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23098996" sideWeight="0.5667125" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23098996" sideWeight="0.5667125" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36370158" sideWeight="0.33377838" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -828,114 +611,100 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0" />
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/teeth_smile.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="110" selection-end="110" vertical-scroll-proportion="0.09142857" />
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/uicolor/uicolor.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="26" selection-start="480" selection-end="480" vertical-scroll-proportion="0.024502298" />
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/icons.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="90" selection-start="211" selection-end="211" vertical-scroll-proportion="0.07350689" />
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/images/noimage.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript.js2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.33233082">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/images/mini.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/article.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="11" selection-start="587" selection-end="587" vertical-scroll-proportion="0.37758112">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/images/dialog_sides.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="36" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.86285716">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/images/toolbar_start.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/treesaver.js">
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/icons_rtl.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/office2003/icons.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/abbr/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.18631732">
+        <state line="110" column="86" selection-start="5534" selection-end="5534" vertical-scroll-proportion="2.377143">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/ckeditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3755459">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="8" selection-start="285" selection-end="285" vertical-scroll-proportion="-3.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="59" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/preview/preview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/styles/styles/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#158#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/book2.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="17" selection-start="3138" selection-end="3138" vertical-scroll-proportion="0.81714284">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36571428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/pics/plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="84" selection-start="730" selection-end="730" vertical-scroll-proportion="0.30276564">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="260" selection-end="260" vertical-scroll-proportion="0.16592592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resources.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.26074073">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/book.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="8" selection-start="2996" selection-end="3103" vertical-scroll-proportion="0.95428574">
+        <state line="102" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="-0.5257143">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="31" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.9085714">
+        <state line="73" column="8" selection-start="3680" selection-end="3680" vertical-scroll-proportion="1.5314286">
           <folding />
         </state>
       </provider>
