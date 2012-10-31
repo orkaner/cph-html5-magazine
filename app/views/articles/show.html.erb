@@ -44,7 +44,7 @@
   <b>Text:</b>
 </p>
   <div class="well">
-    <%= sanitize HTML_Truncator.truncate(@article.text, 50) %>
+    <%= strip_tags(sanitize HTML_Truncator.truncate(@article.text, 50)) %>
   </div>
 
 
