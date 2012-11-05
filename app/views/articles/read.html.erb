@@ -6,8 +6,8 @@
     <title><%= @article.headline %></title>
     <%= stylesheet_link_tag(current_magazine.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
-    <link rel="contents" href="<%= url_for(toc_magazine_path(current_magazine)) %>"/>
-    <%= javascript_include_tag("treesaver") %>
+    <link rel="index" href="<%= url_for(content_index_magazine_path(current_magazine)) %>" type="application/json"/>
+    <%= javascript_include_tag("treesaver-0.10.0-debug") %>
 
 <% end %>
 

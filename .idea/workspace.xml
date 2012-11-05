@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29a19955-c02c-4196-8b46-e4b37ed0e18d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources_old.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/treesaver.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/magazines_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/magazines_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/read.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/read.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/magazines/cover.html.erb" afterPath="$PROJECT_DIR$/app/views/magazines/cover.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/magazines/toc.html.erb" afterPath="$PROJECT_DIR$/app/views/magazines/toc.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/resources.html" afterPath="$PROJECT_DIR$/public/resources.html" />
     </list>
     <ignored path="jaywebmag.iws" />
@@ -31,10 +34,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="resources.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/resources.html">
+      <file leaf-file-name="magazines_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/magazines_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="55" selection-start="3248" selection-end="3248" vertical-scroll-proportion="-23.16">
+            <state line="128" column="40" selection-start="3359" selection-end="3359" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cover.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/magazines/cover.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="2" selection-start="431" selection-end="431" vertical-scroll-proportion="-8.32">
               <folding />
             </state>
           </provider>
@@ -43,7 +55,16 @@
       <file leaf-file-name="toc.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/magazines/toc.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="33" selection-start="167" selection-end="167" vertical-scroll-proportion="0.14004377">
+            <state line="9" column="39" selection-start="366" selection-end="366" vertical-scroll-proportion="0.21752267">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/articles/read.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="116" selection-start="238" selection-end="350" vertical-scroll-proportion="-5.12">
               <folding />
             </state>
           </provider>
@@ -62,22 +83,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/articles/_form.html.erb" />
-        <option value="$PROJECT_DIR$/public/ckeditor/config.js" />
-        <option value="$PROJECT_DIR$/public/ckeditor/plugins/styles/styles/default.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/book2.css.scss" />
         <option value="$PROJECT_DIR$/public/ckeditor/plugins/timestamp/plugin.js" />
         <option value="$PROJECT_DIR$/public/ckeditor/plugins/abbr/plugin.js" />
         <option value="$PROJECT_DIR$/public/ckeditor/plugins/pics/plugin.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" />
         <option value="$PROJECT_DIR$/app/views/articles/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/magazines/toc.html.erb" />
         <option value="$PROJECT_DIR$/public/resources_2.html" />
-        <option value="$PROJECT_DIR$/public/resources.html" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ckeditor_config.js" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/magazines/cover.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/articles/read.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/magazines_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/magazines/toc.html.erb" />
+        <option value="$PROJECT_DIR$/public/resources.html" />
       </list>
     </option>
   </component>
@@ -236,6 +257,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jaywebmag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jaywebmag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jaywebmag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jaywebmag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -644,19 +705,23 @@
       <created>1348420094961</created>
       <updated>1348420094961</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Simplified resource.html file and added two magazine templates with better documentation. The earlier templates are not updated yet to be used with the new resource file.">
+      <created>1352140979157</created>
+      <updated>1352140979157</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="88" y="22" width="1117" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28198075" sideWeight="0.9258427" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28198075" sideWeight="0.9258427" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6712517" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.232493" sideWeight="0.31911966" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.232493" sideWeight="0.389271" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.232493" sideWeight="0.44566712" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.232493" sideWeight="0.54470426" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36370158" sideWeight="0.33377838" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -728,36 +793,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/images/dialog_sides.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/images/toolbar_start.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/kama/icons_rtl.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/skins/office2003/icons.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/abbr/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="86" selection-start="5534" selection-end="5534" vertical-scroll-proportion="2.377143" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/book2.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36571428" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/ckeditor/plugins/pics/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="84" selection-start="730" selection-end="730" vertical-scroll-proportion="0.30276564" />
@@ -783,11 +818,6 @@
         <state line="64" column="28" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.83697236" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="10" selection-start="1755" selection-end="1755" vertical-scroll-proportion="-1.0971428" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/book.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="-2.057143">
@@ -795,23 +825,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/magazines/read.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/magazine.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="22" selection-start="293" selection-end="293" vertical-scroll-proportion="0.4342857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/magazines/cover.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="431" selection-end="431" vertical-scroll-proportion="-8.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/articles/read.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="116" selection-start="238" selection-end="350" vertical-scroll-proportion="-5.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="208" column="20" selection-start="3616" selection-end="3634" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="355" column="51" selection-start="5673" selection-end="5673" vertical-scroll-proportion="8.114285">
+        <state line="289" column="26" selection-start="4721" selection-end="4721" vertical-scroll-proportion="0.056047197">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/magazines_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="40" selection-start="3359" selection-end="3359" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/resources.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="55" selection-start="3248" selection-end="3248" vertical-scroll-proportion="-23.16">
+        <state line="13" column="41" selection-start="201" selection-end="201" vertical-scroll-proportion="0.31852987">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/magazines/toc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="167" selection-end="167" vertical-scroll-proportion="0.14004377">
+        <state line="9" column="39" selection-start="366" selection-end="366" vertical-scroll-proportion="0.21752267">
           <folding />
         </state>
       </provider>

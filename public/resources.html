@@ -11,8 +11,12 @@
 			<div class="controls">
 				<div class="pagewidth">
 					<span class="pagenumbers">
+						<!-- Treesaver 0.9.2>
 						<span data-bind="pagenumber">1</span> /
 						<span data-bind="pagecount">5</span>
+						<=========================== -->
+						<!-- Treesaver 0.10.0 -->
+						<span data-ts-template="position">{{pagenumber}} / {{pagecount}}</span>
 					</span>
 
                     <a href="/">

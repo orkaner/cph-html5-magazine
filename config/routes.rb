@@ -18,6 +18,7 @@ Jaywebmag::Application.routes.draw do
       get 'read'
       get 'toc'
       get 'cover'
+      get 'content_index' # Added to support treesaver 0.10.x
     end
   end
 

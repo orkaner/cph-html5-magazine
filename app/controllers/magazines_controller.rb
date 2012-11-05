@@ -90,6 +90,7 @@ class MagazinesController < ApplicationController
   end
 
   # Naoufal: Allow reading the selected magazine
+  #   Edit: Reading a magazine is not done through this method.
   def read
     @magazine = Magazine.find(params[:id])
     #gridToUse = "ts_test"
@@ -110,17 +111,33 @@ class MagazinesController < ApplicationController
     @magazine = Magazine.find(params[:id])
   end
 
-=begin
-  private
+  # Naoufal: Create the content index of the magazine as JSON file.
+  #   Note: This is required in treesaver version 0.10.x
+  def content_index
+    @magazine = Magazine.find(params[:id])
+    # Initiate the array of contents' links
+    a = []
 
-    def gridToUse=(v)
-      @gridToUse = v
+    # Insert the link to the cover first
+    a << {"url" => cover_magazine_url}
+
+    # Insert the link to the toc
+    a << {"url" => toc_magazine_url}
+
+    # Insert the links to all the magazine's articles
+    @magazine.articles.each do |article|
+      entry = {"url" => read_article_url(article)}
+      a << entry
     end
 
-    def chosenGrid
-        gridToUse
+    # Create the "contents" object and and associate the links array to it.
+    b = {"contents" => a}
+
+    # Render the response as JSON
+    respond_to do |format|
+      format.json { render :json => b }
     end
-=end
+  end
 
 end
 

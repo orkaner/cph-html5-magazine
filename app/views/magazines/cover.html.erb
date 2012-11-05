@@ -4,34 +4,13 @@
     <title><%= @magazine.name %> | Cover</title>
     <%= stylesheet_link_tag(@magazine.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
-    <link rel="contents self" href="<%= url_for(cover_magazine_path(@magazine)) %>"/>
-    <%= javascript_include_tag("treesaver") %>
+    <link rel="index" href="<%= url_for(content_index_magazine_path(@magazine)) %>" type="application/json"/>
+    <%= javascript_include_tag("treesaver-0.10.0-debug") %>
 
 <% end %>
 
 <% content_for :treesaver do %>
 <article data-grids="cover">
-  <!-- Linking the cover to the rest of the magazine -->
-  <div itemscope data-properties="self">
-    <h1 itemprop="title">
-       <%= link_to "", cover_magazine_path(@magazine), :itemprop => "url" %>
-    </h1>
-  </div>
-
-  <div itemscope>
-    <h1 itemprop="title">
-
-      <%= link_to "", toc_magazine_path(@magazine), :itemprop => "url" %>
-    </h1>
-  </div>
-
-  <% for article in @magazine.articles %>
-      <div itemscope>
-        <h3 itemprop="title"><%= link_to "", read_article_path(article), {:itemprop => "url", :magazine => @magazine} %></h3>
-
-      </div>
-  <% end %>
-  <!-- ===================================================-->
 
   <figure>
     <h2 data-sizes="title fallback">

@@ -3,33 +3,19 @@
     <title><%= @magazine.name %> | TOC</title>
     <%= stylesheet_link_tag(@magazine.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
-
-    <link rel="contents self" href="<%= url_for(toc_magazine_path(@magazine)) %>"/>
-
-    <%= javascript_include_tag("treesaver") %>
+    <link rel="index" href="<%= url_for(content_index_magazine_path(@magazine)) %>" type="application/json"/>
+    <%= javascript_include_tag("treesaver-0.10.0-debug") %>
 
 <% end %>
 
 <% content_for :treesaver do %>
     <article data-grids="toc">
 
-      <div itemscope>
-        <h1 itemprop="title">
-          <%= link_to "", cover_magazine_path(@magazine), :itemprop => "url" %>
-        </h1>
-      </div>
-
-      <div itemscope data-properties="self" class="toc-head">
-        <h1 itemprop="title">
-          <!-- a href="toc.html" itemprop="url">The Daily Gazette</a-->
-          <%= link_to @magazine.name, toc_magazine_path(@magazine), :itemprop => "url" %>
-        </h1>
-      </div>
-
+      <h1>Table Of Contents</h1>
       <% for article in @magazine.articles %>
-          <div itemscope class="toc-link">
-            <h3 itemprop="title"><%= link_to article.title, read_article_path(article), {:itemprop => "url", :magazine => @magazine} %></h3>
-            <p itemprop="byline"><%= article.author %></p>
+          <div class="toc-link">
+            <h3 ><%= link_to article.title, read_article_path(article), { :magazine => @magazine} %></h3>
+            <!--p itemprop="byline"><!-- %= article.author %></p -->
           </div>
       <% end %>
 

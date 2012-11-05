@@ -251,6 +251,11 @@ position of the second column +
 .toc {
   background-color: #8BA732;
 }
+
+.toc h1 {
+  color: #000000;
+  line-height: 30px;
+}
 /* Level 1 */
 .toc-head {
 	line-height: 30px;
@@ -298,7 +303,7 @@ position of the second column +
 }
 
 .toc-link h3 a:hover{
-	color: gray;
+	/* color: gray; */
 	text-decoration: underline;
 }
 
