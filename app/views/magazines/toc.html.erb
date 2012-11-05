@@ -19,7 +19,7 @@
         </h1>
       </div>
 
-      <div itemscope data-properties="self">
+      <div itemscope data-properties="self" class="toc-head">
         <h1 itemprop="title">
           <!-- a href="toc.html" itemprop="url">The Daily Gazette</a-->
           <%= link_to @magazine.name, toc_magazine_path(@magazine), :itemprop => "url" %>
@@ -27,7 +27,7 @@
       </div>
 
       <% for article in @magazine.articles %>
-          <div itemscope>
+          <div itemscope class="toc-link">
             <h3 itemprop="title"><%= link_to article.title, read_article_path(article), {:itemprop => "url", :magazine => @magazine} %></h3>
             <p itemprop="byline"><%= article.author %></p>
           </div>

@@ -62,7 +62,7 @@ CKEDITOR.editorConfig = function( config )
         ];
 
     // Customise the paragraph formatting list
-    config.format_tags = 'p;h1;h2;h3;pre';
+    config.format_tags = 'p;h3;pre';
 
     // Naoufal: Experimentation =============================================
     // To load non-default plugins. If there is a need for more than one then add as a comma-separated list like:

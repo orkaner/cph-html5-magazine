@@ -1,0 +1,361 @@
+.treesaver body {
+  /* Hide scrollbars */
+  overflow: hidden;
+
+  /* Use full body canvas */
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+}
+
+.chrome, .viewer, .grid, .column, .container{
+  /* Manually position everything */
+  position:absolute;
+
+  /* Make sure seams aren't visible */
+  overflow: hidden;
+
+  /* Set the base vertical grid */
+  line-height: 20px;
+}
+
+/* Stretch the viewer to fill the screen */
+.viewer {
+  top: 0;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+/* The grid unit.
+ Defines basic attributes to be shared along the magazine
+ template
+*/
+.grid {
+  width: 280px;
+  /*border: 1px solid #ccc;*/
+  margin: 0 72px;
+  opacity: .25;
+  min-height: 30px;
+}
+
+/*	Naoufal: Grids =========================
+	Her are defined the global attributes that
+	are shared by all the columns belonging to
+	the same grid.
+	Note that the letters at the end of the name 
+	of a grid indicate the base width of the columns
+	inside the grid. The correspondence between the letters
+	and column sizes is as follows:
+		- Narrow: a => 140px
+		- Medium: b => 280px
+		- Large:  c => 420px
+*/
+	
+/* Grid b */	
+.col_1_2_3_b{
+  background-color: rgba(205, 213, 235, 0.62);
+}
+
+/* Another grid b */
+.col_2_1_2_b{
+  background-color: rgba(235, 190, 190, 0.61);
+}
+
+/*			Column groups ================*/
+/* Groups with 1 medium column */
+.cols-1-b{
+  width: 310px;
+}
+
+/* Groups with 2 medium columns */
+.cols-2-b {
+  width: 620px;
+}
+
+/* Groups with 3 medium columns */
+.cols-3-b {
+  width: 930px;
+}
+
+
+/*			Columns ======================*/
+
+/* 	
+	Set shared columns initial attributes.
+	Note: As a container is supposed to fit in a column,
+	the container shares the same initial attributes with
+	columns.
+*/
+.column, .container{
+  width: 280px;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+}
+
+/*
+	The main attribute to define here is the location
+	of the column with respect to the edge of the grid.
+*/
+
+/* 	The position of the first column can be omitted
+	as it is usualy the same as the grid unit.
+*/
+.col-1-b {
+  left: 15px;
+}
+
+/*
+The position of the second column. It is computed as: 
+position of the first column +
+ width of the first column + the gutter.
+ (The gutter is the space between two columns.
+*/
+
+/* Gutter = 30px*/
+.col-2-b {
+  left:325px;
+}
+
+/*
+The position of the third column. It is computed as: 
+position of the second column +
+ width of the second column + the gutter.
+*/
+
+/* Gutter = 30px*/
+.col-3-b {
+  left: 635px;
+}
+
+
+
+/*			Containers ======================*/
+
+/* Set the width of the contaier to fill one column */
+.container.col-1-b {
+  width: 280px;
+}
+
+
+/* Set the width of the contaier to fill 2 columns */
+.container.cols-2-b {
+  width: 590px;
+
+}
+
+/* Set the width of the contaier to fill 3 columns */
+.container.cols-3-b {
+  width: 900px;
+}
+
+
+
+/* 			Cover (Not Yet Finalised!) ======================== */
+
+/* Set the width of the cover page */
+.w1col{
+  width: 600px;
+  border: 1px solid #ccc;
+}
+
+.n1col{
+  width: 600px;
+}
+
+/* 	Set the width of the container inside the cover page.
+	Note: In this case, the container fills up the whole cover page.
+*/
+.container.w1col {
+  width: 600px; }
+  
+.container.n1col {
+  width: 600px; }
+ 
+
+.magazinename{
+  display: block;
+  font-size: 72px;
+  font-style: italic;
+  text-align: center;
+
+  line-height: 100px;
+  color: #999;
+}
+.author{
+  display: block;
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+
+  line-height: 32px;
+  color: #000000;
+}
+
+.controls .home {
+  position:absolute;
+  left: 50px;
+  top: 0;
+}
+/*=============================================================== */
+
+
+/* 			TOC =================================== */
+
+/* Level 1 */
+.toc-head {
+	line-height: 30px;
+	text-align: left;
+}
+.toc-head h1 a:link {
+	color: black;
+	text-decoration: none;
+}
+
+.toc-head h1 a:visited{
+	color: black;
+	text-decoration: none;
+}
+
+.toc-head h1 a:hover{
+	color: gray;
+	text-decoration: underline;
+}
+
+.toc-head h1 a:focus{
+	color: gray;
+	text-decoration: none;
+}
+
+.toc-head h1 a:active{
+	color: black;
+	text-decoration: underline;
+}
+
+
+/* Level 2 */
+.toc-link {
+	line-height: 20px;
+	text-align: left;
+}
+.toc-link h3 a:link {
+	color: black;
+	text-decoration: none;
+}
+
+.toc-link h3 a:visited{
+	color: black;
+	text-decoration: none;
+}
+
+.toc-link h3 a:hover{
+	color: gray;
+	text-decoration: underline;
+}
+
+.toc-link h3 a:focus{
+	color: gray;
+	text-decoration: none;
+}
+
+.toc-link h3 a:active{
+	color: black;
+	text-decoration: underline;
+}
+
+
+/* 			Page setup =================================== */
+
+/* Set the current page to be opaque */
+#currentPage {
+  opacity: 1;
+}
+
+/* Set up the controls position and style */
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  line-height: 30px;
+  font-family: Helvetica, sans-serif;
+}
+
+.pagenumbers {
+  display: block;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.controls .pagewidth {
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.controls .next {
+  position:absolute;
+  right: 0;
+  top: 0;
+}
+
+.controls .prev {
+  position:absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Set up document styles */
+
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #434;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: normal;
+  margin: 24px 0;
+  color: #666;
+}
+
+h2 .chapter {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999;
+}
+
+p {
+  margin: 0;
+  text-indent: 24px;
+}
+
+/* This style is not set correctly yet! */
+hr {
+  margin: 24px 0;
+  border: none;
+  padding: 0;
+  height: 24px;
+  background: url('../tut1/img/horizontal-rule.png') 50% 50% no-repeat;
+}
+
+
+strong {
+  color: #00008b;
+  outline: dotted 1px;
+}
+
+em {
+  color: #008b8b;
+  text-decoration: underline;
+}
+
+
