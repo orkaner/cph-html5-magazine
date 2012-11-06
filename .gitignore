@@ -29,4 +29,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+# RubyMine workspace
+.idea/workspace.xml
+
 
