@@ -1,4 +1,8 @@
 Jaywebmag::Application.routes.draw do
+  resources :sizes
+
+  resources :widths
+
   get "welcome/index"
 
   resources :magtemplates

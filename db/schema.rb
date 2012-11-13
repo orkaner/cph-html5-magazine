@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120919111305) do
+ActiveRecord::Schema.define(:version => 20121113132405) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -52,9 +52,18 @@ ActiveRecord::Schema.define(:version => 20120919111305) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "templates", :force => true do |t|
+  create_table "sizes", :force => true do |t|
+    t.integer  "magtemplate_id"
+    t.integer  "width_id"
+    t.integer  "value"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "sizes", ["magtemplate_id", "width_id"], :name => "index_sizes_on_magtemplate_id_and_width_id", :unique => true
+
+  create_table "widths", :force => true do |t|
     t.string   "name"
-    t.string   "path"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
