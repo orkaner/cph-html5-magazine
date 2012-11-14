@@ -3,5 +3,8 @@ class Size < ActiveRecord::Base
 
   # A width (size) is defined in one or many templates
   belongs_to :magtemplate
+  validates_existence_of :magtemplate
+
   belongs_to :width
+  validates_existence_of :width
 end

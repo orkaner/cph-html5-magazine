@@ -1,7 +1,8 @@
 <h1>Listing widths</h1>
 
-<table>
+<table class="table">
   <tr>
+    <th>Id</th>
     <th>Name</th>
     <th></th>
     <th></th>
@@ -10,6 +11,7 @@
 
 <% @widths.each do |width| %>
   <tr>
+    <td><%= width.id %></td>
     <td><%= width.name %></td>
     <td><%= link_to 'Show', width %></td>
     <td><%= link_to 'Edit', edit_width_path(width) %></td>

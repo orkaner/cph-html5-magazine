@@ -1,6 +1,6 @@
 <h1>Listing sizes</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Magtemplate</th>
     <th>Width</th>
@@ -12,9 +12,9 @@
 
 <% @sizes.each do |size| %>
   <tr>
-    <td><%= size.magtemplate_id %></td>
-    <td><%= size.width_id %></td>
-    <td><%= size.value %></td>
+    <td><%= size.magtemplate.name %></td>
+    <td><%= size.width.name %></td>
+    <td><%= size.value %> px</td>
     <td><%= link_to 'Show', size %></td>
     <td><%= link_to 'Edit', edit_size_path(size) %></td>
     <td><%= link_to 'Destroy', size, method: :delete, data: { confirm: 'Are you sure?' } %></td>

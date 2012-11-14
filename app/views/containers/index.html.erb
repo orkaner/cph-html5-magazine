@@ -1,0 +1,33 @@
+<h1>Listing containers</h1>
+
+<table class="table">
+  <tr>
+    <th>Grid</th>
+    <th>Width</th>
+    <th>Data sizes</th>
+    <th>Pictures</th>
+    <th>Text</th>
+    <th>Video</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @containers.each do |container| %>
+  <tr>
+    <td><%= container.grid.name %></td>
+    <td><%= container.width.name %></td>
+    <td><%= container.data_sizes %></td>
+    <td><%= container.pictures %></td>
+    <td><%= container.text %></td>
+    <td><%= container.video %></td>
+    <td><%= link_to 'Show', container %></td>
+    <td><%= link_to 'Edit', edit_container_path(container) %></td>
+    <td><%= link_to 'Destroy', container, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Container', new_container_path %>

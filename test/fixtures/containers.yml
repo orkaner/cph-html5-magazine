@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_sizes: MyString
+  pictures: false
+  text: false
+  video: false
+  width_id: 1
+
+two:
+  data_sizes: MyString
+  pictures: false
+  text: false
+  video: false
+  width_id: 1

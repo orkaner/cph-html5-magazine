@@ -3,6 +3,8 @@ class SizesController < ApplicationController
   # GET /sizes.json
   def index
     @sizes = Size.all
+    @widths = Width.all
+    @magtemplates = Magtemplate.all
 
     respond_to do |format|
       format.html # index.html.erb

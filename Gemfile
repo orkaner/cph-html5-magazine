@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+# Naoufal: This gem validate the existence of a record when referring
+#          to it from a database relationship
+gem "validates_existence", ">= 0.4"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -56,3 +60,4 @@ gem 'devise', '~>1.4.3'
 # Naoufal: These gems are required to enable proper HTML text truncation
 gem "nokogiri"
 gem "html_truncator", "~>0.2"
+

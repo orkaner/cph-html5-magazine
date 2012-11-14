@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :magtemplate_id %><br />
-    <%= f.number_field :magtemplate_id %>
+    <%= f.select :magtemplate_id, Magtemplate.order("name").collect{|s| [(s.name), s.id]} %>
   </div>
   <div class="field">
     <%= f.label :width_id %><br />
-    <%= f.number_field :width_id %>
+    <%= f.select :width_id, Width.order("name").collect{|s| [(s.name), s.id]} %>
   </div>
   <div class="field">
     <%= f.label :value %><br />

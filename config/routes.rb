@@ -1,4 +1,6 @@
 Jaywebmag::Application.routes.draw do
+  resources :containers
+
   resources :sizes
 
   resources :widths
