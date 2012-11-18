@@ -10,6 +10,32 @@
   <%= @grid.path %>
 </p>
 
+<p>
+  <b>Containers:</b>
+</p>
+<ol>
+  <% for container in @grid.containers %>
+      <li>
+        <b>Width:</b>
+        <%= container.width.name %>
+        <br/>
+
+        <b>Data sizes:</b>
+        <%= container.data_sizes %>
+        <br/>
+
+        <b>Pictures:</b>
+        <%= container.pictures %>;
+
+        <b> Text:</b>
+        <%= container.text %>;
+
+        <b> Video:</b>
+        <%= container.video %>
+
+      </li>
+  <% end %>
+</ol>
 
 <%= link_to 'Edit', edit_grid_path(@grid) %> |
 <%= link_to 'Back', grids_path %>
