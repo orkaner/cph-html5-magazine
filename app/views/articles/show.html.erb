@@ -47,6 +47,14 @@
     <%= strip_tags(sanitize HTML_Truncator.truncate(@article.text, 50)) %>
   </div>
 
+<p>
+  <b>Videos:</b>
+</p>
+<ol>
+  <% for videolink in @article.videolinks %>
+    <li><%= h videolink.title %> (<%= videolink.video_src %>)</li>
+  <% end %>
+</ol>
 
 
 

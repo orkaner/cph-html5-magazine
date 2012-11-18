@@ -1,0 +1,29 @@
+<h1>Listing videolinks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Embed code</th>
+    <th>Embedded</th>
+    <th>Article</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @videolinks.each do |videolink| %>
+  <tr>
+    <td><%= videolink.title %></td>
+    <td><%= videolink.embed_code %></td>
+    <td><%= videolink.embedded %></td>
+    <td><%= videolink.article_id %></td>
+    <td><%= link_to 'Show', videolink %></td>
+    <td><%= link_to 'Edit', edit_videolink_path(videolink) %></td>
+    <td><%= link_to 'Destroy', videolink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Videolink', new_videolink_path %>

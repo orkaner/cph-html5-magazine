@@ -1,4 +1,6 @@
 Jaywebmag::Application.routes.draw do
+  resources :videolinks
+
   resources :containers
 
   resources :sizes

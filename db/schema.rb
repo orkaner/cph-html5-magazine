@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114100022) do
+ActiveRecord::Schema.define(:version => 20121116090857) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -72,6 +72,15 @@ ActiveRecord::Schema.define(:version => 20121114100022) do
   end
 
   add_index "sizes", ["magtemplate_id", "width_id"], :name => "index_sizes_on_magtemplate_id_and_width_id", :unique => true
+
+  create_table "videolinks", :force => true do |t|
+    t.string   "title"
+    t.string   "embed_code"
+    t.boolean  "embedded"
+    t.integer  "article_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "widths", :force => true do |t|
     t.string   "name"

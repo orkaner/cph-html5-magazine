@@ -61,3 +61,6 @@ gem 'devise', '~>1.4.3'
 gem "nokogiri"
 gem "html_truncator", "~>0.2"
 
+#           To use advanced nested forms
+gem "nested_form"
+
