@@ -1,5 +1,12 @@
 Jaywebmag::Application.routes.draw do
-  resources :galleries
+
+  resources :videolinks
+
+  resources :containers
+
+  resources :sizes
+
+  resources :widths
 
   get "welcome/index"
 

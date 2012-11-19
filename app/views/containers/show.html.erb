@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Grid:</b>
+  <%= @container.grid.name %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @container.width.name %>
+</p>
+
+<p>
+  <b>Data sizes:</b>
+  <%= @container.data_sizes %>
+</p>
+
+<p>
+  <b>Pictures:</b>
+  <%= @container.pictures %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @container.text %>
+</p>
+
+<p>
+  <b>Video:</b>
+  <%= @container.video %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_container_path(@container) %> |
+<%= link_to 'Back', containers_path %>

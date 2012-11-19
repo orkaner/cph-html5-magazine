@@ -1,0 +1,21 @@
+<div class="field">
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+
+
+  <p>
+    <%= f.label :embed_code, "Paste the code from YouTube to embed the video" %><br/>
+    <%= f.text_area :embed_code, :rows => 3, :class => 'span6' %>
+  </p>
+
+  <p>
+    <%= f.check_box :embedded %>
+    <%= f.label :embedded, "Embed", :class => "checkbox inline" %>
+  </p>
+
+  <p>
+    <%= f.link_to_remove "remove" %>
+  </p>
+</div>

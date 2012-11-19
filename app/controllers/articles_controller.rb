@@ -50,6 +50,7 @@ class ArticlesController < ApplicationController
   def edit
     @article = Article.find(params[:id])
     2.times { @article.assets.build }
+    @videolinks = @article.videolinks.all
   end
 
   # POST /articles

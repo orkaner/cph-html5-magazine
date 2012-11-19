@@ -1,0 +1,33 @@
+<div class="field">
+
+  <p>
+    <%= f.label :width_id %><br />
+    <%= f.select :width_id, Width.order("name").collect{|s| [(s.name), s.id]} %>
+  </p>
+
+  <p>
+    <%= f.label :data_sizes %><br />
+    <%= f.text_field :data_sizes %>
+  </p>
+
+  <p>
+    <%= f.check_box :pictures %>
+    <%= f.label :pictures, :class => "checkbox inline" %>
+  </p>
+
+  <p>
+    <%= f.check_box :text %>
+    <%= f.label :text, :class => "checkbox inline" %>
+  </p>
+
+  <p>
+    <%= f.check_box :video %>
+    <%= f.label :video, :class => "checkbox inline" %>
+  </p>
+
+  <p>
+    <%= f.link_to_remove "remove" %>
+  </p>
+  <p>----------------------------------------------------------------------</p>
+</div>
+

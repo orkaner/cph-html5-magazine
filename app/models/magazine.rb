@@ -4,7 +4,8 @@ class Magazine < ActiveRecord::Base
   # A magazine uses one template
   belongs_to :magtemplate
 
-  # A magazine can have many articles
+  # A magazine can have many articles.
+  # TODO: When a magazine is destroyed, articles will refer to "nil", this has to be fixed properly!
   has_many :articles
   
 end

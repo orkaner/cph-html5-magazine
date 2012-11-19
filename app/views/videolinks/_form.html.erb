@@ -1,0 +1,33 @@
+<%= form_for(@videolink) do |f| %>
+  <% if @videolink.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@videolink.errors.count, "error") %> prohibited this videolink from being saved:</h2>
+
+      <ul>
+      <% @videolink.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :embed_code %><br />
+    <%= f.text_field :embed_code %>
+  </div>
+  <div class="field">
+    <%= f.label :embedded %><br />
+    <%= f.check_box :embedded %>
+  </div>
+  <div class="field">
+    <%= f.label :article_id %><br />
+    <%= f.number_field :article_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

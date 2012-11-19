@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @videolink.title %>
+</p>
+
+<p>
+  <b>Embed code:</b>
+  <%= @videolink.embed_code %>
+</p>
+
+<p>
+  <b>Embedded:</b>
+  <%= @videolink.embedded %>
+</p>
+
+<p>
+  <b>Article:</b>
+  <%= @videolink.article_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_videolink_path(@videolink) %> |
+<%= link_to 'Back', videolinks_path %>

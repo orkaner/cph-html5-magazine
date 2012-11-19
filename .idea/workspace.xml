@@ -2,22 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29a19955-c02c-4196-8b46-e4b37ed0e18d" name="Default" comment="Simplified resource.html file and added two magazine templates with better documentation. The earlier templates are not updated yet to be used with the new resource file.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/imageable.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/assets/.gitkeep" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/containers.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/sizes.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/videolinks.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/widths.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/containers.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sizes.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/videolinks.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/widths.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/containers_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/sizes_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/videolinks_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/widths_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/containers_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/sizes_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/videolinks_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/widths_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/container.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/size.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/videolink.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/width.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/articles/_videolink_fields.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/containers/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/containers/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/containers/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/containers/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/containers/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/grids/_container_fields.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sizes/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sizes/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sizes/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sizes/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sizes/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videolinks/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videolinks/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videolinks/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videolinks/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videolinks/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/widths/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/widths/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/widths/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/widths/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/widths/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121113120620_create_widths.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121113124143_create_sizes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121113132405_add_index_to_sizes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121114091216_create_containers.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121114100022_add_grid_id_to_container.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121116090857_create_videolinks.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/containers.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/sizes.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/videolinks.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/widths.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/containers_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/sizes_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/videolinks_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/widths_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/container_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/containers_helper_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/sizes_helper_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/videolinks_helper_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/widths_helper_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/size_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/videolink_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/width_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jaywebmag.iml" afterPath="$PROJECT_DIR$/.idea/jaywebmag.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/article.rb" afterPath="$PROJECT_DIR$/app/models/article.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/grid.rb" afterPath="$PROJECT_DIR$/app/models/grid.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/magazine.rb" afterPath="$PROJECT_DIR$/app/models/magazine.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/magtemplate.rb" afterPath="$PROJECT_DIR$/app/models/magtemplate.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/read.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/read.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/grids/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/grids/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/grids/show.html.erb" afterPath="$PROJECT_DIR$/app/views/grids/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/nav/_navigationside.html.erb" afterPath="$PROJECT_DIR$/app/views/nav/_navigationside.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/resources.html" afterPath="$PROJECT_DIR$/public/resources.html" />
@@ -42,7 +106,26 @@
     <groupTables value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="26" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile.lock" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="202" column="102" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.78723407">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -55,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/articles/_form.html.erb" />
         <option value="$PROJECT_DIR$/config.ru" />
         <option value="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/article.rb" />
@@ -64,13 +146,14 @@
         <option value="$PROJECT_DIR$/app/views/articles/show.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/fog.rb" />
         <option value="$PROJECT_DIR$/app/models/asset.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/public/resources.html" />
         <option value="$PROJECT_DIR$/app/views/articles/read.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/book.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/Gemfile.lock" />
       </list>
     </option>
   </component>
@@ -113,39 +196,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jaywebmag" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ApplicationFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ApplicationController" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.ControllerClassNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,20 +206,23 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="68" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="106" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="70" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="70" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Sites/treesaver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="78" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="776" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="75" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="72" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -252,7 +305,7 @@
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -342,13 +395,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -380,6 +426,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -445,7 +498,7 @@
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="jaywebmag" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -473,7 +526,7 @@
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="jaywebmag" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -557,8 +610,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6712517" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.232493" sideWeight="0.44566712" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1478817" sideWeight="0.68677044" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15107913" sideWeight="0.30952382" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15347722" sideWeight="0.6776557" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36370158" sideWeight="0.33377838" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -631,104 +684,90 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/magazine.rb">
+    <entry file="file://$PROJECT_DIR$/public/resources.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="65" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-11.875" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/articles/read.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="27" selection-start="125" selection-end="144" vertical-scroll-proportion="-3.75" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/imageable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="352" column="0" selection-start="5593" selection-end="5835" vertical-scroll-proportion="0.04255319" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="415" column="20" selection-start="6476" selection-end="6481" vertical-scroll-proportion="0.029013539" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/resources_old.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="39" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.030425964" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/asset.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="598" selection-end="598" vertical-scroll-proportion="0.32738096" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="26" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="14" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-8.125" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121109132215_create_assets.rb">
+    <entry file="file://$PROJECT_DIR$/.rspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2996" selection-end="2996" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/article_test.rb">
+    <entry file="file://$PROJECT_DIR$/config.ru">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/asset_test.rb">
+    <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.13333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/article.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/book.css.scss">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="43" selection-start="3006" selection-end="3006" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/resources.html">
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="65" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/read.html.erb">
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="27" selection-start="125" selection-end="144" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/imageable.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="31" selection-start="1222" selection-end="1223" vertical-scroll-proportion="0.59381044">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/classic_tmpl.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="352" column="0" selection-start="5593" selection-end="5835" vertical-scroll-proportion="0.04255319">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jayway_tmpl.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="415" column="20" selection-start="6476" selection-end="6481" vertical-scroll-proportion="0.029013539">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/resources_old.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="39" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.030425964">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/asset.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="598" selection-end="598" vertical-scroll-proportion="0.32738096">
+        <state line="202" column="102" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.78723407">
           <folding />
         </state>
       </provider>

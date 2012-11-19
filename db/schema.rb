@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121109132215) do
+ActiveRecord::Schema.define(:version => 20121116090857) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -39,6 +39,17 @@ ActiveRecord::Schema.define(:version => 20121109132215) do
     t.string   "imageable_type"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "containers", :force => true do |t|
+    t.string   "data_sizes"
+    t.boolean  "pictures"
+    t.boolean  "text"
+    t.boolean  "video"
+    t.integer  "width_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "grid_id"
   end
 
   create_table "galleries", :force => true do |t|
@@ -81,6 +92,31 @@ ActiveRecord::Schema.define(:version => 20121109132215) do
     t.string   "picture_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "sizes", :force => true do |t|
+    t.integer  "magtemplate_id"
+    t.integer  "width_id"
+    t.integer  "value"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "sizes", ["magtemplate_id", "width_id"], :name => "index_sizes_on_magtemplate_id_and_width_id", :unique => true
+
+  create_table "videolinks", :force => true do |t|
+    t.string   "title"
+    t.string   "embed_code"
+    t.boolean  "embedded"
+    t.integer  "article_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "widths", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
