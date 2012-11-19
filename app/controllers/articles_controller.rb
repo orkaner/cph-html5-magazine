@@ -36,6 +36,9 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
+    2.times { @article.assets.build }
+    #Orkun: maximum 3 pictures for each article. Returns 3 files, if there is
+    #3.times (@article.assets.build)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -46,6 +49,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    2.times { @article.assets.build }
   end
 
   # POST /articles

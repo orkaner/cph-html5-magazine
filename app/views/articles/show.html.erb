@@ -40,6 +40,17 @@
   <%= @article.status %>
 </p>
 
+    <% if @article.assets.exists? %>
+        <h3>Attached Files</h3>
+        <div class="assets">
+            <% @article.assets.each do |asset| %>
+          <p>
+            <%= link_to File.basename(asset.asset_file_name),asset.asset.url %>
+            <%= image_tag asset.asset.url(:single140) %>
+          </p>
+          <p><small><%= number_to_human_size(asset.asset.size) %></small></p>
+        </div>
+    <% end %>
 <p>
   <b>Text:</b>
 </p>
@@ -53,5 +64,6 @@
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
 
+<% end  %>
 <% end  %>
 

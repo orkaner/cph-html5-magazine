@@ -24,7 +24,39 @@
 
 
     </figure>
-    <p> <%= @article.text.html_safe %></p>
+
+  <p> <%= @article.text.html_safe %></p>
+
+
+
+
+  <% @article.assets.each do |asset|%>
+
+      <figure class="zoomable">
+
+        <div hidden class="hidden" data-sizes="single" data-minWidth="279">
+          <img data-src= <%=asset.asset.url(:single280).to_s%> />
+          <p class="caption">Test Single!</p>
+        </div>
+        <div hidden class="hidden" data-sizes="double"  data-minWidth="579">
+          <img data-src=<%=asset.asset.url(:double280).to_s%> />
+          <p class="caption">Test Double!</p>
+        </div>
+
+        <div hidden class="hidden" data-sizes="fallback"  data-minWidth="49">
+          <p>On fallback!!!!!</p>
+          <img data-src=<%=asset.asset.url(:thumb).to_s%> />
+          <p class="caption">Test Thumb!</p>
+        </div>
+
+
+      </figure>
+
+
+
+
+     <%end%>
+
 </article>
 <% end %>
 <!--%= link_to 'New Magazine', new_magazine_path % -->

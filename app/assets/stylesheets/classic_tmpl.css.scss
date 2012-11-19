@@ -350,7 +350,21 @@ hr {
   height: 24px;
   background: url('../tut1/img/horizontal-rule.png') 50% 50% no-repeat;
 }
+/* Orkun: Lightbox description for zoomable pictures */
 
+
+.lightbox {
+  background: #666;
+  background: rgba(0, 0, 0, .5);
+}
+
+.lightbox .container {
+  border: 20px solid #fff;
+  background: #fff;
+  width: auto;
+  right: 20px;
+  z-index: 30;
+}
 
 strong {
   color: #00008b;

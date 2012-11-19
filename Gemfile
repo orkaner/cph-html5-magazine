@@ -36,6 +36,11 @@ group :test do
 end
 gem 'devise', '~>1.4.3'
 
+# Orkun: These gems are required to upload and view pictures belonging to Article model
+
+gem "cancan"
+gem "paperclip"
+gem "nifty-generators"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

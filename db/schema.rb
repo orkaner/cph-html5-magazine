@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120919111305) do
+ActiveRecord::Schema.define(:version => 20121109132215) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -25,6 +25,30 @@ ActiveRecord::Schema.define(:version => 20120919111305) do
     t.datetime "updated_at",  :null => false
     t.integer  "magazine_id"
     t.integer  "grid_id"
+    t.string   "pictures"
+    t.string   "picture"
+  end
+
+  create_table "assets", :force => true do |t|
+    t.string   "asset_file_name"
+    t.integer  "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
+    t.integer  "article_id"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "galleries", :force => true do |t|
+    t.string   "galleryname"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
   end
 
   create_table "grids", :force => true do |t|
@@ -52,11 +76,11 @@ ActiveRecord::Schema.define(:version => 20120919111305) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "templates", :force => true do |t|
+  create_table "pictures", :force => true do |t|
     t.string   "name"
-    t.string   "path"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "picture_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

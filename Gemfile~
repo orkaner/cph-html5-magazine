@@ -32,8 +32,14 @@ group :test do
   gem 'rspec-rails', '>= 2.0.0'
   gem 'database_cleaner'
   gem 'cucumber-rails'
-  gem 'factory-girl'
+  gem 'factory_girl_rails'
 end
+gem 'devise', '~>1.4.3'
+
+# Orkun: These gems are required to upload and view pictures belonging to Article model
+
+gem "cancan"
+gem "paperclip"
 
 
 # To use ActiveModel has_secure_password
@@ -50,3 +56,8 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+
+# Naoufal: These gems are required to enable proper HTML text truncation
+gem "nokogiri"
+gem "html_truncator", "~>0.2"

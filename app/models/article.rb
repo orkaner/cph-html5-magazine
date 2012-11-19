@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
-  attr_accessible :author, :date, :headline, :status, :text, :title, :version, :magazine_id, :grid_id
+  attr_accessible :author, :date, :headline, :status, :text, :title, :version, :magazine_id, :grid_id, :assets_attributes, :assets
+
   include ActionView::Helpers::SanitizeHelper
 
   # Every article may be published in a magazine
@@ -7,6 +8,14 @@ class Article < ActiveRecord::Base
 
   # Every article uses one grid
   belongs_to :grid
+
+  has_many :assets, :as => :imageable
+  accepts_nested_attributes_for :assets , :allow_destroy => true
+  # Every article might have attached asset
+
+  #has_attached_file :asset
+
+
 
   before_save :strip_html
   def strip_html # Automatically strips any tags from any string to text typed column

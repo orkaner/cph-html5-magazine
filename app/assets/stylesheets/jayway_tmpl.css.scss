@@ -404,6 +404,22 @@ hr {
 }
 
 
+/* Orkun: Lightbox description for zoomable pictures */
+
+
+.lightbox {
+  background: #666;
+  background: rgba(0, 0, 0, .5);
+}
+
+.lightbox .container {
+  border: 20px solid #fff;
+  background: #fff;
+  width: auto;
+  right: 20px;
+  z-index: 30;
+}
+
 strong {
   color: #8BA732;
   outline: dotted 1px;
