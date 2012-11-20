@@ -23,13 +23,15 @@ class Videolink < ActiveRecord::Base
     video_width = video_container.width.sizes.find {
         |s| s.magtemplate.id == current_magazine.magtemplate.id }.value
 
-    videolink_html_code = "<figure>\n" +
-        "<iframe data-sizes='#{video_container.data_sizes.sub 'title', ''}'\n" +
+    videolink_html_code = "<div data-sizes='#{video_container.data_sizes.sub 'title ', ''}'\n" +
+        " data-minWidth='#{video_width}'\n" +
+        " data-minHeight='#{(video_width / ratio).ceil + 10}'>\n" +
+        "<iframe" +
         " width='#{video_width}'\n" +
         " height='#{(video_width / ratio).ceil}'\n" +
         " src='#{video_src}' frameborder='0' allowfullscreen >\n" +
         "</iframe>\n" +
-        "</figure>"
+        "</div>\n"
     videolink_html_code.html_safe
 
   end

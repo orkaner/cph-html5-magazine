@@ -2,76 +2,80 @@
     <title><%= @title || "Jaywebmag" %></title>
     <meta name="description" content="trial">
     <meta name="author" content="Orkun">
-    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
 
 <% end %>
 
 <% content_for :nontreesaver do %>
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @article.title %>
-</p>
+    <p>
+      <b>Title:</b>
+      <%= @article.title %>
+    </p>
 
-<p>
-  <b>Author:</b>
-  <%= @article.author %>
-</p>
+    <p>
+      <b>Author:</b>
+      <%= @article.author %>
+    </p>
 
-<p>
-  <b>Headline:</b>
-  <%= @article.headline %>
-</p>
+    <p>
+      <b>Headline:</b>
+      <%= @article.headline %>
+    </p>
 
-<p>
-  <b>Date:</b>
-  <%= @article.date %>
-</p>
+    <p>
+      <b>Date:</b>
+      <%= @article.date %>
+    </p>
 
-<p>
-  <b>Version:</b>
-  <%= @article.version %>
-</p>
+    <p>
+      <b>Version:</b>
+      <%= @article.version %>
+    </p>
 
-<p>
-  <b>Status:</b>
-  <%= @article.status %>
-</p>
+    <p>
+      <b>Status:</b>
+      <%= @article.status %>
+    </p>
 
     <% if @article.assets.exists? %>
         <h3>Attached Files</h3>
         <div class="assets">
-            <% @article.assets.each do |asset| %>
-          <p>
-            <%= link_to File.basename(asset.asset_file_name),asset.asset.url %>
-            <%= image_tag asset.asset.url(:single140) %>
-          </p>
-          <p><small><%= number_to_human_size(asset.asset.size) %></small></p>
-        </div>
+          <% @article.assets.each do |asset| %>
+              <p>
+                <%= link_to File.basename(asset.asset_file_name), asset.asset.url %>
+                <%= image_tag asset.asset.url(:single140) %>
+              </p>
+
+              <p>
+                <small><%= number_to_human_size(asset.asset.size) %></small>
+              </p>
+              </div>
+          <% end %>
     <% end %>
-<p>
-  <b>Text:</b>
-</p>
-  <div class="well">
-    <%= strip_tags(sanitize HTML_Truncator.truncate(@article.text, 50)) %>
-  </div>
+    <p>
+      <b>Text:</b>
+    </p>
+    <div class="well">
+      <%= strip_tags(sanitize HTML_Truncator.truncate(@article.text, 50)) %>
+    </div>
 
-<p>
-  <b>Videos:</b>
-</p>
-<ol>
-  <% for videolink in @article.videolinks %>
-    <li><%= h videolink.title %> (<%= videolink.video_src %>)</li>
-  <% end %>
-</ol>
+    <p>
+      <b>Videos:</b>
+    </p>
+    <ol>
+      <% for videolink in @article.videolinks %>
+          <li><%= h videolink.title %> (<%= videolink.video_src %>)</li>
+      <% end %>
+    </ol>
 
 
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Back', articles_path %>
 
-<% end  %>
-<% end  %>
+
+<% end %>
 

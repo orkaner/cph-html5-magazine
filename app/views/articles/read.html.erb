@@ -61,15 +61,19 @@
   <% unless @article.videolinks.blank? or @article.grid.containers.blank? %>
       <% embedded_videolinks = @article.videolinks.where(:embedded => true) %>
       <% video_containers = @article.grid.containers.where(:video => true) %>
-      <% if embedded_videolinks.length > video_containers.length %>
-          <% for i in (0..video_containers.length-1) %>
-              <%= embedded_videolinks[i].videolink_html_code(video_containers[i], current_magazine) %>
-          <% end %>
-      <% else %>
-          <% (0..embedded_videolinks.length-1).each do |i| %>
-              <%= embedded_videolinks[i].videolink_html_code(video_containers[i], current_magazine) %>
-          <% end %>
+
+      <% embedded_videolinks.each do |v| %>
+          <figure>
+            <% video_containers.each do |c| %>
+                <%= v.videolink_html_code(c, current_magazine) %>
+            <% end %>
+          </figure>
+
       <% end %>
+      <!--% (0..embedded_videolinks.length-1).each do |i| %-->
+          <!--%= embedded_videolinks[i].videolink_html_code(video_containers[(i % video_containers.length)], current_magazine) %-->
+      <!--% end %-->
+
 
   <% end %>
   <!------------------------------------------->

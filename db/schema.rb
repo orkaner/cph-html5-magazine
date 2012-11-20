@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(:version => 20121116090857) do
     t.datetime "updated_at",  :null => false
     t.integer  "magazine_id"
     t.integer  "grid_id"
-    t.string   "pictures"
-    t.string   "picture"
   end
 
   create_table "assets", :force => true do |t|
@@ -52,16 +50,6 @@ ActiveRecord::Schema.define(:version => 20121116090857) do
     t.integer  "grid_id"
   end
 
-  create_table "galleries", :force => true do |t|
-    t.string   "galleryname"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "asset_file_name"
-    t.string   "asset_content_type"
-    t.integer  "asset_file_size"
-    t.datetime "asset_updated_at"
-  end
-
   create_table "grids", :force => true do |t|
     t.string   "name"
     t.string   "path"
@@ -85,13 +73,6 @@ ActiveRecord::Schema.define(:version => 20121116090857) do
     t.string   "path"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "pictures", :force => true do |t|
-    t.string   "name"
-    t.string   "picture_url"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "sizes", :force => true do |t|
