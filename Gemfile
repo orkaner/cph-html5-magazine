@@ -27,16 +27,22 @@ end
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 
+# Gems used in only by test and development
+group :test, :development do
+  gem 'rspec-rails', '~> 2.11'
+  gem 'factory_girl_rails'
+end
+
 # Gems used only for tests and not required
 # in production environments by default.
 group :test do
   gem 'cucumber', '1.1.3'
-  gem 'rspec-expectations', '2.7.0'
+  gem 'rspec-expectations', '~> 2.11'
   gem 'capybara', '1.1.2'
-  gem 'rspec-rails', '>= 2.0.0'
   gem 'database_cleaner'
   gem 'cucumber-rails'
-  gem 'factory_girl_rails'
+  gem 'guard-rspec'
+  gem 'launchy'
 end
 gem 'devise', '~>1.4.3'
 

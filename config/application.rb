@@ -71,5 +71,17 @@ module Jaywebmag
       ActionView::Base.sanitized_allowed_tags.delete 'div'
       ActionView::Base.sanitized_allowed_tags.delete 'br'
     end
+
+    # Naoufal: Generate starter files for the application's test suite (instead of the default TestUnit)
+    config.generators do |g|
+      g.test_framework :rspec,
+                       :fixture => true,
+                       :view_specs => false,
+                       :helper_specs => false,
+                       :routing_specs => false,
+                       :controller_specs => true,
+                       :request_specs => true
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
   end
 end
