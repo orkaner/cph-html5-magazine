@@ -11,7 +11,7 @@ gem "validates_existence", ">= 0.4"
 
 gem 'pg'
 
-gem 'rspec'
+#gem 'rspec'  # Naoufal: Not necessary anymore
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -36,11 +36,11 @@ end
 # Gems used only for tests and not required
 # in production environments by default.
 group :test do
-  gem 'cucumber', '1.1.3'
+  # gem 'cucumber', '1.1.3'  # Naoufal: Not necessary anymore as tests use exclusively RSpec
   gem 'rspec-expectations', '~> 2.11'
   gem 'capybara', '1.1.2'
   gem 'database_cleaner'
-  gem 'cucumber-rails'
+  # gem 'cucumber-rails' # Naoufal: Not necessary anymore as tests use exclusively RSpec
   gem 'guard-rspec'
   gem 'launchy'
 end

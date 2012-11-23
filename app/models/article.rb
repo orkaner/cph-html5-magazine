@@ -3,6 +3,9 @@ class Article < ActiveRecord::Base
 
   include ActionView::Helpers::SanitizeHelper
 
+  # An article has to have a headline to be valid.
+  validates :headline, :presence => true
+
   # Every article may be published in a magazine
   belongs_to :magazine
 

@@ -6,6 +6,7 @@ require 'rspec/autorun'
 
 # Naoufal: Required in integration testing
 require 'capybara/rspec'
+require 'database_cleaner'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
