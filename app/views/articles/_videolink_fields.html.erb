@@ -1,12 +1,13 @@
 <div class="field">
   <p>
-    <%= f.label :title %><br/>
+    <%= f.label :title, "Video title" %><br/>
     <%= f.text_field :title %>
   </p>
 
 
   <p>
-    <%= f.label :embed_code, "Paste the code from YouTube to embed the video" %><br/>
+    <%= f.label :embed_code, "Video embed code" %><br/>
+    <em>Paste the code from YouTube to embed the video</em> <br/>
     <%= f.text_area :embed_code, :rows => 3, :class => 'span6' %>
   </p>
 

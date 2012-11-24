@@ -29,7 +29,89 @@ feature 'Creating Articles' do
 
   scenario 'can not create an article without a headline' do
     click_button 'Create Article'
-    page.should have_content('prohibited this article from being saved:')
+    page.should have_content('prohibited this article from being saved')
     page.should have_content("Headline can't be blank")
+  end
+
+  scenario 'can create an article and add a video link to it', %q{ As a administrator:
+                                                                  I can embed videos links
+                                                                  In order to add media content to articles.
+                                                                  }, js:true do
+    fill_in 'Title', :with => 'Title example'
+    fill_in 'Author', :with => 'Author example'
+    fill_in 'Headline', :with => 'Headline example'
+    #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Add a video link'
+
+    fill_in 'Video title', :with => 'Video title example'
+    fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
+       ' frameborder="0" allowfullscreen></iframe>'
+
+    click_button 'Create Article'
+    page.should have_content('Article was successfully created.')
+  end
+
+  scenario 'can not add video links without title to articles ', js:true do
+    fill_in 'Title', :with => 'Title example'
+    fill_in 'Author', :with => 'Author example'
+    fill_in 'Headline', :with => 'Headline example'
+    #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Add a video link'
+
+
+    fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
+        ' frameborder="0" allowfullscreen></iframe>'
+
+    click_button 'Create Article'
+
+    page.should have_content('prohibited this article from being saved')
+    page.should have_content("Videolinks title can't be blank")
+  end
+
+  scenario 'can not add video links without embed code to articles ', js:true do
+    fill_in 'Title', :with => 'Title example'
+    fill_in 'Author', :with => 'Author example'
+    fill_in 'Headline', :with => 'Headline example'
+    #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Add a video link'
+    fill_in 'Video title', :with => 'Video title example'
+
+    fill_in 'Video embed code', :with => ''
+
+    click_button 'Create Article'
+
+    page.should have_content('prohibited this article from being saved')
+    page.should have_content("Videolinks embed code can't be blank")
+  end
+
+  scenario 'ignore video links without both title and embed code to articles ', js:true do
+    fill_in 'Title', :with => 'Title example'
+    fill_in 'Author', :with => 'Author example'
+    fill_in 'Headline', :with => 'Headline example'
+    #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Add a video link'
+    fill_in 'Video title', :with => ''
+
+    fill_in 'Video embed code', :with => ''
+
+    click_button 'Create Article'
+
+    page.should have_content('Article was successfully created.')
+  end
+
+  scenario 'can not add video links to articles if the embed code is not a valid YouTube embed code', js:true do
+    fill_in 'Title', :with => 'Title example'
+    fill_in 'Author', :with => 'Author example'
+    fill_in 'Headline', :with => 'Headline example'
+    #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Add a video link'
+    fill_in 'Video title', :with => 'Video title example'
+
+    fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
+
+    click_button 'Create Article'
+
+    page.should have_content('prohibited this article from being saved')
+    page.should have_content("is an invalid YouTube embed code")
   end
 end

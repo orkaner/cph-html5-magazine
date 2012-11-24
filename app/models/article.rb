@@ -26,10 +26,11 @@ class Article < ActiveRecord::Base
 
   # Enable nested attributes to be able to nest 'videolink''s form with 'article''s form.
   # In addition:
-  #   - blank field for the attribute 'embed_code' will not be allowed, resulting
-  #   in rejecting the corresponding entry.
+  #   - blank field for the attribute 'title' and 'embed_code' will not be allowed, resulting
+  #   in ignoring the corresponding entry.
   #   - It is allowed to destroy a 'videolink' from the nested form
-  accepts_nested_attributes_for :videolinks, :reject_if => lambda {|a| a[:embed_code].blank?}, :allow_destroy => true
+  accepts_nested_attributes_for :videolinks, :reject_if => lambda {|a| a[:embed_code].blank? and a[:title].blank?}, :allow_destroy => true
+
 
   before_save :strip_html
   def strip_html # Automatically strips any tags from any string to text typed column
