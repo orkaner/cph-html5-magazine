@@ -84,7 +84,7 @@ feature 'Creating Articles' do
     page.should have_content("Videolinks embed code can't be blank")
   end
 
-  scenario 'ignore video links without both title and embed code to articles ', js:true do
+  scenario 'ignore video links without both title and embed code', js:true do
     fill_in 'Title', :with => 'Title example'
     fill_in 'Author', :with => 'Author example'
     fill_in 'Headline', :with => 'Headline example'

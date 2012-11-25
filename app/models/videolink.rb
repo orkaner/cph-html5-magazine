@@ -5,7 +5,7 @@ class Videolink < ActiveRecord::Base
   validates :title, :presence => true
   validates :embed_code, :presence => true,
             :format => {
-                :with => /<iframe width="[0-9]+" height="[0-9]+" src="http[s]?:\/\/www\.youtube(-nocookie)?\.com\/embed\/.[^\/\s"]+" frameborder="0" allowfullscreen><\/iframe>/,
+                :with => /\A<iframe width="[0-9]+" height="[0-9]+" src="http[s]?:\/\/www\.youtube(-nocookie)?\.com\/embed\/.[^\/\s"]+" frameborder="0" allowfullscreen><\/iframe>\z/,
             :message => "is an invalid YouTube embed code"}
 
   # A video link belongs to an article

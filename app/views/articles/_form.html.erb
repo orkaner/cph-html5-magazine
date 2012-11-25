@@ -3,7 +3,8 @@
     <!--title></title -->
     <%= javascript_include_tag "/ckeditor/ckeditor.js" %><!-- Load the mandatory text editor engine -->
     <%= javascript_include_tag "/ckeditor/ckeditor_browser_support.js" %><!-- Load a browser compatibility checker -->
-    <!--%= javascript_include_tag "/ckeditor/config.js" %><!-- Load the text editor configuration. If omitted, the default
+    <%=# javascript_include_tag "/ckeditor/config.js"
+    %><!-- Load the text editor configuration. If omitted, the default
      settings will apply -->
 <% end %>
 
@@ -46,7 +47,8 @@
   <% status_list = {'Draft' => 'Draft', 'Approved' => 'Approved', 'Published' => 'Published'} %>
   <div class="field">
     <%= f.label :status %><br />
-    <!--%= f.text_field :status %-->
+    <%=# f.text_field :status
+    %>
     <%= f.select :status, status_list %>
   </div>
   <div class="field">
@@ -72,7 +74,8 @@
 
               <div class="thumbnail">
                 <%= link_to( image_tag(asset_fields.object.asset.url(:thumb)), asset_fields.object.asset.url(:original) ) %>
-              <!--%= asset_fields.check_box :_delete %-->
+              <%=# asset_fields.check_box :_delete
+              %>
               </div>
 
           <% end %>
@@ -84,8 +87,9 @@
   
   <div class="field">
   	<%= f.label :magazine_id %><br />
-  	<!--%= f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
-  		[(s.name + " " + s.date.to_s), s.id]} %-->
+  	<%= #f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
+  		#[(s.name + " " + s.date.to_s), s.id]}
+      %>
     <%= f.select :magazine_id, Magazine.order("name, date").all.collect{|s|
       [(s.name + " " + s.date.to_s), s.id]} %>
   </div>

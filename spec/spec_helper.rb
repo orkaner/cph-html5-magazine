@@ -28,7 +28,10 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  # Naoufal: the default is "true", but this doesn't work for testing
+  # JavaScript with Selenium. The file spec/support/database_cleaner.rb adds support to
+  # JavaScript using the database_cleaner gem.
+  config.use_transactional_fixtures = false
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
