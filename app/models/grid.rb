@@ -1,8 +1,11 @@
 class Grid < ActiveRecord::Base
   attr_accessible :name, :path, :containers_attributes
 
+  # The name is mandatory
+  validates :name, :presence => true
+
   # A grid is used by many articles.
-  # TODO: When a grid is destroyed, articles will refer to "nil", this has to be fixed properly!
+  # TODO: When an article is destroyed, grids will refer to "nil", this has to be fixed properly!
   has_many :articles
 
   # A grid can have many containers. When a grid is destroyed, all the containers

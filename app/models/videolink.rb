@@ -26,13 +26,11 @@ class Videolink < ActiveRecord::Base
   end
 
   # Returns a formatted code for a video link as it is required by Treesaver
-  def videolink_html_code(video_container, current_magazine)
-    video_width = video_container.width.sizes.find {
-        |s| s.magtemplate.id == current_magazine.magtemplate.id }.value
+  def videolink_html_code(video_width, data_sizes)
 
-    videolink_html_code = "<div data-sizes='#{video_container.data_sizes.sub 'title ', ''}'\n" +
+    videolink_html_code = "<div data-sizes='#{data_sizes}'\n" +
         " data-minWidth='#{video_width}'\n" +
-        " data-minHeight='#{(video_width / ratio).ceil + 10}'>\n" +
+        " data-minHeight='#{(video_width / ratio).ceil}'>\n" +
         "<iframe" +
         " width='#{video_width}'\n" +
         " height='#{(video_width / ratio).ceil}'\n" +
