@@ -31,6 +31,13 @@ Jaywebmag::Application.routes.draw do
     end
   end
 
+  resources :assets do
+    member do
+      get 'thumbnail'
+    end
+  end
+
+
 
   #map.resources :magazines, :collection => {:read => :get}
 

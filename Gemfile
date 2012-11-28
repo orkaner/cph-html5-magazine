@@ -26,6 +26,8 @@ end
 
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+gem "jquery-fileupload-rails", "~> 0.3.5"
+
 
 # Gems used in only by test and development
 group :test, :development do
@@ -48,10 +50,9 @@ gem 'devise', '~>1.4.3'
 
 # Orkun: These gems are required to upload and view pictures belonging to Article model
 
-gem "cancan"
-gem "paperclip"
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "nifty-generators"
-
+gem "fog"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -75,4 +76,6 @@ gem "html_truncator", "~>0.2"
 
 #           To use advanced nested forms
 gem "nested_form"
+# To use JQuery file uploader gem provided by: https://github.com/tors/jquery-fileupload-rails
+
 

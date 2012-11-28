@@ -34,33 +34,19 @@
 
 
 
+  <% unless @article.assets.blank? or @article.grid.containers.blank? %>
 
-  <% @article.assets.each do |asset|%>
+      <% picture_containers = @article.grid.containers.where(:pictures => true) %>
 
-      <figure class="zoomable">
+      <% @article.assets.each do |v| %>
+          <figure class="zoomable">
+            <% picture_containers.each do |c| %>
+                <%= v.picture_html_code(c, current_magazine) %>
+            <% end %>
+          </figure>
 
-        <div hidden class="hidden" data-sizes="single" data-minWidth="279">
-          <img data-src= <%=asset.asset.url(:single280).to_s%> />
-          <p class="caption">Test Single!</p>
-        </div>
-        <div hidden class="hidden" data-sizes="double"  data-minWidth="579">
-          <img data-src=<%=asset.asset.url(:double280).to_s%> />
-          <p class="caption">Test Double!</p>
-        </div>
-
-        <div hidden class="hidden" data-sizes="fallback"  data-minWidth="49">
-          <p>On fallback!!!!!</p>
-          <img data-src=<%=asset.asset.url(:thumb).to_s%> />
-          <p class="caption">Test Thumb!</p>
-        </div>
-
-
-      </figure>
-
-
-
-
-     <%end%>
+      <% end %>
+  <% end %>
 
 
   <!-- Naoufal: experimental: embedding YouTube video links ---------------- -->
