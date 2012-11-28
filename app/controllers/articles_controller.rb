@@ -35,8 +35,12 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   # GET /articles/new.json
   def new
+
+    #Build the asset fields
     @article = Article.new
-    2.times { @article.assets.build }
+     @article.assets.build
+
+
     #Orkun: maximum 3 pictures for each article. Returns 3 files, if there is
     #3.times (@article.assets.build)
 
@@ -49,7 +53,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
-    2.times { @article.assets.build }
+     @article.assets.build
     @videolinks = @article.videolinks.all
   end
 
@@ -96,6 +100,7 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   # Naoufal: Allow reading the selected magazine
   def read
