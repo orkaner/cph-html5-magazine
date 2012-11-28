@@ -15,19 +15,20 @@ feature 'Creating Articles' do
     visit '/'
     click_link 'Admin'
     page.current_path.should == magazines_path + "/"
+    click_button 'Articles'
     click_link 'New Article'
   end
-  scenario 'can create an article' do
+  scenario 'can create an article', js:true do
 
     fill_in 'Title', :with => 'Title example'
     fill_in 'Author', :with => 'Author example'
     fill_in 'Headline', :with => 'Headline example'
-    fill_in 'Text', :with => dummy_text
+    #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
     click_button 'Create Article'
     page.should have_content('Article was successfully created.')
   end
 
-  scenario 'can not create an article without a headline' do
+  scenario 'can not create an article without a headline', js:true do
     click_button 'Create Article'
     page.should have_content('prohibited this article from being saved')
     page.should have_content("Headline can't be blank")

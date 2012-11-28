@@ -47,13 +47,15 @@
           <% @article.assets.each do |asset| %>
               <p>
                 <%= link_to File.basename(asset.asset_file_name), asset.asset.url %>
-                <%= image_tag asset.asset.url(:single140) %>
+                <%= image_tag asset.asset.url %>
               </p>
 
               <p>
                 <small><%= number_to_human_size(asset.asset.size) %></small>
               </p>
-              <!-- /div -->
+              <!--
+               </div>
+                -->
           <% end %>
 
             <% @article.assets.each do |asset| %>

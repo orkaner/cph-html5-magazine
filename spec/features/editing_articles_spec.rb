@@ -9,19 +9,20 @@ feature 'Editing Articles' do
       visit '/'
       click_link 'Admin'
       page.current_path.should == magazines_path + "/"
+      click_button 'Articles'
       click_link 'Show Articles'
       page.should have_content('Listing articles')
       page.should have_content('Old headline')
       click_link "Edit"
     end
 
-    scenario 'updating an article' do
+    scenario 'updating an article', js:true do
       fill_in "Headline", :with => "New headline"
       click_button "Update Article"
       page.should have_content('Article was successfully updated.')
     end
 
-    scenario 'can not update an article without a headline' do
+    scenario 'can not update an article without a headline', js:true do
       fill_in "Headline", :with => ""
       click_button 'Update Article'
       page.should have_content('prohibited this article from being saved:')
@@ -92,6 +93,7 @@ feature 'Editing Articles' do
       visit '/'
       click_link 'Admin'
       page.current_path.should == magazines_path + "/"
+      click_button 'Articles'
       click_link 'Show Articles'
       page.should have_content('Listing articles')
       page.should have_content('Old headline')
