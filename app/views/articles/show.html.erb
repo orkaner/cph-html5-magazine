@@ -47,7 +47,7 @@
           <% @article.assets.each do |asset| %>
               <p>
                 <%= link_to File.basename(asset.asset_file_name), asset.asset.url %>
-                <%= image_tag asset.asset.url %>
+                <%= image_tag asset.dynamic_asset_url("100x100>") %>
               </p>
 
               <p>
@@ -57,14 +57,6 @@
                </div>
                 -->
           <% end %>
-
-            <% @article.assets.each do |asset| %>
-          <p>
-            <%= link_to File.basename(asset.asset_file_name),asset.asset.url %>
-            <%= image_tag asset.asset.url %>
-          </p>
-          <p><small><%= number_to_human_size(asset.asset.size) %></small></p>
-              <% end %>
         </div>
 
     <% end %>
@@ -87,6 +79,7 @@
 
 
     <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Preview', preview_article_path(@article), :target => '_blank' %> |
     <%= link_to 'Back', articles_path %>
 
 

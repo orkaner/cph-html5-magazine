@@ -7,6 +7,7 @@ require 'rspec/autorun'
 # Naoufal: Required in integration testing
 require 'capybara/rspec'
 require 'database_cleaner'
+require "paperclip/matchers"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -37,4 +38,9 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
+
+  # Adds support for paperclip testing
+  config.include Paperclip::Shoulda::Matchers
+
+  config.include ActionDispatch::TestProcess
 end

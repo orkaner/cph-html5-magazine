@@ -1,5 +1,7 @@
 class Article < ActiveRecord::Base
-  attr_accessible :author, :date, :headline, :status, :text, :title, :version, :magazine_id, :grid_id, :assets_attributes, :assets, :videolinks_attributes
+  attr_accessible :author, :date, :headline, :status, :text, :title, :version, :magazine_id, :grid_id, :assets_attributes,
+                  :videolinks_attributes #, :assets
+
 
   include ActionView::Helpers::SanitizeHelper
 

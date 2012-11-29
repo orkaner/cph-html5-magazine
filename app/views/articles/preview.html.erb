@@ -4,9 +4,9 @@
 <% content_for :head do %>
 
     <title><%= @article.headline %></title>
-    <%= stylesheet_link_tag(current_magazine.magtemplate.path) %>
+    <%= stylesheet_link_tag('default_tmpl') %>
     <link rel="resources" href="/resources.html"/>
-    <link rel="index" href="<%= url_for(content_index_magazine_path(current_magazine)) %>" type="application/json"/>
+
     <%= javascript_include_tag("treesaver-0.10.0-debug") %>
 
 <% end %>
@@ -39,10 +39,11 @@
       <% picture_containers = @article.grid.containers.where(:pictures => true) %>
 
       <% @article.assets.each do |v| %>
-          <figure class="zoomable">
+
+          <figure>
             <% picture_containers.each do |c| %>
                 <% picture_width = c.width.sizes.find {
-                        |s| s.magtemplate.id == current_magazine.magtemplate.id }.value %>
+                        |s| s.magtemplate.name == 'Default' }.value %>
                 <%= v.picture_html_code(picture_width, c.data_sizes.sub('title ', '')) %>
             <% end %>
           </figure>
@@ -61,7 +62,7 @@
           <figure>
             <% video_containers.each do |c| %>
                 <% video_width = c.width.sizes.find {
-                        |s| s.magtemplate.id == current_magazine.magtemplate.id }.value %>
+                        |s| s.magtemplate.name == 'Default' }.value %>
                 <%= v.videolink_html_code(video_width, c.data_sizes.sub('title ', '')) %>
             <% end %>
           </figure>

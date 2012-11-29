@@ -42,11 +42,11 @@ class Asset < ActiveRecord::Base
   end
 
   # Returns a formatted code for an image link as it is required by Treesaver
-  def picture_html_code(picture_container, current_magazine)
-    picture_width = picture_container.width.sizes.find {
-        |s| s.magtemplate.id == current_magazine.magtemplate.id }.value
+  def picture_html_code(picture_width, data_sizes)
+    #picture_width = picture_container.width.sizes.find {
+    #    |s| s.magtemplate.id == current_magazine.magtemplate.id }.value
 
-    picture_html_code = "<div data-sizes='#{picture_container.data_sizes.sub 'title ', ''}'\n" +
+    picture_html_code = "<div data-sizes='#{data_sizes}'\n" +
         " data-minWidth='#{picture_width}'>\n" +
         "<img" +
         " src='#{dynamic_asset_url("#{picture_width}x#{picture_width}>")}'\n" +

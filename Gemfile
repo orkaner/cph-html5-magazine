@@ -33,6 +33,12 @@ gem "jquery-fileupload-rails", "~> 0.3.5"
 group :test, :development do
   gem 'rspec-rails', '~> 2.11'
   gem 'factory_girl_rails'
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i # Install if the platform is a Mac OS X
+  gem 'ruby_gntp', :require => false if RUBY_PLATFORM =~ /darwin/i # Install if the platform is a Mac OS X, although
+                                                                    # it is supported in Windows and Linux if Growl
+                                                                    # is installed
+  #gem 'terminal-notifier-guard', :require => false if RUBY_PLATFORM =~ /darwin/i # Install if the platform is a Mac OS X
+  gem 'guard-rspec'
 end
 
 # Gems used only for tests and not required
@@ -43,7 +49,6 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'database_cleaner'
   # gem 'cucumber-rails' # Naoufal: Not necessary anymore as tests use exclusively RSpec
-  gem 'guard-rspec'
   gem 'launchy'
 end
 gem 'devise', '~>1.4.3'

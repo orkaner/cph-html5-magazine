@@ -38,7 +38,7 @@ class ArticlesController < ApplicationController
 
     #Build the asset fields
     @article = Article.new
-     @article.assets.build
+    # @article.assets.build
 
 
     #Orkun: maximum 3 pictures for each article. Returns 3 files, if there is
@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
-     @article.assets.build
+    # @article.assets.build
     @videolinks = @article.videolinks.all
   end
 
@@ -104,11 +104,16 @@ class ArticlesController < ApplicationController
 
   # Naoufal: Allow reading the selected magazine
   def read
-    # Naoufal: Force sweeping the any cached resources file
-    # expire_page :controller => 'resources', :action => 'index' # Doesn't work
 
     @article = Article.find(params[:id])
-    # Naoufal: Testing reloading the resources file
-    #redirect_to url_for(:controller => 'resources', :artid => @article.id )# Doesn't work!
+  end
+
+  # Naoufal: Preview the article
+  def preview
+    @article = Article.find(params[:id])
+
+    respond_to do |format|
+      format.html # preview.html.erb
+    end
   end
 end

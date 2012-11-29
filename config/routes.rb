@@ -19,6 +19,7 @@ Jaywebmag::Application.routes.draw do
   resources :articles do
     member do
       get 'read'
+      get 'preview'
     end
   end
 
