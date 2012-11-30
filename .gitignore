@@ -30,6 +30,6 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 # RubyMine workspace
-.idea/workspace.xml
+/.idea/*
 
 
