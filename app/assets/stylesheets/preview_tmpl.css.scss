@@ -281,8 +281,8 @@ position of the second column +
   opacity: 1;
 }
 
-/* Set up the controls position and style */
-/*
+/* Set up the controls position and style *//*
+
 .controls {
   position: absolute;
   bottom: 10px;
@@ -323,7 +323,7 @@ position of the second column +
 /* Set up document styles */
 
 body {
-  font-family: Georgia, serif;
+  font-family: Helvetica, sans-serif;
   font-size: 16px;
   /*color: #434;*/
   color: #000000;
@@ -359,16 +359,15 @@ hr {
 }
 
 strong {
-  color: #00008b;
-  outline: dotted 1px;
+  color: black;
+  //outline: dotted 1px;
 }
 
 em {
-  color: #008b8b;
+  color: #000000;
   text-decoration: underline;
 }
-
-/* Orkun: ==============================================
+/* Orkun: =============================================
  Lightbox description for zoomable pictures */
 
 
@@ -384,7 +383,8 @@ em {
   right: 20px;
   z-index: 30;
 }
-/* ==== end =====*/
+/* ====================================================== */
+
 
 
 /* ======================== Side bar ========================================= */
@@ -511,6 +511,10 @@ hide a sidebar. You can also use CSS animations to show a sidebar. */
   display: none;
 }
 
+.sidebar-controls .toggle-sidebar {
+  display: none; /* disable Toggle button. Doing so, the sidebar won't be displayed. */
+}
+
 .active .sidebar-controls, .sidebar-active .sidebar-controls {
   display: block;
 }
@@ -530,11 +534,12 @@ hide a sidebar. You can also use CSS animations to show a sidebar. */
   z-index: 20;
   display: none;
 }
-/*.controls .home {
+.controls .home {
+  display: none;  /* disable home (Magazines) button */
   position:absolute;
   left: 50px;
   top: 0;
-}*/
+}
 .linked-in {
   /*position: inline;
         left: 0;
@@ -597,7 +602,7 @@ width: 100%;
  * Menu
  */
 .menu {
-  display: inline;
+  display: none; /* The menu is disabled */
   text-align: left;
 }
 
@@ -632,5 +637,15 @@ width: 100%;
   display: inline-block;
 }
 
+/* ======= Sharing buttons: disabled ================*/
+.linked-in {
+  display: none;
+}
 
+.twitter-share-button {
+  display: none;
+}
 
+.fb-like {
+  display: none;
+}

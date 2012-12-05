@@ -119,14 +119,16 @@ class MagazinesController < ApplicationController
     a = []
 
     # Insert the link to the cover first
-    a << {"url" => cover_magazine_url}
+    a << {"url" => cover_magazine_url, "title" => "Cover", "hidden" => true}
+
 
     # Insert the link to the toc
-    a << {"url" => toc_magazine_url}
+    a << {"url" => toc_magazine_url, "title" => "TOC", "hidden" => true}
 
     # Insert the links to all the magazine's articles
     @magazine.articles.each do |article|
-      entry = {"url" => read_article_url(article)}
+      entry = {"url" => read_article_url(article), "title" => article.headline, "byline" => article.author,
+               "thumb" => (article.assets.exists? ? article.assets[0].dynamic_asset_url("40x40>") : "")}
       a << entry
     end
 

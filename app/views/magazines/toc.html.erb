@@ -5,6 +5,15 @@
     <link rel="resources" href="/resources.html"/>
     <link rel="index" href="<%= url_for(content_index_magazine_path(@magazine)) %>" type="application/json"/>
     <%= javascript_include_tag("treesaver-0.10.0-debug") %>
+    <!-- FaceBook like -->
+    <%= javascript_include_tag("/fb_like") %>
+    <!-- end -->
+    <!-- LinkedIn share -->
+    <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+    <!-- end -->
+    <!-- Twitter -->
+    <%= javascript_include_tag("/twitter") %>
+    <!-- end -->
 
 <% end %>
 

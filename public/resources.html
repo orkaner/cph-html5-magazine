@@ -8,34 +8,74 @@
 			<div class="viewer">
 
 			</div>
-			<div class="controls">
-				<div class="pagewidth">
+            <div class="pagenumbers">
+                <span data-ts-template="position">{{pagenumber}} / {{pagecount}}</span>
+            </div>
+            <div class="controls">
+                <!-- div class="pagewidth" -->
 					<span class="pagenumbers">
-						<!-- Treesaver 0.9.2>
-						<span data-bind="pagenumber">1</span> /
-						<span data-bind="pagecount">5</span>
-						<=========================== -->
-						<!-- Treesaver 0.10.0 -->
 						<span data-ts-template="position">{{pagenumber}} / {{pagecount}}</span>
 					</span>
+                <!-- Twitter -->
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{$url$}}">Tweet</a>
+                <!-- end -->
+                <!-- LinkedIn -->
+                <!-- <div class="linked-in"> -->
+						<span class="linked-in">
+							<script type="IN/Share" data-url="http://localhost/~naoufal/treesaver/tut1/article-1.html" data-counter="right"></script>
+						</span>
+                <!-- </div> -->
+                <!-- end -->
+                <!-- FaceBook like button -->
+                <div class="fb-like" data-href="http://localhost/~naoufal/treesaver/tut1/cover.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                <!-- end -->
+                <a href="/"><button class="home">Magazines</button></a>
+                <button class="prev">Previous</button>
+                <button class="next">Next</button>
+                <!-- /div -->
 
-                    <a href="/">
-                        <button class="home">
-                            Home
-                        </button>
-                    </a>
+                <!-- =================== Menus =========================== -->
 
-					<button class="prev">
-						Prev
-					</button>
-					<button class="next">
-						Next
-					</button>
-				</div>
-			</div>
+                <div class="menu">
+                    <button>Menu</button>
+                    <ul>
+                        <li><a href="http://www.jayway.com/" target="_blank">About Jayway</a></li>
+                        <li data-ts-template="position"><a href="http://twitter.com/?status={{$url$}}" target="_blank">Tweet this!</a></li>
+                        <!-- <li><a href="/">Home</a></li> -->
+                        <!--<li><a href="toc">Table of contents</a></li>-->
+                        <li><a href="#" class="nextArticle">Next article</a></li>
+                        <li><a href="#" class="prevArticle">Previous article</a></li>
+                    </ul>
+
+                </div>
+                <!-- /div -->
+
+            </div>
+            <!-- =================== Side bare ========================= -->
+
+            <div class="sidebar">
+                <div class="toc" data-ts-template="index">
+                    {{#contents}}
+                    {{^hidden}}
+                    <div class="article">
+                        <img class="thumb" src="{{thumb}}"/>
+                        <h3><a href="{{url}}">{{title}}</a></h3>
+                        <p class="byline">{{byline}}</p>
+                    </div>
+                    {{/hidden}}
+                    {{/contents}}
+                </div>
+                <div class="sidebar-controls">
+                    <!-- button class="open-sidebar">Open</button -->
+                    <button class="toggle-sidebar">Toggle</button>
+                    <!-- button class="close-sidebar">Close</button -->
+                </div>
+            </div>
+            <!-- end -->
 		</div>
 
-        <!--========================== COVER ==========================-->
+
+        <!-- ========================== COVER ========================== -->
 
         <div class="grid w1col cover">
             <div class="column"></div>
@@ -117,5 +157,9 @@
 		<div class="error">
 			Error
 		</div>
+        <!-- ===================== Lightbox =================== -->
+        <div class="lightbox">
+            <div class="container"></div>
+        </div>
 	</body>
 </html>
