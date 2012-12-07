@@ -1,0 +1,54 @@
+<%= form_for(@magissue) do |f| %>
+    <% if @magissue.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@magissue.errors.count, "error") %> prohibited this magazine from being saved:</h2>
+
+          <ul>
+            <% @magissue.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :magazine_id %>
+      <br/>
+      <%= f.select :magazine_id, Magazine.order("name").all.collect { |s| [(s.name), s.id] } %>
+    </div>
+
+    
+    <div class="field">
+      <%= f.label :date %>
+      <br/>
+      <%= f.date_select :date %>
+    </div>
+    <div class="field">
+      <%= f.label :volume %>
+      <br/>
+      <%= f.number_field :volume %>
+    </div>
+    <div class="field">
+      <%= f.label :number %>
+      <br/>
+      <%= f.number_field :number %>
+    </div>
+
+    <% status_list = {'Not Published' => 'Not Published', 'Published' => 'Published'} %>
+    <div class="field">
+      <%= f.label :status %>
+      <br/>
+      <!--%= f.text_field :status %-->
+      <%= f.select :status, status_list %>
+    </div>
+
+    <div class="field">
+      <%= f.label :magtemplate_id %>
+      <br/>
+      <%= f.select :magtemplate_id, Magtemplate.order("name").all.collect { |s| [(s.name), s.id] } %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

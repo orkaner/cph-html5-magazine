@@ -14,7 +14,7 @@ feature 'Creating Articles' do
   before do
     visit '/'
     click_link 'Admin'
-    page.current_path.should == magazines_path + "/"
+    page.current_path.should == magissues_path
     click_button 'Articles'
     click_link 'New Article'
   end

@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   # Naoufal: TODO: It is perhaps a good idea to add a toc action?!
 
   # Naoufal: TODO: Change the following line to load the layout dynamically
-  #       depending on the template associated to the magazine
+  #       depending on the template associated to the magissues
   layout "ts_test"
 
 
@@ -38,11 +38,11 @@ class ArticlesController < ApplicationController
 
     #Build the asset fields
     @article = Article.new
-    # @article.assets.build
+    # @magissues.assets.build
 
 
-    #Orkun: maximum 3 pictures for each article. Returns 3 files, if there is
-    #3.times (@article.assets.build)
+    #Orkun: maximum 3 pictures for each magissues. Returns 3 files, if there is
+    #3.times (@magissues.assets.build)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -102,7 +102,7 @@ class ArticlesController < ApplicationController
   end
 
 
-  # Naoufal: Allow reading the selected magazine
+  # Naoufal: Allow reading the selected magissues
   def read
 
     @article = Article.find(params[:id])

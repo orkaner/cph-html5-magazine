@@ -1,11 +1,4 @@
 class MagazinesController < ApplicationController
-
-
-  # TODO: Change the following line to load the layout dynamically
-  #       depending on the template associated to the magazine
-  #layout "ts_test"#:chosenGrid
-  layout "ts_test", :only => [:toc, :cover]
-
   # GET /magazines
   # GET /magazines.json
   def index
@@ -16,7 +9,6 @@ class MagazinesController < ApplicationController
       format.json { render json: @magazines }
     end
   end
-  
 
   # GET /magazines/1
   # GET /magazines/1.json
@@ -88,59 +80,4 @@ class MagazinesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  # Naoufal: Allow reading the selected magazine
-  #   Edit: Reading a magazine is not done through this method.
-  def read
-    @magazine = Magazine.find(params[:id])
-    #gridToUse = "ts_test"
-  end
-
-  # Naoufal: Returns the first article in the magazine
-  def firstArticle
-    @magazine = Magazine.find(params[:id])
-    @article = @magazine.articles.first
-  end
-  # Naoufal: Create the magazine's Table Of Content (TOC)
-  def toc
-    @magazine = Magazine.find(params[:id])
-  end
-
-  # Naoufal: Create the magazine's Cover
-  def cover
-    @magazine = Magazine.find(params[:id])
-  end
-
-  # Naoufal: Create the content index of the magazine as JSON file.
-  #   Note: This is required in treesaver version 0.10.x
-  def content_index
-    @magazine = Magazine.find(params[:id])
-    # Initiate the array of contents' links
-    a = []
-
-    # Insert the link to the cover first
-    a << {"url" => cover_magazine_url, "title" => "Cover", "hidden" => true}
-
-
-    # Insert the link to the toc
-    a << {"url" => toc_magazine_url, "title" => "TOC", "hidden" => true}
-
-    # Insert the links to all the magazine's articles
-    @magazine.articles.each do |article|
-      entry = {"url" => read_article_url(article), "title" => article.headline, "byline" => article.author,
-               "thumb" => (article.assets.exists? ? article.assets[0].dynamic_asset_url("40x40>") : "")}
-      a << entry
-    end
-
-    # Create the "contents" object and and associate the links array to it.
-    b = {"contents" => a}
-
-    # Render the response as JSON
-    respond_to do |format|
-      format.json { render :json => b }
-    end
-  end
-
 end
-
-

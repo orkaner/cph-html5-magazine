@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121116090857) do
+ActiveRecord::Schema.define(:version => 20121207092013) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20121116090857) do
     t.text     "text"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "magazine_id"
+    t.integer  "magissue_id"
     t.integer  "grid_id"
   end
 
@@ -59,6 +59,11 @@ ActiveRecord::Schema.define(:version => 20121116090857) do
 
   create_table "magazines", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "magissues", :force => true do |t|
     t.date     "date"
     t.integer  "volume"
     t.integer  "number"
@@ -66,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20121116090857) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.integer  "magtemplate_id"
+    t.integer  "magazine_id"
   end
 
   create_table "magtemplates", :force => true do |t|

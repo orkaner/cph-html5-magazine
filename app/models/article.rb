@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  attr_accessible :author, :date, :headline, :status, :text, :title, :version, :magazine_id, :grid_id, :assets_attributes,
+  attr_accessible :author, :date, :headline, :status, :text, :title, :version, :magissue_id, :grid_id, :assets_attributes,
                   :videolinks_attributes #, :assets
 
 
@@ -8,8 +8,8 @@ class Article < ActiveRecord::Base
   # An article has to have a headline to be valid.
   validates :headline, :presence => true
 
-  # Every article may be published in a magazine
-  belongs_to :magazine
+  # Every article may be published in a magazine issue
+  belongs_to :magissue
 
   # Every article uses one grid
   belongs_to :grid

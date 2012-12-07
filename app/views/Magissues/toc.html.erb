@@ -1,9 +1,9 @@
 <% content_for :head do %>
 
-    <title><%= @magazine.name %> | TOC</title>
-    <%= stylesheet_link_tag(@magazine.magtemplate.path) %>
+<title><%= @magissue.magazine.name %> | TOC</title>
+    <%= stylesheet_link_tag(@magissue.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
-    <link rel="index" href="<%= url_for(content_index_magazine_path(@magazine)) %>" type="application/json"/>
+    <link rel="index" href="<%= url_for(content_index_magissue_path(@magissue)) %>" type="application/json"/>
     <%= javascript_include_tag("treesaver-0.10.0-debug") %>
     <!-- FaceBook like -->
     <%= javascript_include_tag("/fb_like") %>
@@ -21,10 +21,11 @@
     <article data-grids="toc">
 
       <h1>Table Of Contents</h1>
-      <% for article in @magazine.articles %>
+      <% @magissue.articles.each do |article| %>
           <div class="toc-link">
-            <h3 ><%= link_to article.title, read_article_path(article), { :magazine => @magazine} %></h3>
-            <!--p itemprop="byline"><!-- %= article.author %></p -->
+            <h3 ><%= link_to article.title, read_article_path(article), { :magissue => @magissue} %></h3>
+            <!--p itemprop="byline"><%#= article.author 
+			%></p -->
           </div>
       <% end %>
 

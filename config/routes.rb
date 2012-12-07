@@ -1,5 +1,7 @@
 Jaywebmag::Application.routes.draw do
 
+  resources :magazines
+
   resources :videolinks
 
   resources :containers
@@ -9,6 +11,7 @@ Jaywebmag::Application.routes.draw do
   resources :widths
 
   get "welcome/index"
+  get "welcome/show"
 
   resources :magtemplates
 
@@ -23,7 +26,7 @@ Jaywebmag::Application.routes.draw do
     end
   end
 
-  resources :magazines do
+  resources :magissues do
     member do
       get 'read'
       get 'toc'
@@ -93,7 +96,7 @@ Jaywebmag::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  # Naoufal: Set the default homepage to magazines
+  # Naoufal: Set the default homepage to Magazin issues
   # Orkun: A new Welcome action/view created and rooted as default to be used as welcome interface
   root :to => "welcome#index"
 

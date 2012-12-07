@@ -85,18 +85,16 @@
 
   
   <div class="field">
-  	<%= f.label :magazine_id %><br />
-  	<%= #f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
+  	<%= f.label :magissue_id %><br />
+  	<%#= f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
   		#[(s.name + " " + s.date.to_s), s.id]}
       %>
-    <%= f.select :magazine_id, Magazine.order("name, date").all.collect{|s|
-      [(s.name + " " + s.date.to_s), s.id]} %>
+    <%= f.select :magissue_id, Magissue.order("date").all.collect{|s| [(s.date.to_s), s.id]} %>
   </div>
 
   <div class="field">
     <%= f.label :grid_id %><br />
-    <%= f.select :grid_id, Grid.find(:all, :order => "name").collect{|s|
-        [(s.name), s.id]} %>
+    <%= f.select :grid_id, Grid.order("name").all.collect{|s| [(s.name), s.id]} %>
   </div>
 
     <h2>YouTube video links</h2>

@@ -1,32 +1,19 @@
-<%= @title= "Jaywebmag" %>
-
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @magazine.name %>
-</p>
+<!-- <p> -->
+  <!-- <b>Name:</b> -->
+  <h3><%= @magazine.name %></h3>
+<!-- </p> -->
 
-<p>
-  <b>Date:</b>
-  <%= @magazine.date %>
-</p>
-
-<p>
-  <b>Volume:</b>
-  <%= @magazine.volume %>
-</p>
-
-<p>
-  <b>Number:</b>
-  <%= @magazine.number %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @magazine.status %>
-</p>
-
-
+<% unless @magazine.magissues.blank? %>
+      <h4>Issues</h4>
+    <ol>
+      <% @magazine.magissues.each do |issue| %>
+        <li>
+           <%= link_to issue.date, magissue_path(issue) %>
+        </li>
+    <% end %>
+    </ol>
+<% end %>
 <%= link_to 'Edit', edit_magazine_path(@magazine) %> |
 <%= link_to 'Back', magazines_path %>

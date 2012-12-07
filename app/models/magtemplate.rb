@@ -16,10 +16,10 @@ class Magtemplate < ActiveRecord::Base
   validates :name, :presence => true
   validates :path, :presence => true, :existence => true
 
-  # A magtemplate is used by many magazines.
-  # TODO: When a "magtemplate" is destroyed, the magazine
+  # A magtemplate is used by many Magissues.
+  # TODO: When a "magtemplate" is destroyed, the magissues
   # will refer to an un-existing template, this issue has to be fixed!
-  has_many :magazines
+  has_many :magissues
 
   # A magtemplate defines many grid sizes. Sizes should be destroyed when
   # the associated magtemplate is destroyed.

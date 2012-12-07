@@ -1,10 +1,10 @@
 
 <% content_for :head do %>
 
-    <title><%= @magazine.name %> | Cover</title>
-    <%= stylesheet_link_tag(@magazine.magtemplate.path) %>
+<title><%= @magissue.magazine.name %> | Cover</title>
+    <%= stylesheet_link_tag(@magissue.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
-    <link rel="index" href="<%= url_for(content_index_magazine_path(@magazine)) %>" type="application/json"/>
+    <link rel="index" href="<%= url_for(content_index_magissue_path(@magissue)) %>" type="application/json"/>
     <%= javascript_include_tag("treesaver-0.10.0-debug") %>
     <!-- FaceBook like -->
     <%= javascript_include_tag("/fb_like") %>
@@ -23,7 +23,7 @@
 
   <figure>
     <h2 data-sizes="title fallback">
-      <span class="magazinename"><%= @magazine.name %></span>
+      <span class="magazinename"><%= @magissue.magazine.name %></span>
       <!--span class="author">Lewis Carroll</span -->
     </h2>
   </figure>

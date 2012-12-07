@@ -1,7 +1,7 @@
-# spec/factories/magazines.rb
+# Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :magazine do |f|
-    f.name "Example Magazine"
+  factory :magazine do
+    name "Magazine example"
   end
 end

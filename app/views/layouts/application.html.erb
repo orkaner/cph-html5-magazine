@@ -9,7 +9,8 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application", :media => "all"  %>
     <%= csrf_meta_tags %>
-    <!--%= yield(:head) %-->
+    <%#= yield(:head)
+     %>
   </head>
   <body>
     <header class="navbar navbar-fixed-top">
@@ -24,12 +25,12 @@
       <div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span4">
-			<!--Sidebar content-->
+			<!-- Sidebar content -->
 			<%= render 'nav/navigationside' %>
 			</div>
 			<div class="span8">
 			<%= yield %>
-			<!--Body content-->
+			<!-- Body content -->
 			<div class="container">
 			   <%= debug(params) if Rails.env.development? %>
          
@@ -44,7 +45,7 @@
           <footer>
           </footer>
         </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+      </div> <!-- ! end of .container -->
+    </div> <!-- ! end of #main -->
   </body>
 </html>

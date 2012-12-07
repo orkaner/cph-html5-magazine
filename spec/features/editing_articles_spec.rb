@@ -8,7 +8,7 @@ feature 'Editing Articles' do
       FactoryGirl.create(:article, :headline => "Old headline")
       visit '/'
       click_link 'Admin'
-      page.current_path.should == magazines_path + "/"
+      page.current_path.should == magissues_path
       click_button 'Articles'
       click_link 'Show Articles'
       page.should have_content('Listing articles')
@@ -92,7 +92,7 @@ feature 'Editing Articles' do
       FactoryGirl.create(:videolink, :article_id => '1')
       visit '/'
       click_link 'Admin'
-      page.current_path.should == magazines_path + "/"
+      page.current_path.should == magissues_path
       click_button 'Articles'
       click_link 'Show Articles'
       page.should have_content('Listing articles')

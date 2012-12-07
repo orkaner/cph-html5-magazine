@@ -12,7 +12,8 @@ class Asset < ActiveRecord::Base
                         :google_storage_access_key_id     => 'GOOGMCZOXQDTCBVWZOHT',
                         :google_storage_secret_access_key => 'CG+UO42HAurabFdd1T1HKf5k2AZgSK9Da1e7WaY0'
                     },
-                    :fog_directory => 'ezine',
+                    #:fog_directory => 'ezine',
+                    :fog_directory => 'naoufal',
                     :fog_public => true ,
                     :persistent => false,
                  #   :url => "/attachments/:basename_:style.:extension",

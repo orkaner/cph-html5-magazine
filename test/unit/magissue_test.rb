@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MagazineTest < ActiveSupport::TestCase
+class MagissueTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

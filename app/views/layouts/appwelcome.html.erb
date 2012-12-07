@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0">
     <title><%= @title || "Jaywebmag" %></title>
     <meta name="description" content="trial">
-    <meta name="author" content="Orkun">
+
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag ("application") %>
     <%= csrf_meta_tags %>
-    <!--%= yield(:head) %-->
+    <%#= yield(:head)
+    %>
   </head>
   <body>
     <header class="navbar navbar-fixed-top">
@@ -24,16 +25,16 @@
       <div class="container-fluid" >
 		<div class="row-fluid">
 			<div class="span5 ">
-			<!--Sidebar content-->
+			<!-- Sidebar content -->
 			
 			
-			<%= render 'magazines/indexmag' %>
+			<%= render 'magazines/index' %>
 			
 			</div>
 			<div class="span7">
 			<%= yield %>
 			
-			<!--Body content-->
+			<!-- Body content -->
 			   <div class="container">
 			      <%= debug(params) if Rails.env.development? %>
          
@@ -45,7 +46,7 @@
           <footer>
           </footer>
         </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+      </div> <!-- end of .container -->
+    </div> <!-- end of #main -->
   </body>
 </html>

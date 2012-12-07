@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :article do |f|
     f.association :grid
-    f.association :magazine
+    f.association :magissue
     f.title "Example title"
     f.headline "Example headline"
     f.author "Donald Duck"

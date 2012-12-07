@@ -12,8 +12,8 @@ layout 'appwelcome'
   end
   
 
-  # GET /magazines/1
-  # GET /magazines/1.json
+  # GET /magissues/1
+  # GET /magissues/1.json
   def show
     @magazine = Magazine.find(params[:id])
 

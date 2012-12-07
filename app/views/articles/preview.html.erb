@@ -1,5 +1,6 @@
 
-<% current_magazine = @article.magazine %>
+<%# current_magazine = @article.magissue
+ %>
 
 <% content_for :head do %>
 
@@ -43,7 +44,7 @@
           <figure>
             <% picture_containers.each do |c| %>
                 <% picture_width = c.width.sizes.find {
-                        |s| s.magtemplate.name == 'Default' }.value %>
+                        |s| s.magtemplate.name == 'Preview' }.value %>
                 <%= v.picture_html_code(picture_width, c.data_sizes.sub('title ', '')) %>
             <% end %>
           </figure>
@@ -52,7 +53,7 @@
   <% end %>
 
 
-  <!-- Naoufal: experimental: embedding YouTube video links ---------------- -->
+  <!-- Naoufal: experimental: embedding YouTube video links =============== -->
 
   <% unless @article.videolinks.blank? or @article.grid.containers.blank? %>
       <% embedded_videolinks = @article.videolinks.where(:embedded => true) %>
@@ -62,7 +63,7 @@
           <figure>
             <% video_containers.each do |c| %>
                 <% video_width = c.width.sizes.find {
-                        |s| s.magtemplate.name == 'Default' }.value %>
+                        |s| s.magtemplate.name == 'Preview' }.value %>
                 <%= v.videolink_html_code(video_width, c.data_sizes.sub('title ', '')) %>
             <% end %>
           </figure>
@@ -77,6 +78,6 @@
 
 
   <% end %>
-  <!-- --------------------------------------- -->
+  <!-- ================================================= -->
 </article>
 <% end %>

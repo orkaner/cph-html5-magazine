@@ -1,0 +1,32 @@
+<% @title= "Jaywebmag" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Magazine:</b>
+  <%= @magissue.magazine.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @magissue.date %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%= @magissue.volume %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @magissue.number %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @magissue.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_magissue_path(@magissue) %> |
+<%= link_to 'Back', magissues_path %>

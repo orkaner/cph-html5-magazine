@@ -1,12 +1,12 @@
 
-<% current_magazine = @article.magazine %>
+<% current_magazine_issue = @article.magissue %>
 
 <% content_for :head do %>
 
     <title><%= @article.headline %></title>
-    <%= stylesheet_link_tag(current_magazine.magtemplate.path) %>
+    <%= stylesheet_link_tag(current_magazine_issue.magtemplate.path) %>
     <link rel="resources" href="/resources.html"/>
-    <link rel="index" href="<%= url_for(content_index_magazine_path(current_magazine)) %>" type="application/json"/>
+    <link rel="index" href="<%= url_for(content_index_magissue_path(current_magazine_issue)) %>" type="application/json"/>
     <%= javascript_include_tag("treesaver-0.10.0-debug") %>
     <!-- FaceBook like -->
     <%= javascript_include_tag("/fb_like") %>
@@ -51,7 +51,7 @@
           <figure class="zoomable">
             <% picture_containers.each do |c| %>
                 <% picture_width = c.width.sizes.find {
-                        |s| s.magtemplate.id == current_magazine.magtemplate.id }.value %>
+                        |s| s.magtemplate.id == current_magazine_issue.magtemplate.id }.value %>
                 <%= v.picture_html_code(picture_width, c.data_sizes.sub('title ', '')) %>
             <% end %>
           </figure>
@@ -60,7 +60,7 @@
   <% end %>
 
 
-  <!-- Naoufal: experimental: embedding YouTube video links ---------------- -->
+  <!-- Naoufal: experimental: embedding YouTube video links ==================== -->
 
   <% unless @article.videolinks.blank? or @article.grid.containers.blank? %>
       <% embedded_videolinks = @article.videolinks.where(:embedded => true) %>
@@ -70,7 +70,7 @@
           <figure>
             <% video_containers.each do |c| %>
                 <% video_width = c.width.sizes.find {
-                        |s| s.magtemplate.id == current_magazine.magtemplate.id }.value %>
+                        |s| s.magtemplate.id == current_magazine_issue.magtemplate.id }.value %>
                 <%= v.videolink_html_code(video_width, c.data_sizes.sub('title ', '')) %>
             <% end %>
           </figure>
@@ -85,6 +85,6 @@
 
 
   <% end %>
-  <!-- --------------------------------------- -->
+  <!-- ============================================== -->
 </article>
 <% end %>
