@@ -1,55 +1,18 @@
-<!-- <p id="notice"><%#= notice
- %></p> -->
-
-<!-- <p> -->
-  <!-- <b>Name:</b> -->
-  <!-- <%#= @magissues.name
-   %> -->
-<!-- </p> -->
-
-<!-- <p> -->
-  <!-- <b>Date:</b> -->
-  <!-- <%#= @magissues.date
-   %>-- >
-<!-- </p> -->
-
-<!-- <p> -->
-  <!-- <b>Volume:</b> -->
-  <!-- <%#= @magissues.volume
-   %> -->
-<!-- </p> -->
-
-<!-- <p> -->
-  <!-- <b>Number:</b> -->
-  <!-- <%#= @magissues.number
-   %> -->
-<!-- </p> -->
-
-<!-- <p> -->
-  <!-- <b>Status:</b> -->
-  <!-- <%#= @magissues.status
-   %> -->
-<!-- </p> -->
-
-<!--
-<%#= link_to 'Edit', edit_magazine_path(@magissues)
- %> |  -->
-<!-- <%#= link_to 'Back', magazines_path
- %> -->
 
 <p id="notice"><%= notice %></p>
 
-<!-- <p> -->
-<!-- <b>Name:</b> -->
 <h3><%= @magazine.name %></h3>
 <!-- </p> -->
 
-<% unless @magazine.magissues.blank? %>
+<% if (pub_issues = @magazine.published_issues).blank? %>
+    <h4>No published issues.</h4>
+
+<% else %>
     <h4>Issues</h4>
     <ol>
-      <% @magazine.magissues.each do |issue| %>
+      <% pub_issues.each do |issue| %>
           <li>
-            <%= link_to issue.date, magissue_path(issue) %>
+            <%= link_to issue.date, cover_magissue_path(issue) %>
           </li>
       <% end %>
     </ol>

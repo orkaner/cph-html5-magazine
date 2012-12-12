@@ -1,5 +1,13 @@
-<h1>Admin Entrance</h1>
-<div class="btn-group btn-group-vertical"> 
- <!-- <a href="/magissues/" class="btn btn-large" id="adminbtn">Admin</a> -->
- <%= link_to "Admin", magissues_path, :class => "btn btn-large", :id => "adminbtn" %>
-</div>
+<div class="span8"><h1>Magazines to read</h1></div>
+
+<table class="table span9">
+
+  <% unless @magazines.blank? %>
+      <% @magazines.each do |magazine| %>
+          <tr>
+            <td><%=link_to magazine.name, welcome_path(magazine) %></td>
+
+          </tr>
+      <% end %>
+  <% end %>
+</table>

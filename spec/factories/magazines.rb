@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :magazine do
-    name "Magazine example"
+    name "Alice"
   end
 end

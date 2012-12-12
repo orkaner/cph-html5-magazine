@@ -1,19 +1,23 @@
-<h1>Listing magazines</h1>
+Naoufal: This page can be destroyed.
 
-<table class="table">
-  <tr>
+<div class="span8"><h1>Magazines</h1></div>
+
+<table class="table span9">
+ <!-- <tr>
     <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
-  </tr>
+  </tr> -->
 
-  <% @magazines.each do |magazine| %>
-      <tr>
-        <td><%= magazine.name %></td>
-        <td><%= link_to 'Show', magazine_path(magazine) %></td>
-
-      </tr>
+  <% unless @magazines.blank? %>
+      <% @magazines.each do |magazine| %>
+          <tr>
+            <td><%=link_to magazine.name, magazine_path(magazine) %></td>
+            <!-- <td><%#= link_to 'Show', magazine_path(magazine)
+             %></td> -->
+          </tr>
+      <% end %>
   <% end %>
 </table>
 

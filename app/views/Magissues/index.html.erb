@@ -28,7 +28,7 @@
     <td><%= issue.number %></td>
     <td><%= issue.status %></td>
     <!-- Naoufal -->
-    <!-- TODO: Add condition to show the Read link only if the magissues has at least one magissues-->
+    <!-- TODO: Add condition to show the Read link only if the magissues has at least one article-->
     <% if issue.articles[0] != nil %>
         <td><%= link_to 'Read', cover_magissue_path(issue) %></td>
         <!--td><%#= link_to 'Read', read_article_path(magazine.articles[0])

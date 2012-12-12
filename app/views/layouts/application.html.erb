@@ -4,48 +4,66 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title><%= @title || "Jaywebmag" %></title>
-    <meta name="description" content="trial">
-    <meta name="author" content="">
     <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application", :media => "all"  %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    <!-- [if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
     <%#= yield(:head)
      %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-			<%= render 'nav/navigation' %>
-         
+  <header class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <%= link_to "Jaywebmag", '#', class: "logo" %>
+
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <div class="nav-collapse collapse">
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home", '/' %></li>
+              <li><%= link_to "Admin", '#' %></li>
+            </ul>
+          </nav>
         </div>
-      </nav>
-    </header>
-    <div id="main" role="main">
-      <div class="container-fluid">
-		<div class="row-fluid">
-			<div class="span4">
-			<!-- Sidebar content -->
-			<%= render 'nav/navigationside' %>
-			</div>
-			<div class="span8">
-			<%= yield %>
-			<!-- Body content -->
-			<div class="container">
-			   <%= debug(params) if Rails.env.development? %>
-         
-               </div>
-			</div>
-			
-		</div>
-		</div>
-        </div>
-          
-          
-          <footer>
-          </footer>
-        </div>
-      </div> <!-- ! end of .container -->
-    </div> <!-- ! end of #main -->
+      </div>
+    </div>
+  </header>
+  <div id="main" role="main">
+    <div class="container-fluid">
+      <!--<div class="row-fluid">-->
+      <div class="span4">
+        <!-- Sidebar content -->
+        <%= render 'nav/navigationside' %>
+      </div>
+      <div class="span8">
+        <%= yield %>
+        <!-- Body content -->
+        <!-- <div class="container">
+            <%#= debug(params) if Rails.env.development?
+            %>
+
+          </div> -->
+      </div>
+
+      <!--</div>-->
+    </div>
+  </div>
+
+
+  <footer>
+  </footer>
+
+  <!-- ! end of .container -->
+  <!-- ! end of #main -->
   </body>
 </html>

@@ -1,9 +1,44 @@
 @import "bootstrap";
-body { padding-top: 60px; }
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  //padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
 .span5{
     border-right: 1px solid #000000;
     padding: 1px;   
     }
 
+/* header */
 
+.logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #1fa0e8;
+  text-transform: uppercase;
+  //letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
 @import "bootstrap-responsive";
