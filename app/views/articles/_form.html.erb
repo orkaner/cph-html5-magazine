@@ -1,14 +1,3 @@
-<% content_for :head do %>
-
-    <!--title></title -->
-    <%= javascript_include_tag "/ckeditor/ckeditor.js" %><!-- Load the mandatory text editor engine -->
-    <%= javascript_include_tag "/ckeditor/ckeditor_browser_support.js" %><!-- Load a browser compatibility checker -->
-    <%=# javascript_include_tag "/ckeditor/config.js"
-    %><!-- Load the text editor configuration. If omitted, the default
-     settings will apply -->
-<% end %>
-
-
 
 <%= nested_form_for(@article, :html => {:multipart => true}) do |f| %>
   <% if @article.errors.any? %>

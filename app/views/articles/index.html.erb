@@ -1,13 +1,6 @@
-<% content_for :head do %>
-    <title><%= @title || "Jaywebmag" %></title>
-    <meta name="description" content="trial">
-    
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
 
-<% end %>
-
-<% content_for :nontreesaver do %>
+<!-- <%# content_for :nontreesaver do 
+%> -->
 <h1>Listing articles</h1>
 
   <table class="table table-hover">
@@ -44,4 +37,5 @@
 <br />
 
 <%= link_to 'New Article', new_article_path %>
-<% end %>
+<!-- <%# end 
+%> -->

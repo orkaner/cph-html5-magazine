@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
   # Naoufal: TODO: Change the following line to load the layout dynamically
   #       depending on the template associated to the magissues
-  layout "ts_test"
+  layout "ts_test", :only => [:read, :preview]
 
 
   # GET /articles

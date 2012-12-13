@@ -1,13 +1,13 @@
 <% content_for :head do %>
-    <title><%= @title || "Jaywebmag" %></title>
-    <meta name="description" content="trial">
-    
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
+    <!-- Load the mandatory text editor engine -->
+    <%= javascript_include_tag "/ckeditor/ckeditor.js" %>
+	<!-- Load a browser compatibility checker -->
+    <%= javascript_include_tag "/ckeditor/ckeditor_browser_support.js" %>
 
 <% end %>
 
-<% content_for :nontreesaver do %>
+<!-- <%# content_for :nontreesaver do
+ %> -->
 <h1>Editing article</h1>
 
 <%= render 'form' %>
@@ -15,4 +15,5 @@
 <%= link_to 'Show', @article %> |
 <%= link_to 'Back', articles_path %>
 
-<% end %>
+<!-- <%# end
+ %> -->
