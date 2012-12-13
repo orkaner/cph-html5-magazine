@@ -5,7 +5,7 @@
 
     <title><%= @article.headline %></title>
     <%= stylesheet_link_tag(current_magazine_issue.magtemplate.path) %>
-    <link rel="resources" href="/resources.html"/>
+    <link rel="resources prefetch" href="/resources.html"/>
     <link rel="index" href="<%= url_for(content_index_magissue_path(current_magazine_issue)) %>" type="application/json"/>
     <%= javascript_include_tag("treesaver-0.10.0-debug") %>
     <!-- FaceBook like -->

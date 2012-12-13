@@ -56,6 +56,7 @@ gem 'devise', '~>1.4.3'
 # Orkun: These gems are required to upload and view pictures belonging to Article model
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "aws-sdk" # Amazon 3s
 gem "nifty-generators"
 gem "fog"
 # To use ActiveModel has_secure_password
