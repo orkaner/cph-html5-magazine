@@ -9,8 +9,8 @@ feature 'Editing Articles' do
       visit '/'
       click_link 'Admin'
       page.current_path.should == magissues_path
-      click_button 'Articles'
-      click_link 'Show Articles'
+      #click_button 'Articles'
+      click_link 'Articles'
       page.should have_content('Listing articles')
       page.should have_content('Old headline')
       click_link "Edit"
@@ -93,8 +93,8 @@ feature 'Editing Articles' do
       visit '/'
       click_link 'Admin'
       page.current_path.should == magissues_path
-      click_button 'Articles'
-      click_link 'Show Articles'
+      #click_button 'Articles'
+      click_link 'Articles'
       page.should have_content('Listing articles')
       page.should have_content('Old headline')
       click_link "Edit"

@@ -27,6 +27,14 @@
   <%= @magissue.status %>
 </p>
 
+<p>
+  <b>Template:</b>
+  <%= @magissue.magtemplate.name %>
+</p>
 
-<%= link_to 'Edit', edit_magissue_path(@magissue) %> |
-<%= link_to 'Back', magissues_path %>
+
+<% content_for :local_menu do %>
+<li><%= link_to 'Edit the issue', edit_magissue_path(@magissue) %></li>
+<% end %>
+<!-- <%#= link_to 'Back', magissues_path
+ %> -->

@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  //padding-top: 60px;
+  padding-top: 60px;
 }
 
 section {
@@ -17,7 +17,42 @@ textarea {
   resize: vertical;
 }
 
+#notice {
+  color: green;
+}
 
+.field_with_errors {
+  padding: 2px;
+  background-color: #f2dede;
+  display: table;
+  border: 2px solid rgb(185, 74, 72);
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+#error_explanation {
+/*  width: 450px;*/
+  border: 2px solid rgb(185, 74, 72);
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: white;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 14px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #f2dede;
+/*    color: #fff;*/
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
 .span5{
     border-right: 1px solid #000000;
     padding: 1px;   
@@ -41,4 +76,304 @@ textarea {
   color: #fff;
   text-decoration: none;
 }
+
+/* Dropdown menu*/
+
+.dropdown {
+	position: relative;
+}
+
+.navbar-inverse .nav li.dropdown > a:hover .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+  color: #999999;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Sidenav: From the style sheet used in the website http://twitter.github.com/bootstrap/index.html */
+
+.admin-sidenav {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+
+.admin-sidenav > li > a, .nav-header {
+  display: block;
+/*  width: 190px \9;*/
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+
+.admin-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.admin-sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.admin-sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+
+/*.nav-header {
+    display: block;
+    width: 190px \9;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+    border: 1px solid #e5e5e5;
+}*/
+.admin-sidenav .nav-header {
+  margin-left: 0px;
+  margin-right: 0px;
+/*  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);*/
+}
+.admin-sidenav > .nav-header:first-child {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+
+/* Chevrons */
+.admin-sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.admin-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.admin-sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.admin-sidenav .active .icon-chevron-right,
+.admin-sidenav .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.admin-sidenav.affix {
+  top: 40px;
+}
+.admin-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  /*.bs-docs-container {
+      max-width: 970px;
+    }*/
+  .admin-sidenav {
+    width: 258px;
+  }
+  .admin-sidenav > li > a {
+    width: 230px \9; /* Override the previous IE8-9 hack */
+  }
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Inline-block quick links for more spacing */
+  /*.quick-links li {
+      display: inline-block;
+      margin: 5px;
+    }*/
+
+  /* When affixed, space properly */
+  .admin-sidenav {
+    top: 0;
+    width: 218px;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Widen masthead and social buttons to fill body padding */
+ /* .jumbotron {
+     margin-top: -20px; // Offset bottom margin on .navbar
+   }*/
+  /* Adjust sidenav width */
+  .admin-sidenav {
+    width: 166px;
+    margin-top: 65px;
+  }
+  .admin-sidenav.affix {
+	position: static;
+    top: 0;
+	margin-top: 20px;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  /* Widen masthead and social buttons to fill body padding */
+  /*.jumbotron {
+      padding: 40px 20px;
+      margin-top:   -20px; // Offset bottom margin on .navbar 
+      margin-right: -20px;
+      margin-left:  -20px;
+    }*/
+/*  .masthead h1 {
+    font-size: 90px;
+  }
+  .masthead p,
+  .masthead .btn {
+    font-size: 24px;
+  }
+  .marketing .span4 {
+    margin-bottom: 40px;
+  }
+  .bs-docs-social {
+    margin: 0 -20px;
+  }*/
+
+  /* Space out the show-grid examples */
+  .show-grid [class*="span"] {
+    margin-bottom: 5px;
+  }
+
+  /* Sidenav */
+  .admin-sidenav {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .admin-sidenav.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  /* Unfloat the back to top link in footer */
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer p {
+    margin-bottom: 9px;
+  }
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Downsize the jumbotrons */
+  /*.jumbotron h1 {
+      font-size: 45px;
+    }
+    .jumbotron p,
+    .jumbotron .btn {
+      font-size: 18px;
+    }
+    .jumbotron .btn {
+      display: block;
+      margin: 0 auto;
+    }*/
+
+  /* center align subhead text like the masthead */
+  /*.subhead h1,
+    .subhead p {
+      text-align: center;
+    }*/
+
+  /* Marketing on home */
+  /*.marketing h1 {
+      font-size: 30px;
+    }
+    .marketing-byline {
+      font-size: 18px;
+    }*/
+
+  /* center example sites */
+  /*.example-sites {
+      margin-left: 0;
+    }
+    .example-sites > li {
+      float: none;
+      display: block;
+      max-width: 280px;
+      margin: 0 auto 18px;
+      text-align: center;
+    }
+    .example-sites .thumbnail > img {
+      max-width: 270px;
+    }*/
+
+  /* Do our best to make tables work in narrow viewports */
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+
+  /* Tighten up footer */
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 @import "bootstrap-responsive";

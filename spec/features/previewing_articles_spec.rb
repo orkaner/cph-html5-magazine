@@ -27,7 +27,7 @@ feature 'Previewing Articles' do
       visit '/'
       click_link 'Admin'
       page.current_path.should == magissues_path
-      click_link 'Articles'
+      #click_link 'Articles'
       click_link 'New Article'
     end
 
@@ -60,7 +60,7 @@ feature 'Previewing Articles' do
       visit '/'
       click_link 'Admin'
       page.current_path.should == magissues_path
-      click_button 'Articles'
+      #click_button 'Articles'
       click_link 'New Article'
     end
 
@@ -96,7 +96,7 @@ feature 'Previewing Articles' do
       visit '/'
       click_link 'Admin'
       page.current_path.should == magissues_path
-      click_button 'Articles'
+      #click_button 'Articles'
       click_link 'New Article'
     end
 

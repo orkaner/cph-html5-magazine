@@ -1,6 +1,6 @@
 <%= form_for(@videolink) do |f| %>
   <% if @videolink.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-error" id="error_explanation">
       <h2><%= pluralize(@videolink.errors.count, "error") %> prohibited this videolink from being saved:</h2>
 
       <ul>

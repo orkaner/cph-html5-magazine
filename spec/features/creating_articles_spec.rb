@@ -15,7 +15,7 @@ feature 'Creating Articles' do
     visit '/'
     click_link 'Admin'
     page.current_path.should == magissues_path
-    click_button 'Articles'
+    #click_button 'Articles'
     click_link 'New Article'
   end
   scenario 'can create an article', js:true do
