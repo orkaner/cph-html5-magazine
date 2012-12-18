@@ -33,11 +33,11 @@ containers = Container.create([{grid_id: grids[0].id, width_id: widths[1].id, da
                                 text: false, video: false},
                                {grid_id: grids[0].id, width_id: widths[2].id, data_sizes: 'title', pictures: false,
                                 text: true, video: false},
-                               {grid_id: grids[2].id, width_id: widths[3].id, data_sizes: 'single', pictures: true,
+                               {grid_id: grids[1].id, width_id: widths[3].id, data_sizes: 'single', pictures: true,
                                 text: false, video: false},
-                               {grid_id: grids[2].id, width_id: widths[1].id, data_sizes: 'title double', pictures: true,
+                               {grid_id: grids[1].id, width_id: widths[1].id, data_sizes: 'title double', pictures: true,
                                 text: true, video: true},
-                               {grid_id: grids[2].id, width_id: widths[3].id, data_sizes: 'title single', pictures: true,
+                               {grid_id: grids[1].id, width_id: widths[3].id, data_sizes: 'title single', pictures: true,
                                 text: true, video: true}])
 # Sizes
 sizes = Size.create([{magtemplate_id: magtemplates[0].id, width_id: widths.first.id, value: '310'},
