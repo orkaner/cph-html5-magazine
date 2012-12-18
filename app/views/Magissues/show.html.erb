@@ -31,7 +31,44 @@
   <b>Template:</b>
   <%= @magissue.magtemplate.name %>
 </p>
+<br/>
+<h3>Articles</h3>
 
+<% articles = @magissue.articles %>
+<% if articles.blank?%>
+	<h4>There are no articles associated to this issue.</h4>
+<% else %>
+	<table class="table table-hover">
+		<tr>
+		  <th>Title</th>
+		  <th>Author</th>
+		  <th>Headline</th>
+		  <th>Date</th>
+		  <th>Version</th>
+		  <th>Status</th>
+		  <!-- th>Text</th -->
+		  <th></th>
+		  <th></th>
+		  <th></th>
+		</tr>
+	<% articles.each do |article|%>
+	    <tr>
+	      <td><%= article.title %></td>
+	      <td><%= article.author %></td>
+	      <td><%= article.headline %></td>
+	      <td><%= article.date %></td>
+	      <td><%= article.version %></td>
+	      <td><%= article.status %></td>
+	      <!--td><%= # article.text
+	    %></td -->
+	      <td><%= link_to 'Show', article %></td>
+	      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+	      <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	    </tr>
+	<% end %>
+  </table>
+	
+<% end %>
 
 <% content_for :local_menu do %>
 <li><%= link_to 'Edit the issue', edit_magissue_path(@magissue) %></li>
