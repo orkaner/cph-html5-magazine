@@ -45,7 +45,9 @@
     <div class="field">
       <%= f.label :magtemplate_id %>
       <br/>
-      <%= f.select :magtemplate_id, Magtemplate.order("name").all.collect { |s| [(s.name), s.id] } %>
+      <%= f.select :magtemplate_id, Magtemplate.order("name").all.collect { |s| [(s.name), s.id] },
+	  :include_blank => true,
+	   :selected => (@magissue.magtemplate_id == nil ? Magtemplate.find_by_name('Default').id : @magissue.magtemplate_id) %>
     </div>
 
     <div class="actions">

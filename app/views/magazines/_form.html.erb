@@ -15,6 +15,12 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  
+  <div class="field">
+    <%= f.label :magtemplate_id, 'Default template' %><br />
+    <%= f.select :magtemplate_id, Magtemplate.order("name").all.collect{|s| [(s.name), s.id]} %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -19,7 +19,7 @@ class Magtemplate < ActiveRecord::Base
   # A magtemplate is used by many Magissues.
   # TODO: When a "magtemplate" is destroyed, the magissues
   # will refer to an un-existing template, this issue has to be fixed!
-  has_many :magissues
+  has_many :magissues, :dependent => :nullify
 
   # A magtemplate defines many grid sizes. Sizes should be destroyed when
   # the associated magtemplate is destroyed.
@@ -27,4 +27,7 @@ class Magtemplate < ActiveRecord::Base
 
   # A magtemplate defines many "widths" through sizes
   has_many :widths, :through => :sizes
+  
+  # A magtemplate can be a default template for many magazines
+  has_many :magazines, :dependent => :nullify
 end

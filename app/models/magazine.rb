@@ -1,5 +1,5 @@
 class Magazine < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :magtemplate_id
 
   # A magazine should not be valid without a name
   validates :name, :presence => true
@@ -23,4 +23,6 @@ class Magazine < ActiveRecord::Base
     pis
   end
 
+  # A magazine can only have one template
+  belongs_to :magtemplate
 end

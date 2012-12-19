@@ -3,6 +3,10 @@
 <!-- <p> -->
   <!-- <b>Name:</b> -->
   <h3><%= @magazine.name %></h3>
+  <p>
+	  <b>Default template</b>
+	  <%= @magazine.magtemplate == nil ? "No defaul template" : @magazine.magtemplate.name %>
+  </p>
 <!-- </p> -->
 <h4>Issues:</h4>
 <% if @magazine.magissues.blank? %>
@@ -55,6 +59,10 @@
 <% content_for :local_menu do %>
 	<li><%= link_to 'Edit', edit_magazine_path(@magazine), class: 'context-menue' %></li>
 	<li><%= link_to 'Magazines', magazines_path, class: 'context-menue' %></li>
-	<li><%= link_to 'Assign/Unassign articles', assign_articles_magazine_path(@magazine), class: 'context-menue' %></li>
+	<li><%= link_to 'New issue', new_magissue_path(:new_issue => {
+		:magazine_id => @magazine.id, :magtemplate_id => (@magazine.magtemplate == nil ? nil : @magazine.magtemplate.id)}),
+	 class: 'context-menue' %></li>
+	<li><%= link_to 'Assign/Unassign articles', assign_articles_magazine_path(@magazine),
+	 class: 'context-menue' %></li>
 <% end %>
 

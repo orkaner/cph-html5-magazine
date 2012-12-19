@@ -33,8 +33,8 @@ class MagissuesController < ApplicationController
   # GET /magissues/new
   # GET /magissues/new.json
   def new
-    @magissue = Magissue.new
-
+    @magissue = Magissue.new(params[:new_issue])
+        
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @magissue }
