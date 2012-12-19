@@ -2,13 +2,13 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="lead">
   <b>Magazine:</b>
   <%= @magissue.magazine.name %>
 </p>
 
-<p>
-  <b>Date:</b>
+<p  class="lead">
+  <b>Issue:</b>
   <%= @magissue.date %>
 </p>
 
@@ -71,7 +71,13 @@
 <% end %>
 
 <% content_for :local_menu do %>
-<li><%= link_to 'Edit the issue', edit_magissue_path(@magissue) %></li>
+	<li><%= link_to 'Back', :back,  class: 'context-menue' %></li>
+	<li><%= link_to 'Edit issue', edit_magissue_path(@magissue), class: 'context-menue' %></li>
+	<% unless articles.blank? %>
+		<li><%= link_to 'Preview', cover_magissue_path(@magissue), target: '_blank', class: 'context-menue' %></li>
+	<% end %>
+	<li><%= link_to 'Issues', magissues_path, class: 'context-menue' %></li>
+	
 <% end %>
 <!-- <%#= link_to 'Back', magissues_path
  %> -->

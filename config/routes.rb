@@ -1,6 +1,10 @@
 Jaywebmag::Application.routes.draw do
 
-  resources :magazines
+  resources :magazines do
+    member do
+      get 'assign_articles'
+    end
+  end
 
   resources :videolinks
 
@@ -23,6 +27,11 @@ Jaywebmag::Application.routes.draw do
     member do
       get 'read'
       get 'preview'
+      
+    end
+    collection do
+      put 'unassign'
+      put 'assign'
     end
   end
 

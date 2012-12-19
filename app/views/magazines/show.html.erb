@@ -4,16 +4,57 @@
   <!-- <b>Name:</b> -->
   <h3><%= @magazine.name %></h3>
 <!-- </p> -->
+<h4>Issues:</h4>
+<% if @magazine.magissues.blank? %>
+  <b>No issues yet!</b>
+<% else %>
+  <table class="table table-hover table-condensed">
+    <thead>
+     <tr>
 
-<% unless @magazine.magissues.blank? %>
-      <h4>Issues</h4>
-    <ol>
-      <% @magazine.magissues.each do |issue| %>
-        <li>
-           <%= link_to issue.date, magissue_path(issue) %>
-        </li>
-    <% end %>
-    </ol>
+      <th>Date</th>
+      <th>Volume</th>
+      <th>Nr.#</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+	
+	
+  	<% @magazine.magissues.each do |issue|%>
+	    <tbody>
+		    <tr>
+				      
+		      <td><%= link_to issue.date, issue %></td>
+		      <td><%= issue.volume %></td>
+		      <td><%= issue.number %></td>
+		      <td><%= issue.status %></td>
+		      
+		      <% if issue.articles.blank? %>
+			  	<td>No aticles</td>			  
+		      <% else %>
+			  	<td><%= link_to 'Preview', cover_magissue_path(issue), target: '_blank' %></td>
+		          <!--td><%#= link_to 'Read', read_article_path(magazine.articles[0])
+		  		 %></td --><!-- Start reading from the first article -->
+		      <% end %>
+		      <!-- <td><%#= link_to 'TOC', toc_magissue_path(issue)
+		      					   %></td> -->
+		      <!-- end Naoufal -->
+		      <!-- <td><%#= link_to 'Show', issue
+		      					   %></td> -->
+		      <td><%= link_to 'Edit', edit_magissue_path(issue) %></td>
+		      <td><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		    </tr>
+	    </tbody>
+  	<% end %>
+	</table>
 <% end %>
-<%= link_to 'Edit', edit_magazine_path(@magazine) %> |
-<%= link_to 'Back', magazines_path %>
+
+<% content_for :local_menu do %>
+	<li><%= link_to 'Edit', edit_magazine_path(@magazine), class: 'context-menue' %></li>
+	<li><%= link_to 'Magazines', magazines_path, class: 'context-menue' %></li>
+	<li><%= link_to 'Assign/Unassign articles', assign_articles_magazine_path(@magazine), class: 'context-menue' %></li>
+<% end %>
+

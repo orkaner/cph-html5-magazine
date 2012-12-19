@@ -34,12 +34,12 @@
 					      <td><%= issue.status %></td>
 					      <!-- Naoufal -->
 					      <!-- TODO: Add condition to show the Read link only if the magissues has at least one article-->
-					      <% if issue.articles[0] != nil %>
-						  <td><%= link_to 'Preview', cover_magissue_path(issue) %></td>
+					      <% if issue.articles.blank? %>
+						  	<td>No aticles</td>						  
+					      <% else %>
+						  	<td><%= link_to 'Preview', cover_magissue_path(issue) %></td>
 					          <!--td><%#= link_to 'Read', read_article_path(magazine.articles[0])
 					  		 %></td --><!-- Start reading from the first article -->
-					      <% else %>
-					          <td>No aticles</td>
 					      <% end %>
 					      <!-- <td><%#= link_to 'TOC', toc_magissue_path(issue)
 					      					   %></td> -->

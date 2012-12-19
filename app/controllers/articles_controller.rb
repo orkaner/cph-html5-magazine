@@ -116,4 +116,17 @@ class ArticlesController < ApplicationController
       format.html # preview.html.erb
     end
   end
+  
+  # Naoufal: Un-assign a group of articles from the magazine issues, they were assigned to.
+  def unassign
+    Article.update_all(["magissue_id=?", nil], :id => params[:article_ids])
+    @magazine = Magazine.find(params[:magazine])
+    redirect_to assign_articles_magazine_path(@magazine)
+  end
+
+  def assign
+    Article.update(params[:articles].keys, params[:articles].values)
+    @magazine = Magazine.find(params[:magazine])
+    redirect_to assign_articles_magazine_path(@magazine)
+  end
 end

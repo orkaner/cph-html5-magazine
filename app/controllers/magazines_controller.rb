@@ -80,4 +80,15 @@ class MagazinesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # Assign/Unassign articles to/from magazine's issues
+  def assign_articles
+    @magazine = Magazine.find(params[:id])
+    @articles = Article.all
+
+    respond_to do |format|
+      format.html # assign_articles.html.erb
+      format.json { render json: @magazine }
+    end
+  end
 end

@@ -38,13 +38,14 @@
             </ul>
             <ul class="nav pull-right">
               <li class="divider-vertical"></li>
-              <li><%= link_to "Home", '/' %></li>
+              <li><%= link_to "Home", magissues_path %></li>
               <li class="divider-vertical"></li>
               <!-- Admin menu -->
               <li class="dropdown"><%= link_to ('Admin ' + '<b class="caret"></b>').html_safe, '#', class: "dropdown-toggle", :data => {:toggle => "dropdown"} %>
                 <ul class="dropdown-menu" role="menu" aria-labbeldby="dLabel">
                   <li><%= link_to 'New Magazine', new_magazine_path, tabindex: "-1" %></li>
                   <li><%= link_to 'Magazines', magazines_path, tabindex: "-1" %></li>
+				  <li><%= link_to 'Sign out', root_path, tabindex: "-1" %></li>
                 </ul>
               </li>
             </ul>

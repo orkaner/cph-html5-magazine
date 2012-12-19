@@ -2,5 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @magazine %> |
-<%= link_to 'Back', magazines_path %>
+<% content_for :local_menu do %>
+	<li><%= link_to 'Show', @magazine, class: 'context-menue' %></li>
+	<li><%= link_to 'Magazines', magazines_path, class: 'context-menue' %></li>
+<% end %>
+
