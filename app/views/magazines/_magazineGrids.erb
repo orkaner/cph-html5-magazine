@@ -1,8 +1,6 @@
-<% Grid.order("name").all.collect do |s| %>
-
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="carousel slide" id="<%='myCarousel'+ s.to_s%>">
+    <div class="carousel slide" id="myCarousel">
       <div class="carousel-inner">
         <div class="item active">
           <ul class="thumbnails">
@@ -47,7 +45,7 @@
               </div>
             </li>
             <li class="span3">
-              <div class="thumbnail">
+                          <div class="thumbnail">
                 <%= image_tag "Lighthouse.jpg" %>
               </div>
             </li>
@@ -59,19 +57,18 @@
             </li>
           </ul>
 
+
         </div>
 
+
       </div>
-      <%= render 'controllers' %>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 
-</div>
-
+    </div>
 
   </div>
 
 </div>
-
-
-<% end %>
-
 </div>
