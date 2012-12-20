@@ -1,9 +1,9 @@
 
 
-<% Grid.order("name").all.collect do |s| %>
+<% Grid.order("name").all.collect do |g| %>
 
-    <a class="carousel-control left" href="#<%='myCarousel'+ s.to_s%>" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#<%='myCarousel'+ s.to_s%>" data-slide="next">&rsaquo;</a>
+    <a class="carousel-control left" href="#<%='myCarousel'+ g.name.downcase %>" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#<%='myCarousel'+ g.name.downcase%>" data-slide="next">&rsaquo;</a>
 
 
 <% end %>

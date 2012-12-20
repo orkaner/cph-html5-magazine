@@ -19,44 +19,47 @@
       </ul>
 
       <div class="tab-content">
-	<!-- Tab 1 ====================================== -->
+        <!-- Tab 1 ====================================== -->
         <div class="tab-pane active" id="tab1">
           <div class="field">
-            <%= f.label :title %><br />
+            <%= f.label :title %>
+            <br/>
             <%= f.text_field :title %>
           </div>
           <div class="field">
-            <%= f.label :author %><br />
+            <%= f.label :author %>
+            <br/>
             <%= f.text_field :author %>
           </div>
           <div class="field">
-            <%= f.label :headline %><br />
+            <%= f.label :headline %>
+            <br/>
             <%= f.text_field :headline %>
           </div>
           <div class="field">
-            <%= f.label :date %><br />
+            <%= f.label :date %>
+            <br/>
             <%= f.date_select :date %>
           </div>
           <div class="field">
-            <%= f.label :version %><br />
+            <%= f.label :version %>
+            <br/>
             <%= f.text_field :version %>
           </div>
 
           <% status_list = {'Draft' => 'Draft', 'Approved' => 'Approved', 'Published' => 'Published'} %>
           <div class="field">
-            <%= f.label :status %><br />
-            <%=# f.text_field :status
+            <%= f.label :status %>
+            <br/>
+            <%= # f.text_field :status
             %>
             <%= f.select :status, status_list %>
           </div>
           <div class="field">
-            <%= f.label :text %><br />
+            <%= f.label :text %>
+            <br/>
             <%= f.text_area(:text, :rows => 20, :class => 'ckeditor span8') %>
           </div>
-
-
-
-
 
 
           <h2>Upload Pictures</h2>
@@ -68,15 +71,14 @@
           </p>
 
 
-
           <div class="field">
-            <%= f.label :magissue_id %><br />
+            <%= f.label :magissue_id %>
+            <br/>
             <%#= f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
   		#[(s.name + " " + s.date.to_s), s.id]}
             %>
-            <%= f.select :magissue_id, Magissue.order("date").all.collect{|s| [(s.date.to_s), s.id]} %>
+            <%= f.select :magissue_id, Magissue.order("date").all.collect { |s| [(s.date.to_s), s.id] } %>
           </div>
-
 
 
           <h2>YouTube video links</h2>
@@ -86,35 +88,119 @@
           <p>
             <%= f.link_to_add "Add a video link", :videolinks %>
           </p>
-          </li>
         </div>
 
 
+        <!-- Tab 2 =============================================== -->
+        <div class="tab-pane" id="tab2">
+          <h2>Available Article Grids</h2>
+          <br>
+
+          <fieldset>
+            <legend>Grids</legend>
+            <% Grid.order("name").all.collect.each do |g| %>
+                <%= f.radio_button :grid_id, g.id %>
+                <label for="<%= ("article_grid_" + g.name.downcase) %>"><%= g.name %></label>
+                <br/>
+                <!-- Carousel =================== -->
+                <div class="container-fluid">
+                  <div class="row-fluid">
+                    <div class="carousel slide" data-interval="false" id="<%= 'myCarousel'+ g.name.downcase %>">
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <ul class="thumbnails">
+                            <li class="span3">
+                              <div class="thumbnail">
+                                <%= image_tag "Hydrangeas.jpg" %>
+                              </div>
+                            </li>
+                            <li class="span3">
+
+                              <div class="thumbnail">
+                                <%= image_tag "Desert.jpg" %>
+                              </div>
+                            </li>
+                            <li class="span3">
+
+                              <div class="thumbnail">
+                                <%= image_tag "Lighthouse.jpg" %>
+                              </div>
+                            </li>
+                            <li class="span3">
+
+                              <div class="thumbnail">
+                                <%= image_tag "Desert.jpg" %>
+                              </div>
+                            </li>
+							
+                          </ul>
+                        </div>
+                        <!-- <div class="item">
+                                                  <ul class="thumbnails">
+                                                    <li class="span3">
+                        
+                                                      <div class="thumbnail">
+                                                        <%#= image_tag "Lighthouse.jpg"
+														 %>
+                                                      </div>
+                                                    </li>
+                                                    <li class="span3">
+                        
+                                                      <div class="thumbnail">
+                                                        <%#= image_tag "Desert.jpg" 
+														%>
+                                                      </div>
+                                                    </li>
+                                                    <li class="span3">
+                                                      <div class="thumbnail">
+                                                        <%#= image_tag "Lighthouse.jpg"
+														 %>
+                                                      </div>
+                                                    </li>
+                                                    <li class="span3">
+                        
+                                                      <div class="thumbnail">
+                                                        <%#= image_tag "Lighthouse.jpg"
+														 %>
+                                                      </div>
+                                                    </li>
+                                                  </ul>
+                        
+                                                </div> -->
+
+                      </div>
+                      <a class="carousel-control left" href="#<%='myCarousel'+ g.name.downcase %>" data-slide="prev">&lsaquo;</a>
+                      <a class="carousel-control right" href="#<%='myCarousel'+ g.name.downcase%>" data-slide="next">&rsaquo;</a>
+
+                    </div>
+
+
+                  </div>
+
+                </div>
+
+                <!-- End ======================== -->
+            <% end %>
+          </fieldset>
+          <%# Grid.order("name").all.collect.each do |s|
+           %><!--
+
+              <input type="radio"> Choose Grid <%#= s.name
+               %>-->
+              <%#= render 'gallery'
+               %>
+
+
+          <%# end
+          %>
+        </div>
       </div>
-	  <!-- Tab 2 =============================================== -->
-      <div class="tab-pane" id="tab2">
-        <h2>Available Article Grids</h2>
-        <br>
 
-        <% Grid.order("name").all.collect.each do |s| %>
 
-            <input type="radio"> Choose Grid <%= s.name %>
-            <%= render 'gallery' %>
-            </label>
-
-        <% end %>
-      </div>
     </div>
-
-        </ul>
-
-      </div>
     <div class="actions">
       <%= f.submit %>
     </div>
-    </div>
-
-
 
 <% end %>
 
