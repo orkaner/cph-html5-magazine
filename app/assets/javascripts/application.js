@@ -12,8 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-button
-//= require bootstrap-carousel
 //= require bootstrap
 //= require jquery_nested_form
 

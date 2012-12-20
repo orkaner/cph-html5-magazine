@@ -207,7 +207,8 @@ textarea {
     width: 258px;
   }
   .admin-sidenav > li > a {
-    width: 230px \9; /* Override the previous IE8-9 hack */
+/*	  width: 230px \9; */ /* Orkun: Gives some warnings.*/
+    width: 230px\9; /* Override the previous IE8-9 hack */
   }
 }
 
@@ -385,7 +386,29 @@ textarea {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+
 }
+
+/* ============== Carousel styling ======================*/
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.carousel-control.left{
+postion:relative;
+}
+.carousel-control.right {
+  position: absolute;
+  right: 50px;
+
+
+}
+
+
+
 
 /*====================== Scrollable div ==================*/
 .scrollable {

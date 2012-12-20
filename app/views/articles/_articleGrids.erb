@@ -1,31 +1,37 @@
-<% Grid.order("name").all.collect do |s| %>
-
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="carousel slide" id="<%='myCarousel'+ s.to_s%>">
+    <div class="carousel slide" id="myCarousel1">
       <div class="carousel-inner">
         <div class="item active">
           <ul class="thumbnails">
-            <li class="span3">
-
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Hydrangeas.jpg" %>
               </div>
             </li>
-            <li class="span3">
-
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Desert.jpg" %>
               </div>
             </li>
-            <li class="span3">
-
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Lighthouse.jpg" %>
               </div>
             </li>
-            <li class="span3">
-
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Desert.jpg" %>
               </div>
@@ -34,44 +40,47 @@
         </div>
         <div class="item">
           <ul class="thumbnails">
-            <li class="span3">
-
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Lighthouse.jpg" %>
               </div>
             </li>
-            <li class="span3">
-
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Desert.jpg" %>
               </div>
             </li>
-            <li class="span3">
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Lighthouse.jpg" %>
               </div>
             </li>
-            <li class="span3">
-
+            <li class="span2">
+              <div class="caption">
+                <h5>Caption</h5>
+              </div>
               <div class="thumbnail">
                 <%= image_tag "Lighthouse.jpg" %>
               </div>
             </li>
           </ul>
-
         </div>
 
-      </div>
-      <%= render 'controllers' %>
-
-</div>
-
-
+        </div>
+    </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel1" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel1" data-slide="next">&rsaquo;</a>
   </div>
 
 </div>
 
-
-<% end %>
-
-</div>

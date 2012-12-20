@@ -12,88 +12,110 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :headline %><br />
-    <%= f.text_field :headline %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :version %><br />
-    <%= f.text_field :version %>
-  </div>
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Article</a></li>
+        <li><a href="#tab2" data-toggle="tab">Choose Grids</a></li>
+      </ul>
 
-  <% status_list = {'Draft' => 'Draft', 'Approved' => 'Approved', 'Published' => 'Published'} %>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%=# f.text_field :status
-    %>
-    <%= f.select :status, status_list %>
-  </div>
-  <div class="field">
-    <%= f.label :text %><br />
-    <%= f.text_area(:text, :rows => 20, :class => 'ckeditor span8') %>
-  </div>
+      <div class="tab-content">
+	<!-- Tab 1 ====================================== -->
+        <div class="tab-pane active" id="tab1">
+          <div class="field">
+            <%= f.label :title %><br />
+            <%= f.text_field :title %>
+          </div>
+          <div class="field">
+            <%= f.label :author %><br />
+            <%= f.text_field :author %>
+          </div>
+          <div class="field">
+            <%= f.label :headline %><br />
+            <%= f.text_field :headline %>
+          </div>
+          <div class="field">
+            <%= f.label :date %><br />
+            <%= f.date_select :date %>
+          </div>
+          <div class="field">
+            <%= f.label :version %><br />
+            <%= f.text_field :version %>
+          </div>
 
-
-
-    <h2>Pictures Gallery</h2>
-    <%= render 'gallery'%>
-
-
-    <h2>Upload Pictures</h2>
-    <%= f.fields_for :assets do |asset_form| %>
-        <%= render 'asset_fields', :f => asset_form %>
-    <% end %>
-    <p>
-      <%= f.link_to_add "Add Picture", :assets %>
-    </p>
-
-              <!--
-              <div class="thumbnail">
-                <%#= link_to( image_tag(asset_fields.object.asset.url(:thumb)), asset_fields.object.asset.url(:original) )
-                 %>
-              <%#= asset_fields.check_box :_delete
-              %>
-              </div>
-              -->
+          <% status_list = {'Draft' => 'Draft', 'Approved' => 'Approved', 'Published' => 'Published'} %>
+          <div class="field">
+            <%= f.label :status %><br />
+            <%=# f.text_field :status
+            %>
+            <%= f.select :status, status_list %>
+          </div>
+          <div class="field">
+            <%= f.label :text %><br />
+            <%= f.text_area(:text, :rows => 20, :class => 'ckeditor span8') %>
+          </div>
 
 
 
 
 
-  
-  <div class="field">
-  	<%= f.label :magissue_id %><br />
-  	<%#= f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
+
+          <h2>Upload Pictures</h2>
+          <%= f.fields_for :assets do |asset_form| %>
+              <%= render 'asset_fields', :f => asset_form %>
+          <% end %>
+          <p>
+            <%= f.link_to_add "Add Picture", :assets %>
+          </p>
+
+
+
+          <div class="field">
+            <%= f.label :magissue_id %><br />
+            <%#= f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
   		#[(s.name + " " + s.date.to_s), s.id]}
-      %>
-    <%= f.select :magissue_id, Magissue.order("date").all.collect{|s| [(s.date.to_s), s.id]} %>
-  </div>
+            %>
+            <%= f.select :magissue_id, Magissue.order("date").all.collect{|s| [(s.date.to_s), s.id]} %>
+          </div>
 
-  <div class="field">
-    <%= f.label :grid_id %><br />
-    <%= f.select :grid_id, Grid.order("name").all.collect{|s| [(s.name), s.id]} %>
-  </div>
 
-    <h2>YouTube video links</h2>
-  <%= f.fields_for :videolinks do |videolink_form| %>
-        <%= render 'videolink_fields', :f => videolink_form %>
-  <% end %>
-  <p>
-    <%= f.link_to_add "Add a video link", :videolinks %>
-  </p>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+          <h2>YouTube video links</h2>
+          <%= f.fields_for :videolinks do |videolink_form| %>
+              <%= render 'videolink_fields', :f => videolink_form %>
+          <% end %>
+          <p>
+            <%= f.link_to_add "Add a video link", :videolinks %>
+          </p>
+          </li>
+        </div>
+
+
+      </div>
+	  <!-- Tab 2 =============================================== -->
+      <div class="tab-pane" id="tab2">
+        <h2>Available Article Grids</h2>
+        <br>
+
+        <% Grid.order("name").all.collect.each do |s| %>
+
+            <input type="radio"> Choose Grid <%= s.name %>
+            <%= render 'gallery' %>
+            </label>
+
+        <% end %>
+      </div>
+    </div>
+
+        </ul>
+
+      </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    </div>
+
+
+
 <% end %>
+
+
