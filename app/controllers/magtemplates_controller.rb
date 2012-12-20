@@ -40,6 +40,9 @@ class MagtemplatesController < ApplicationController
   # POST /magtemplates
   # POST /magtemplates.json
   def create
+    # template_name = params[:magtemplate]['name']
+    #     template_path = "app/assets/stylesheets/templates/#{template_name.downcase}/" + "#{params[:magtemplate]['path']}.css.scss"
+    #     @magtemplate = Magtemplate.new({:name => template_name, :path => template_path})
     @magtemplate = Magtemplate.new(params[:magtemplate])
 
     respond_to do |format|
