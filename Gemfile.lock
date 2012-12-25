@@ -1,14 +1,3 @@
-GIT
-  remote: git://github.com/thoughtbot/paperclip.git
-  revision: ba768753be7f981cd376b584fb47c23ff3b2bb86
-  specs:
-    paperclip (3.3.1)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.4.0)
-      mime-types
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -140,6 +129,12 @@ GEM
     nifty-generators (0.4.6)
     nokogiri (1.5.6)
     orm_adapter (0.0.7)
+    paperclip (3.3.1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.4.0)
+      mime-types
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.10)
@@ -242,7 +237,7 @@ DEPENDENCIES
   nested_form
   nifty-generators
   nokogiri
-  paperclip!
+  paperclip (= 3.3.1)
   pg
   rails (= 3.2.8)
   rb-fsevent
