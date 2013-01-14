@@ -12,8 +12,11 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', articles_path %></li>
+	<li><%= link_to 'Show', @article %></li>
+	
+<% end %>
 
 <!-- <%# end
  %> -->

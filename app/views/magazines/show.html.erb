@@ -56,7 +56,8 @@
 	</table>
 <% end %>
 
-<% content_for :local_menu do %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', :back,  class: 'context-menue' %></li>
 	<li><%= link_to 'Edit', edit_magazine_path(@magazine), class: 'context-menue' %></li>
 	<li><%= link_to 'Magazines', magazines_path, class: 'context-menue' %></li>
 	<li><%= link_to 'New issue', new_magissue_path(:new_issue => {

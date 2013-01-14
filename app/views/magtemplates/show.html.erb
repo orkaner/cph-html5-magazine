@@ -11,5 +11,8 @@
 </p>
 
 
-<%= link_to 'Edit', edit_magtemplate_path(@magtemplate) %> |
-<%= link_to 'Back', magtemplates_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', magtemplates_path %></li>
+	<li><%= link_to 'Edit', edit_magtemplate_path(@magtemplate) %></li>
+	
+<% end %>

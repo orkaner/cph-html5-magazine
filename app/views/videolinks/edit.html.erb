@@ -2,5 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @videolink %> |
-<%= link_to 'Back', videolinks_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', videolinks_path %></li>
+	<li><%= link_to 'Show', @videolink %></li>
+
+<% end %>

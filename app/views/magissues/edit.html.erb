@@ -2,5 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @magissue %> |
-<%= link_to 'Back', magissue_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', magissue_path %></li>
+	<li><%= link_to 'Show', @magissue %></li>
+	
+<% end %>

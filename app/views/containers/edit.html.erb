@@ -2,5 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @container %> |
-<%= link_to 'Back', containers_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', containers_path %></li>
+	<li><%= link_to 'Show', @container %></li>
+
+<% end %>

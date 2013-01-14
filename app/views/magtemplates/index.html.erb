@@ -22,4 +22,6 @@
 
 <br />
 
-<%= link_to 'New Magtemplate', new_magtemplate_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'New Magtemplate', new_magtemplate_path %></li>
+<% end %>

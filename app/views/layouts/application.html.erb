@@ -62,6 +62,14 @@
           <%= render 'nav/navigationside' %>
         </div>
         <div class="span9">
+			<div class="navbar">
+			  <div class="navbar-inner">
+			    <!-- <a class="brand" href="#">Title</a> -->
+			    <ul class="nav">
+					<%= yield :contextual_menu %>
+			    </ul>
+			  </div>
+			</div>
           <%= yield %>
           <!-- Body content -->
           <!-- <div class="container">

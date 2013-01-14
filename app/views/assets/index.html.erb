@@ -18,4 +18,6 @@
 
 <br />
 
-<%= link_to 'New Asset', new_asset_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'New Asset', new_asset_path %></li>
+<% end %>

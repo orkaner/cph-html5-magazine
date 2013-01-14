@@ -21,7 +21,8 @@
 
 <br />
 
-<% content_for :local_menu do %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', :back,  class: 'context-menue' %></li>
 	<li><%= link_to 'New Magazine', new_magazine_path, class: 'context-menue' %></li>
 <% end %>
 

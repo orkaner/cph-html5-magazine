@@ -21,5 +21,8 @@
 </p>
 
 
-<%= link_to 'Edit', edit_videolink_path(@videolink) %> |
-<%= link_to 'Back', videolinks_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', videolinks_path %></li>
+	<li><%= link_to 'Edit', edit_videolink_path(@videolink) %></li>
+
+<% end %>

@@ -56,7 +56,7 @@
 	  <% end %>
 	</div>
 </div>
-<% content_for :local_menu do %>
-	<!-- <li><%#= link_to 'New Magazine issue', new_magissue_path
-		 %></li> -->
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', :back,  class: 'context-menue' %></li>
+	<li><%= link_to 'New Magazine issue', new_magissue_path %></li>
 <% end %>

@@ -24,4 +24,6 @@
 
 <br />
 
-<%= link_to 'New Size', new_size_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'New Size', new_size_path %></li>
+<% end %>

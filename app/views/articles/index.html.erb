@@ -35,9 +35,9 @@
 </table>
 
 <br />
-<% content_for :local_menu do %>
-	<!-- <li><%#= link_to 'New Article', new_article_path
-		 %></li> -->
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', :back %></li>
+	<li><%= link_to 'New Article', new_article_path %></li>
 <% end %>
 
 <!-- <%# end 

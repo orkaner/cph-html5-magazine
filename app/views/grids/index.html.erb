@@ -22,4 +22,6 @@
 
 <br />
 
-<%= link_to 'New Grid', new_grid_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'New Grid', new_grid_path %></li>
+<% end %>

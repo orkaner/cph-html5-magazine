@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', sizes_path %>
+<% content_for :contextual_menu do %>
+	<li><%= link_to 'Back', sizes_path %></li>
+<% end %>

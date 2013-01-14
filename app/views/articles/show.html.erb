@@ -70,10 +70,13 @@
     </ol>
 
 
-
-    <%= link_to 'Edit', edit_article_path(@article) %> |
-    <%= link_to 'Preview', preview_article_path(@article), :target => '_blank' %> |
-    <%= link_to 'Back', articles_path %>
+	<% content_for :contextual_menu do %>
+		<li><%= link_to 'Back', articles_path %></li>
+    	<li><%= link_to 'Edit', edit_article_path(@article) %></li>
+    	<li><%= link_to 'Preview', preview_article_path(@article), :target => '_blank' %></li>
+    
+	<% end %>
+    
 
 
 <!-- <%# end

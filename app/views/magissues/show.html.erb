@@ -1,5 +1,7 @@
 <% @title= "Jaywebmag" %>
 
+<% articles = @magissue.articles %>
+
 <p id="notice"><%= notice %></p>
 
 <p class="lead">
@@ -34,7 +36,7 @@
 <br/>
 <h3>Articles</h3>
 
-<% articles = @magissue.articles %>
+
 <% if articles.blank?%>
 	<h4>There are no articles associated to this issue.</h4>
 <% else %>
@@ -70,7 +72,7 @@
 	
 <% end %>
 
-<% content_for :local_menu do %>
+<% content_for :contextual_menu do %>
 	<li><%= link_to 'Back', :back,  class: 'context-menue' %></li>
 	<li><%= link_to 'Edit issue', edit_magissue_path(@magissue), class: 'context-menue' %></li>
 	<% unless articles.blank? %>
