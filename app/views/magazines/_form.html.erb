@@ -11,21 +11,119 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
   
-  <div class="field">
-    <%= f.label :magtemplate_id, 'Default template' %><br />
-    <%= f.select :magtemplate_id, Magtemplate.order("name").all.collect{|s| [(s.name), s.id]} %>
-  </div>
   
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-    <br>
-    <br>
-    <br>
- <%=  render 'magazines/magazineGrids' %>
+  <!-- <div class="field"> -->
+    <!-- <%#= f.label :magtemplate_id, 'Default template'-->
+	 <!-- %><br /> --> 
+    <!-- <%#= f.select :magtemplate_id, Magtemplate.order("name").all.collect{|s| [(s.name), s.id]}  -->
+	<!-- %> -->
+  <!-- </div> -->
+  
+  
+    <!-- <br>
+        <br>
+        <br> -->
+ <!-- <%#=  render 'magazines/magazineGrids'
+   %> -->
+ 
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Magazine attributes</a></li>
+        <li><a href="#tab2" data-toggle="tab">Default Template</a></li>
+      </ul>
+      <div class="tab-content">
+        <!-- Tab 1 ====================================== -->
+        <div class="tab-pane active" id="tab1">
+		    <div class="field">
+		      <%= f.label :name %><br />
+		      <%= f.text_field :name %>
+		    </div>
+        </div>
+        <!-- Tab 2 =============================================== -->
+        <div class="tab-pane" id="tab2">
+          <h2>Available Magazine Templates</h2>
+          <br>
+
+          <fieldset>
+            <legend>Templates</legend>
+            <% Magtemplate.order("name").all.collect.each do |t| %>
+                <%= f.radio_button :magtemplate_id, t.id %>
+                <label for="<%= ("magissue_template_" + t.name.downcase) %>"><%= t.name %></label>
+                <br/>
+                <!-- Carousel =================== -->
+                <div class="container-fluid">
+                  <div class="row-fluid">
+                    <div class="carousel slide" data-interval="false" id="<%= 'myCarousel'+ t.name.downcase %>">
+                      <div class="carousel-inner">
+                        <% @files = Dir.glob("app/assets/images/templates/#{t.name.downcase}/*.png")%>
+                        <%
+                           carousel_size = 4
+                           remaining_files = @files.length
+                           offset = 0
+                        %>
+                        <% while remaining_files >= carousel_size %>
+                            <% if offset == 0 %>
+                                <div class="item active">
+                            <% else %>
+                                <div class="item">
+                            <% end %>
+                            <ul class="thumbnails">
+                              <% end_index = offset + carousel_size - 1 %>
+                              <% for i in offset..end_index %>
+                                  <li class="span3">
+                                    <div class="thumbnail">
+                                      <%= image_tag "templates/#{t.name.downcase}/#{File.basename(@files[i])}" %>
+                                    </div>
+                                  </li>
+                              <% end %>
+
+                            </ul>
+                            </div>
+                            <%
+                               offset += carousel_size
+                               remaining_files -= carousel_size
+                            %>
+
+                        <% end %>
+                        <% if remaining_files < 4 and remaining_files > 0%>
+                            <% if offset == 0 %>
+                                <div class="item active">
+                            <% else %>
+                                <div class="item">
+                            <% end %>
+                            <ul class="thumbnails">
+                              <% for i in offset..(@files.length - 1) %>
+                                  <li class="span3">
+                                    <div class="thumbnail">
+                                      <%= image_tag "templates/#{t.name.downcase}/#{File.basename(@files[i])}" %>
+                                    </div>
+                                  </li>
+                              <% end %>
+
+                            </ul>
+                            </div>
+                        <% end %>
+
+                        </div>
+                        <a class="carousel-control left" href="#<%='myCarousel'+ t.name.downcase %>" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#<%='myCarousel'+ t.name.downcase%>" data-slide="next">&rsaquo;</a>
+
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                    <!-- End ======================== -->
+            <% end %>
+          </fieldset>
+
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
