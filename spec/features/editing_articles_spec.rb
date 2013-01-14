@@ -33,7 +33,7 @@ feature 'Editing Articles' do
                                                                   I can embed videos links
                                                                   In order to add media content to articles.
                                                                   }, js:true do
-
+      click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
       fill_in 'Video title', :with => 'Video title example'
       fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
@@ -44,6 +44,7 @@ feature 'Editing Articles' do
     end
 
     scenario 'can not add video links without title', js:true do
+      click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
       fill_in 'Video title', :with => ''
       fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
@@ -55,6 +56,7 @@ feature 'Editing Articles' do
     end
 
     scenario 'can not add video links without embed code', js:true do
+      click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
       fill_in 'Video title', :with => 'Video title example'
       fill_in 'Video embed code', :with => ''
@@ -65,6 +67,8 @@ feature 'Editing Articles' do
     end
 
     scenario 'ignore video links without both title and embed code', js:true do
+
+      click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
       fill_in 'Video title', :with => ''
       fill_in 'Video embed code', :with => ''
@@ -75,6 +79,7 @@ feature 'Editing Articles' do
 
     scenario 'can not add video links if the embed code is not a valid YouTube embed code', js:true do
 
+      click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
       fill_in 'Video title', :with => 'Video title example'
       fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
@@ -101,6 +106,7 @@ feature 'Editing Articles' do
     end
     scenario 'can not update video links if the embed code is not a valid YouTube embed code', js:true do
 
+      click_link 'Upload YouTube Videos'
       fill_in 'Video title', :with => 'New Video title example'
       fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
       click_button 'Update Article'
@@ -111,6 +117,7 @@ feature 'Editing Articles' do
 
     scenario 'can not update video links without title', js:true do
 
+      click_link 'Upload YouTube Videos'
       fill_in 'Video title', :with => ''
       click_button 'Update Article'
 
@@ -119,6 +126,8 @@ feature 'Editing Articles' do
     end
 
     scenario 'can not update video links without embed code', js:true do
+
+      click_link 'Upload YouTube Videos'
       fill_in 'Video embed code', :with => ''
       click_button 'Update Article'
 
@@ -127,6 +136,8 @@ feature 'Editing Articles' do
     end
 
     scenario 'ignore updating video links without both title and embed code', js:true do
+
+      click_link 'Upload YouTube Videos'
       fill_in 'Video title', :with => ''
       fill_in 'Video embed code', :with => ''
       click_button 'Update Article'

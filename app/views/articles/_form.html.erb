@@ -1,5 +1,5 @@
 
-<%= nested_form_for(@article, :html => {:multipart => true}) do |f| %>
+<%= nested_form_for(@article, :html => {:multipart => true, :class=>'form-horizontal'}) do |f| %>
   <% if @article.errors.any? %>
     <div class="alert alert-error" id="error_explanation">
       <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -16,81 +16,77 @@
       <ul class="nav nav-tabs">
         <li class="active"><a href="#tab1" data-toggle="tab">Article</a></li>
         <li><a href="#tab2" data-toggle="tab">Choose Grids</a></li>
+        <li><a href="#tab3" data-toggle="tab">Upload Pictures</a></li>
+        <li><a href="#tab4" data-toggle="tab">Upload YouTube Videos</a></li>
       </ul>
 
       <div class="tab-content">
         <!-- Tab 1 ====================================== -->
         <div class="tab-pane active" id="tab1">
-          <div class="field">
-            <%= f.label :title %>
-            <br/>
+
+
+           <div class="control-group">
+            <%= f.label :title, :class => "control-label" %>
+            <div class="controls">
             <%= f.text_field :title %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :author %>
-            <br/>
-            <%= f.text_field :author %>
-          </div>
-          <div class="field">
-            <%= f.label :headline %>
-            <br/>
+
+
+          <div class="control-group">
+            <%= f.label :headline, :class => "control-label" %>
+            <div class="controls">
             <%= f.text_field :headline %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :date %>
-            <br/>
+
+          <div class="control-group">
+            <%= f.label :author, :class => "control-label" %>
+            <div class="controls">
+              <%= f.text_field :author %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%= f.label :date, :class => "control-label" %>
+            <div class="controls">
             <%= f.date_select :date %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :version %>
-            <br/>
-            <%= f.text_field :version %>
+
+          <div class="control-group">
+            <%= f.label :version, :class => "control-label" %>
+            <div class="controls">
+              <%= f.text_field :version %>
+            </div>
           </div>
 
           <% status_list = {'Draft' => 'Draft', 'Approved' => 'Approved', 'Published' => 'Published'} %>
-          <div class="field">
-            <%= f.label :status %>
-            <br/>
-            <%= # f.text_field :status
-            %>
-            <%= f.select :status, status_list %>
-          </div>
-          <div class="field">
-            <%= f.label :text %>
-            <br/>
-            <%= f.text_area(:text, :rows => 20, :class => 'ckeditor span8') %>
+          <div class="control-group">
+            <%= f.label :status, :class => "control-label" %>
+            <div class="controls">
+              <%= f.select :status, status_list %>
+            </div>
           </div>
 
-
-          <h2>Upload Pictures</h2>
-          <%= f.fields_for :assets do |asset_form| %>
-              <%= render 'asset_fields', :f => asset_form %>
-          <% end %>
-          <p>
-            <%= f.link_to_add "Add Picture", :assets %>
-          </p>
-
-
-          <div class="field">
-            <%= f.label :magissue_id %>
-            <br/>
-            <%#= f.select :magazine_id, Magazine.find(:all, :order => "name, date").collect{|s|
-  		#[(s.name + " " + s.date.to_s), s.id]}
-            %>
-            <%= f.select :magissue_id, Magissue.order("magazine_id", "date").all.collect {
-                    |s| [(s.magazine.name + ": " + s.date.to_s), s.id] } %>
+          <div class="control-group">
+            <%= f.label 'Magazine Issue', :class => "control-label" %>
+            <div class="controls">
+              <%= f.select :magissue_id, Magissue.order("magazine_id", "date").all.collect {
+                      |s| [(s.magazine.name + ": " + s.date.to_s), s.id] } %>
+            </div>
           </div>
 
 
-          <h2>YouTube video links</h2>
-          <%= f.fields_for :videolinks do |videolink_form| %>
-              <%= render 'videolink_fields', :f => videolink_form %>
-          <% end %>
-          <p>
-            <%= f.link_to_add "Add a video link", :videolinks %>
-          </p>
+          <div class="control-group">
+            <%= f.label :text, :class => "control-label" %>
+            <div class="controls">
+              <%= f.text_area(:text, :rows => 20, :class => 'ckeditor span8') %>
+            </div>
+          </div>
+
+
         </div>
-
 
         <!-- Tab 2 =============================================== -->
         <div class="tab-pane" id="tab2">
@@ -183,7 +179,35 @@
           <%# end
           %>
         </div>
-      </div>
+
+
+      <!-- Tab 3 =============================================== -->
+        <div class='tab-pane' id="tab3">
+
+          <h2>Upload Pictures</h2>
+          <%= f.fields_for :assets do |asset_form| %>
+              <%= render 'asset_fields', :f => asset_form %>
+          <% end %>
+          <p>
+            <%= f.link_to_add "Add Picture", :assets %>
+          </p>
+
+        </div>
+
+
+
+        <!-- Tab4 ================================================= -->
+        <div class='tab-pane' id="tab4">
+
+          <h2>YouTube video links</h2>
+          <%= f.fields_for :videolinks do |videolink_form| %>
+              <%= render 'videolink_fields', :f => videolink_form %>
+          <% end %>
+          <p>
+            <%= f.link_to_add "Add a video link", :videolinks %>
+          </p>
+        </div>
+
 
     </div>
     <br/>
