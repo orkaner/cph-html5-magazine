@@ -112,6 +112,8 @@ feature 'Previewing Articles' do
       #browser.execute_script("CKEDITOR.instances['#{article_text}'].setData('#{dummy_text}');")
       #fill_in 'article_text', :with => dummy_text # For some reason Selenium cannot see this field!
       fill_in_ckeditor 'article_text', :with => dummy_text
+
+      click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
 
       fill_in 'Video title', :with => 'Video title example'

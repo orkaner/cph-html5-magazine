@@ -42,6 +42,7 @@ feature 'Creating Articles' do
     fill_in 'Author', :with => 'Author example'
     fill_in 'Headline', :with => 'Headline example'
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
 
     fill_in 'Video title', :with => 'Video title example'
@@ -57,6 +58,7 @@ feature 'Creating Articles' do
     fill_in 'Author', :with => 'Author example'
     fill_in 'Headline', :with => 'Headline example'
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
 
 
@@ -74,6 +76,7 @@ feature 'Creating Articles' do
     fill_in 'Author', :with => 'Author example'
     fill_in 'Headline', :with => 'Headline example'
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
     fill_in 'Video title', :with => 'Video title example'
 
@@ -90,6 +93,7 @@ feature 'Creating Articles' do
     fill_in 'Author', :with => 'Author example'
     fill_in 'Headline', :with => 'Headline example'
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
     fill_in 'Video title', :with => ''
 
@@ -105,6 +109,7 @@ feature 'Creating Articles' do
     fill_in 'Author', :with => 'Author example'
     fill_in 'Headline', :with => 'Headline example'
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
+    click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
     fill_in 'Video title', :with => 'Video title example'
 
