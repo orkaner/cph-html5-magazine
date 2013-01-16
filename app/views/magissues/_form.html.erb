@@ -1,4 +1,4 @@
-<%= form_for(@magissue) do |f| %>
+<%= form_for @magissue,:html => {:class=>'form-horizontal'} do |f| %>
     <% if @magissue.errors.any? %>
         <div class="alert alert-error" id="error_explanation">
           <h2><%= pluralize(@magissue.errors.count, "error") %> prohibited this magazine from being saved:</h2>
@@ -18,49 +18,51 @@
       </ul>
       <div class="tab-content">
         <!-- Tab 1 ====================================== -->
+
         <div class="tab-pane active" id="tab1">
-          <div class="field">
-            <%= f.label :magazine_id %>
-            <br/>
-            <%= f.select :magazine_id, Magazine.order("name").all.collect { |s| [(s.name), s.id] } %>
+
+          <div class="control-group">
+            <%= f.label :magazine_id, :class => "control-label" %>
+            <div class="controls">
+              <%= f.select :magazine_id, Magazine.order("name").all.collect { |s| [(s.name), s.id] } %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%= f.label :date, :class => "control-label" %>
+            <div class="controls">
+              <%= f.date_select :date %>
+            </div>
+          </div>
+
+          <div class="control-group ">
+            <%= f.label :volume, :class => "control-label" %>
+            <div class="controls">
+              <%= f.number_field :volume %>
+            </div>
           </div>
 
 
-          <div class="field">
-            <%= f.label :date %>
-            <br/>
-            <%= f.date_select :date %>
+          <div class="control-group">
+            <%= f.label :number, :class =>"control-label" %>
+            <div class ="controls">
+              <%= f.number_field :number  %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :volume %>
-            <br/>
-            <%= f.number_field :volume %>
-          </div>
-          <div class="field">
-            <%= f.label :number %>
-            <br/>
-            <%= f.number_field :number %>
-          </div>
+
 
           <% status_list = {'Not Published' => 'Not Published', 'Published' => 'Published'} %>
-          <div class="field">
-            <%= f.label :status %>
-            <br/>
-            <!--%= f.text_field :status %-->
-            <%= f.select :status, status_list %>
+          <div class="control-group">
+            <%= f.label :status, :class =>"control-label" %>
+            <div class ="controls">
+              <%= f.select :status, status_list  %>
+            </div>
           </div>
 
-          <!-- <div class="field"> -->
-            <!-- <%#= f.label :magtemplate_id
-             %> -->
-            <!-- <br/> -->
-            <%#= f.select :magtemplate_id, Magtemplate.order("name").all.collect { |s| [(s.name), s.id] },
-#                         :include_blank => true,
-            #             :selected => (@magissue.magtemplate_id == nil ? Magtemplate.find_by_name('Default').id : @magissue.magtemplate_id)
-             %>
-          <!-- </div> -->
         </div>
-        <!-- Tab 2 =============================================== -->
+
+
+          <!-- Tab 2 =============================================== -->
         <div class="tab-pane" id="tab2">
           <h2>Available Magazine Templates</h2>
           <br>

@@ -1,12 +1,16 @@
-<div class="field">
-  <p>
-    <%= f.label :asset %><br/>
-    <%= f.file_field :asset %>
-  </p>
+ <div class="control-group">
+    <%= f.label :asset,"Choose the Picture", :class => "control-label" %>
+    <div class="controls">
+      <%= f.file_field :asset %>
 
+    </div>
+  </div>
 
-  <p>
-    <%= f.link_to_remove "remove" %>
-  </p>
-</div>
+ <div class="control-group">
+    <div class="controls">
+      <%= f.link_to_remove "remove" %>
+
+    </div>
+  </div>
+ </div>
 

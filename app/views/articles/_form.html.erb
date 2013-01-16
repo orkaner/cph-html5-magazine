@@ -185,13 +185,18 @@
         <div class='tab-pane' id="tab3">
 
           <h2>Upload Pictures</h2>
-          <%= f.fields_for :assets do |asset_form| %>
-              <%= render 'asset_fields', :f => asset_form %>
-          <% end %>
-          <p>
-            <%= f.link_to_add "Add Picture", :assets %>
-          </p>
 
+          <div class="control-group">
+            <div class="controls">
+              <%= f.fields_for :assets do |asset_form| %>
+                  <%= render 'asset_fields', :f => asset_form %>
+
+              <% end %>
+            </div>
+            <div class="controls">
+              <%= f.link_to_add "Add Picture", :assets %>
+            </div>
+          </div>
         </div>
 
 

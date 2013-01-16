@@ -1,4 +1,4 @@
-<%= nested_form_for(@grid) do |f| %>
+<%= nested_form_for(@grid, :html => {:multipart => true, :class=>'form-horizontal'}) do |f| %>
     <% if @grid.errors.any? %>
         <div class="alert alert-error" id="error_explanation">
           <h2><%= pluralize(@grid.errors.count, "error") %> prohibited this grid from being saved:</h2>
@@ -11,24 +11,33 @@
         </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :name %>
-      <br/>
+    <div class="control-group">
+      <%= f.label :name,:class=>"control-label" %>
+      <div class="controls">
       <%= f.text_field :name %>
     </div>
-    <div class="field">
-      <%= f.label :path %>
-      <br/>
-      <%= f.text_field :path %>
     </div>
+
+    <div class="control-group">
+      <%= f.label :path, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :path %>
+      </div>
+    </div>
+
+
 
     <h2>Containers</h2>
     <%= f.fields_for :containers do |container_form| %>
         <%= render 'container_fields', :f => container_form %>
     <% end %>
-    <p>
-      <%= f.link_to_add "Add a container link", :containers %>
-    </p>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.link_to_add "Add a container link", :containers %>
+      </div>
+    </div>
+
 
     <div class="actions">
       <%= f.submit %>

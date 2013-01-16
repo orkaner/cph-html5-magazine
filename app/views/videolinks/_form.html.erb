@@ -1,5 +1,5 @@
-<%= form_for(@videolink) do |f| %>
-  <% if @videolink.errors.any? %>
+<%= form_for @videolink, :html=>{:class=>'form-horizontal'}  do |f| %>
+    <% if @videolink.errors.any? %>
     <div class="alert alert-error" id="error_explanation">
       <h2><%= pluralize(@videolink.errors.count, "error") %> prohibited this videolink from being saved:</h2>
 
@@ -11,23 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :embed_code %><br />
-    <%= f.text_field :embed_code %>
-  </div>
-  <div class="field">
-    <%= f.label :embedded %><br />
-    <%= f.check_box :embedded %>
-  </div>
-  <div class="field">
-    <%= f.label :article_id %><br />
-    <%= f.number_field :article_id %>
-  </div>
-  <div class="actions">
+    <div class="control-group">
+      <%= f.label :title,:class=>"control-label" %>
+      <div class="controls">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :embed_code,:class=>"control-label" %>
+      <div class="controls">
+        <%= f.text_field :embed_code %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :embedded, :class => "control-label" %>
+      <div class="controls">
+        <%= f.check_box :embedded, :class => "checkbox inline" %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :article_id,:class=>"control-label" %>
+      <div class="controls">
+        <%= f.number_field :article_id %>
+      </div>
+    </div>
+
+   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

@@ -1,5 +1,5 @@
-<%= form_for(@magazine) do |f| %>
-  <% if @magazine.errors.any? %>
+<%= form_for @magazine,:html => {:class=>'form-horizontal'} do |f| %>
+    <% if @magazine.errors.any? %>
     <div class="alert alert-error" id="error_explanation">
       <h2><%= pluralize(@magazine.errors.count, "error") %> prohibited this magazine from being saved:</h2>
 
@@ -35,11 +35,14 @@
       <div class="tab-content">
         <!-- Tab 1 ====================================== -->
         <div class="tab-pane active" id="tab1">
-		    <div class="field">
-		      <%= f.label :name %><br />
-		      <%= f.text_field :name %>
-		    </div>
+		  <div class="control-group">
+            <%= f.label :name, :class => "control-label" %>
+            <div class="controls">
+              <%= f.text_field :name %>
+            </div>
+          </div>
         </div>
+
         <!-- Tab 2 =============================================== -->
         <div class="tab-pane" id="tab2">
           <h2>Available Magazine Templates</h2>

@@ -1,5 +1,5 @@
-<%= form_for(@magtemplate) do |f| %>
-  <% if @magtemplate.errors.any? %>
+<%= form_for @magtemplate, :html=>{:class=>'form-horizontal'}  do |f| %>
+    <% if @magtemplate.errors.any? %>
     <div class="alert alert-error" id="error_explanation">
       <h2><%= pluralize(@magtemplate.errors.count, "error") %> prohibited this magtemplate from being saved:</h2>
 
@@ -11,15 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :path, "Associated file name" %><br />
-    <%= f.text_field :path %>
-  </div>
-  <div class="actions">
+    <div class="control-group">
+      <%= f.label :name, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :path,"Associated file name", :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :path %>
+      </div>
+    </div>
+
+    <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

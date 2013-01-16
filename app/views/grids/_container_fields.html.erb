@@ -1,33 +1,45 @@
-<div class="field">
+<div class="control-group">
+  <%= f.label :width_id, :class => "control-label" %>
+  <div class="controls">
+    <%= f.select :width_id, Width.order("name").collect{|s| [(s.name), s.id]} %>  </div>
+</div>
+</div>
 
-  <p>
-    <%= f.label :width_id %><br />
-    <%= f.select :width_id, Width.order("name").collect{|s| [(s.name), s.id]} %>
-  </p>
+<div class="control-group">
+  <%= f.label :data_sizes, :class => "control-label" %>
+  <div class="controls">
+    <%= f.text_field :data_sizes %>  </div>
+</div>
+</div>
 
-  <p>
-    <%= f.label :data_sizes %><br />
-    <%= f.text_field :data_sizes %>
-  </p>
+<div class="control-group">
+  <%= f.label :pictures, :class => "control-label" %>
+  <div class="controls">
+    <%= f.check_box :pictures, :class => "checkbox inline" %>
+</div>
+</div>
 
-  <p>
-    <%= f.check_box :pictures %>
-    <%= f.label :pictures, :class => "checkbox inline" %>
-  </p>
+<div class="control-group">
+  <%= f.label :text, :class => "control-label" %>
+  <div class="controls">
+    <%= f.check_box :text, :class => "checkbox inline" %>
+</div>
+</div>
 
-  <p>
-    <%= f.check_box :text %>
-    <%= f.label :text, :class => "checkbox inline" %>
-  </p>
+<div class="control-group">
+  <%= f.label :video, :class => "control-label" %>
+  <div class="controls">
+    <%= f.check_box :video, :class => "checkbox inline" %>
+</div>
+</div>
 
-  <p>
-    <%= f.check_box :video %>
-    <%= f.label :video, :class => "checkbox inline" %>
-  </p>
-
-  <p>
+<div class="control-group">
+  <div class="controls">
     <%= f.link_to_remove "remove" %>
-  </p>
+</div>
+</div>
+
+
   <p>----------------------------------------------------------------------</p>
 </div>
 

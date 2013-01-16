@@ -1,5 +1,5 @@
-<%= form_for(@width) do |f| %>
-  <% if @width.errors.any? %>
+<%= form_for @width, :html=>{:class=>'form-horizontal'}  do |f| %>
+    <% if @width.errors.any? %>
     <div class="alert alert-error" id="error_explanation">
       <h2><%= pluralize(@width.errors.count, "error") %> prohibited this width from being saved:</h2>
 
@@ -11,10 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
+    <div class="control-group">
+      <%= f.label :name,:class=>"control-label" %>
+      <div class="controls">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
