@@ -35,8 +35,8 @@ feature 'Editing Articles' do
                                                                   }, js:true do
       click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
-      fill_in 'Video title', :with => 'Video title example'
-      fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
+      fill_in 'Video Title', :with => 'Video title example'
+      fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
           ' frameborder="0" allowfullscreen></iframe>'
 
       click_button 'Update Article'
@@ -46,8 +46,8 @@ feature 'Editing Articles' do
     scenario 'can not add video links without title', js:true do
       click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
-      fill_in 'Video title', :with => ''
-      fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
+      fill_in 'Video Title', :with => ''
+      fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
           ' frameborder="0" allowfullscreen></iframe>'
       click_button 'Update Article'
 
@@ -58,8 +58,8 @@ feature 'Editing Articles' do
     scenario 'can not add video links without embed code', js:true do
       click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
-      fill_in 'Video title', :with => 'Video title example'
-      fill_in 'Video embed code', :with => ''
+      fill_in 'Video Title', :with => 'Video title example'
+      fill_in 'Video Embed Code', :with => ''
       click_button 'Update Article'
 
       page.should have_content('prohibited this article from being saved')
@@ -70,8 +70,8 @@ feature 'Editing Articles' do
 
       click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
-      fill_in 'Video title', :with => ''
-      fill_in 'Video embed code', :with => ''
+      fill_in 'Video Title', :with => ''
+      fill_in 'Video Embed Code', :with => ''
       click_button 'Update Article'
 
       page.should have_content('Article was successfully updated.')
@@ -81,8 +81,8 @@ feature 'Editing Articles' do
 
       click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
-      fill_in 'Video title', :with => 'Video title example'
-      fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
+      fill_in 'Video Title', :with => 'Video title example'
+      fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
       click_button 'Update Article'
 
       page.should have_content('prohibited this article from being saved')
@@ -107,8 +107,8 @@ feature 'Editing Articles' do
     scenario 'can not update video links if the embed code is not a valid YouTube embed code', js:true do
 
       click_link 'Upload YouTube Videos'
-      fill_in 'Video title', :with => 'New Video title example'
-      fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
+      fill_in 'Video Title', :with => 'New Video title example'
+      fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
       click_button 'Update Article'
 
       page.should have_content('prohibited this article from being saved')
@@ -118,7 +118,7 @@ feature 'Editing Articles' do
     scenario 'can not update video links without title', js:true do
 
       click_link 'Upload YouTube Videos'
-      fill_in 'Video title', :with => ''
+      fill_in 'Video Title', :with => ''
       click_button 'Update Article'
 
       page.should have_content('prohibited this article from being saved')
@@ -128,7 +128,7 @@ feature 'Editing Articles' do
     scenario 'can not update video links without embed code', js:true do
 
       click_link 'Upload YouTube Videos'
-      fill_in 'Video embed code', :with => ''
+      fill_in 'Video Embed Code', :with => ''
       click_button 'Update Article'
 
       page.should have_content('prohibited this article from being saved')
@@ -138,8 +138,8 @@ feature 'Editing Articles' do
     scenario 'ignore updating video links without both title and embed code', js:true do
 
       click_link 'Upload YouTube Videos'
-      fill_in 'Video title', :with => ''
-      fill_in 'Video embed code', :with => ''
+      fill_in 'Video Title', :with => ''
+      fill_in 'Video Embed Code', :with => ''
       click_button 'Update Article'
       # save_and_open_page # This method is from Launchy gem used here to allow debugging
       # The video link shouldn't be updated. This happens silently without informing the user with the issue.

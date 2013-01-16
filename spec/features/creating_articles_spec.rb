@@ -45,8 +45,8 @@ feature 'Creating Articles' do
     click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
 
-    fill_in 'Video title', :with => 'Video title example'
-    fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
+    fill_in 'Video Title', :with => 'Video title example'
+    fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
        ' frameborder="0" allowfullscreen></iframe>'
 
     click_button 'Create Article'
@@ -62,7 +62,7 @@ feature 'Creating Articles' do
     click_link 'Add a video link'
 
 
-    fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
+    fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
         ' frameborder="0" allowfullscreen></iframe>'
 
     click_button 'Create Article'
@@ -78,10 +78,9 @@ feature 'Creating Articles' do
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
     click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
-    fill_in 'Video title', :with => 'Video title example'
+    fill_in 'Video Title', :with => 'Video title example'
 
-    fill_in 'Video embed code', :with => ''
-
+    fill_in 'Video Embed Code', :with => ''
     click_button 'Create Article'
 
     page.should have_content('prohibited this article from being saved')
@@ -95,9 +94,9 @@ feature 'Creating Articles' do
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
     click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
-    fill_in 'Video title', :with => ''
+    fill_in 'Video Title', :with => ''
 
-    fill_in 'Video embed code', :with => ''
+    fill_in 'Video Embed Code', :with => ''
 
     click_button 'Create Article'
 
@@ -111,9 +110,9 @@ feature 'Creating Articles' do
     #fill_in 'Text', :with => dummy_text # For some reason Selenium cannot see this field!
     click_link 'Upload YouTube Videos'
     click_link 'Add a video link'
-    fill_in 'Video title', :with => 'Video title example'
+    fill_in 'Video Title', :with => 'Video title example'
 
-    fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
+    fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4?rel=0" frameborder="0" allowfullscreen></iframe'
 
     click_button 'Create Article'
 

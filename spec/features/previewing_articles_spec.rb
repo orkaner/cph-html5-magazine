@@ -116,8 +116,8 @@ feature 'Previewing Articles' do
       click_link 'Upload YouTube Videos'
       click_link 'Add a video link'
 
-      fill_in 'Video title', :with => 'Video title example'
-      fill_in 'Video embed code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
+      fill_in 'Video Title', :with => 'Video title example'
+      fill_in 'Video Embed Code', :with => '<iframe width="420" height="315" src="http://www.youtube.com/embed/pHte24GGHD4"'+
           ' frameborder="0" allowfullscreen></iframe>'
 
       click_button 'Create Article'
