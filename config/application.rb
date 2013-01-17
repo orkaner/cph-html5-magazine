@@ -60,13 +60,13 @@ module Jaywebmag
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # Naoufal: Add 'templates' folder to the pipeline
+    config.assets.paths << Rails.root.join("app", "assets", "templates")
 
     # Naoufal: Configuration of the 'sanitize' helper
     config.action_view.sanitized_allowed_tags = 'i', 'b', 'p'
-
-
-
-
+    
     config.after_initialize do
       ActionView::Base.sanitized_allowed_tags.delete 'div'
       ActionView::Base.sanitized_allowed_tags.delete 'br'

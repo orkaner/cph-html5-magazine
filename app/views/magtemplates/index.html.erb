@@ -22,6 +22,23 @@
 
 <br />
 
+<!-- Naoufal: Experimental: add a template from a JSON file -->
+
+<h2>Import a new template</h2>
+<%= form_tag import_magtemplates_path, multipart: true do %>
+  <div class="field">
+    <%= label_tag 'Template file'%>
+    <%= file_field_tag :file %>
+  </div>
+
+  <%= submit_tag "Import", :class => "btn btn-small btn-primary" %>
+<% end %>
+<p id="notice"><%= notice %></p>
+<p>Data: <%= 0 %></p>
+
+<!-- ================================================================ -->
+
 <% content_for :contextual_menu do %>
-	<li><%= link_to 'New Magtemplate', new_magtemplate_path %></li>
+	<!-- <li><%#= link_to 'New Magtemplate', new_magtemplate_path
+		 %></li> -->
 <% end %>

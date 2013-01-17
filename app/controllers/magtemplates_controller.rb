@@ -83,4 +83,11 @@ class MagtemplatesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # Naoufal: Experimental:
+  # Import a magazine template from a JSON file
+  def import
+    @json_data = Magtemplate.import(params[:file])
+    redirect_to magtemplates_url, notice: "Template imported."
+  end
 end

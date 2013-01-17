@@ -32,8 +32,6 @@ feature 'Previewing Articles' do
     end
 
     scenario 'can preview an article that has only text after it is created' do
-
-
       fill_in 'Title', :with => 'Title example'
       fill_in 'Author', :with => 'Author example'
       fill_in 'Headline', :with => 'Headline example'
@@ -43,6 +41,8 @@ feature 'Previewing Articles' do
       #browser.execute_script("CKEDITOR.instances['#{article_text}'].setData('#{dummy_text}');")
       fill_in 'article_text', :with => dummy_text # For some reason Selenium cannot see this field!
       #fill_in_ckeditor 'article_text', :with => dummy_text
+      click_link 'Choose a Grid'
+      choose 'article_grid_id_1'
       click_button 'Create Article'
       page.should have_content('Article was successfully created.')
       click_link 'Preview'
@@ -76,9 +76,12 @@ feature 'Previewing Articles' do
       #browser.execute_script("CKEDITOR.instances['#{article_text}'].setData('#{dummy_text}');")
       #fill_in 'article_text', :with => dummy_text # For some reason Selenium cannot see this field!
       fill_in_ckeditor 'article_text', :with => dummy_text
+      click_link 'Upload Pictures'
       click_link 'Add Picture'
       attach_file 'Asset', 'spec/fixtures/alice.jpg'
       #save_and_open_page # This method is from Launchy gem used here to allow debugging
+      # click_link 'Choose a Grid'
+      #       choose('col_1_2_3_b') 
       click_button 'Create Article'
 
       page.should have_content('Article was successfully created.')

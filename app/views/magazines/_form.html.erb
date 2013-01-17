@@ -56,7 +56,7 @@
                   <div class="row-fluid">
                     <div class="carousel slide" data-interval="false" id="<%= 'myCarousel'+ t.name.downcase %>">
                       <div class="carousel-inner">
-                        <% @files = Dir.glob("app/assets/images/templates/#{t.name.downcase}/*.png")%>
+                        <% @files = Dir.glob("app/assets/templates/#{t.name.downcase}/thumbs/template/*.png")%>
                         <%
                            carousel_size = 4
                            remaining_files = @files.length
@@ -73,7 +73,9 @@
                               <% for i in offset..end_index %>
                                   <li class="span3">
                                     <div class="thumbnail">
-                                      <%= image_tag "templates/#{t.name.downcase}/#{File.basename(@files[i])}" %>
+                                      <!-- <%#= image_tag "templates/#{t.name.downcase}/#{File.basename(@files[i])}" 
+                                      									  %> -->
+									  <%= image_tag "#{t.name.downcase}/thumbs/template/#{File.basename(@files[i])}" %>
                                     </div>
                                   </li>
                               <% end %>
@@ -96,7 +98,10 @@
                               <% for i in offset..(@files.length - 1) %>
                                   <li class="span3">
                                     <div class="thumbnail">
-                                      <%= image_tag "templates/#{t.name.downcase}/#{File.basename(@files[i])}" %>
+										
+                                      <%= image_tag "#{t.name.downcase}/thumbs/template/#{File.basename(@files[i])}" %>
+									  <!-- <%#= image_tag "templates/#{t.name.downcase}/#{File.basename(@files[i])}"
+									 									   %> -->
                                     </div>
                                   </li>
                               <% end %>
