@@ -1,0 +1,65 @@
+{
+	"magtemplate": {
+		"name": "Experiment",
+		 "path": "experiment_tmpl"
+	 },
+	"widths": [
+		{
+			"name": "wexp1"
+		},
+		{
+			"name": "wexp2"
+		},
+		{
+			"name": "wexp3"
+		},
+		{
+			"name": "wexp4"
+		}
+	],
+	"grids":[
+		{
+			"name": "gexp1",
+			"path": "--"
+		},
+		{
+			"name": "gexp2",
+			"path": "--"
+		}
+	],
+	"sizes": [
+		{
+			"value": "10",
+			"magtemplate_name": "Experiment", 
+			"width_name": "wexp1"
+		},
+		{
+			"value": "20", 
+			"magtemplate_name": "Experiment", 
+			"width_name": "wexp2"
+		},
+		{
+			"value": "30", 
+			"magtemplate_name": "Experiment", 
+			"width_name": "wexp3"
+		}
+	],
+	"containers": [
+		{
+			"grid_name": "gexp1",
+			"width_name": "wexp1",
+			"data_sizes": "exoexo", 
+			"pictures": "true", 
+			"text": "false", 
+			"video": "true"
+		},
+		{
+			"grid_name": "gexp2", 
+			"width_name": "wexp2",
+			"data_sizes": "pexopexu", 
+			"pictures": "false", 
+			"text": "true", 
+			"video": "false"
+		}
+	]	
+}

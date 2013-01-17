@@ -17,7 +17,11 @@ Jaywebmag::Application.routes.draw do
   get "welcome/index"
   get "welcome/show"
 
-  resources :magtemplates
+  resources :magtemplates do
+    collection do
+      post 'import' # Naoufal: Eperimental: Magazine template import.
+    end
+  end
 
   resources :grids
   

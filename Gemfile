@@ -82,6 +82,10 @@ gem "html_truncator", "~>0.2"
 
 #           To use advanced nested forms
 gem "nested_form"
+
+#           To unzip compressed files
+gem "rubyzip", :require => 'zip/zip'  
 # To use JQuery file uploader gem provided by: https://github.com/tors/jquery-fileupload-rails
+
 
 

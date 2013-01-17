@@ -15,7 +15,7 @@
     <div class="tabbable"> <!-- Only required for left/right tabs -->
       <ul class="nav nav-tabs">
         <li class="active"><a href="#tab1" data-toggle="tab">Article</a></li>
-        <li><a href="#tab2" data-toggle="tab">Choose Grids</a></li>
+        <li><a href="#tab2" data-toggle="tab">Choose a Grid</a></li>
         <li><a href="#tab3" data-toggle="tab">Upload Pictures</a></li>
         <li><a href="#tab4" data-toggle="tab">Upload YouTube Videos</a></li>
       </ul>
@@ -104,7 +104,7 @@
                   <div class="row-fluid">
                     <div class="carousel slide" data-interval="false" id="<%= 'myCarousel'+ g.name.downcase %>">
                       <div class="carousel-inner">
-						  <% @files = Dir.glob("app/assets/images/grids/#{g.name.downcase}/*.png")%>
+						  <% @files = Dir.glob("app/assets/templates/grids/thumbs/#{g.name.downcase}/*.png")%>
 						  <%
 						  	carousel_size = 4
 							remaining_files = @files.length
@@ -121,7 +121,7 @@
 										  <% for i in offset..end_index %>
 											  <li class="span3">
 												  <div class="thumbnail">
-													  <%= image_tag "grids/#{g.name.downcase}/#{File.basename(@files[i])}" %>
+													  <%= image_tag "grids/thumbs/#{g.name.downcase}/#{File.basename(@files[i])}" %>
 												  </div>
 											  </li>
 										  <% end %>
@@ -144,7 +144,7 @@
 										  <% for i in offset..(@files.length - 1) %>
 											  <li class="span3">
 												  <div class="thumbnail">
-													  <%= image_tag "grids/#{g.name.downcase}/#{File.basename(@files[i])}" %>
+													  <%= image_tag "grids/thumbs/#{g.name.downcase}/#{File.basename(@files[i])}" %>
 												  </div>
 											  </li>
 										  <% end %>

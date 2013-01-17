@@ -244,6 +244,7 @@ DEPENDENCIES
   rspec-expectations (~> 2.11)
   rspec-rails (~> 2.11)
   ruby_gntp
+  rubyzip
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   validates_existence (>= 0.4)
