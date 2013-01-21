@@ -135,7 +135,7 @@
 								  
 						  <% end %>
 						  <% if remaining_files < 4 and remaining_files > 0%>
-						  <% if offset == 0 %>
+						      <% if offset == 0 %>
 								  <div class="item active">
 							  <% else %>
 								  <div class="item">
@@ -186,17 +186,15 @@
 
           <h2>Upload Pictures</h2>
 
-          <div class="control-group">
-            <div class="controls">
-              <%= f.fields_for :assets do |asset_form| %>
+          <%= f.fields_for :assets do |asset_form| %>
                   <%= render 'asset_fields', :f => asset_form %>
 
               <% end %>
-            </div>
-            <div class="controls">
-              <%= f.link_to_add "Add Picture", :assets %>
-            </div>
+
+          <div>
+            <%= f.link_to_add '<i class="icon-plus icon-white""></i> '.html_safe + 'Add Picture', :assets, class: "btn btn-success" %>
           </div>
+
         </div>
 
 
@@ -208,16 +206,16 @@
           <%= f.fields_for :videolinks do |videolink_form| %>
               <%= render 'videolink_fields', :f => videolink_form %>
           <% end %>
-          <p>
-            <%= f.link_to_add "Add a video link", :videolinks %>
-          </p>
+          <div>
+            <%= f.link_to_add '<i class="icon-plus icon-white""></i> '.html_safe + 'Add a video link', :videolinks, class: " btn btn-success" %>
+          </div>
         </div>
 
 
     </div>
     <br/>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit :class => "btn" %>
     </div>
 
 <% end %>

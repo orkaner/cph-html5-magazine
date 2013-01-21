@@ -78,7 +78,7 @@ feature 'Previewing Articles' do
       fill_in_ckeditor 'article_text', :with => dummy_text
       click_link 'Upload Pictures'
       click_link 'Add Picture'
-      attach_file 'Asset', 'spec/fixtures/alice.jpg'
+      attach_file 'Choose a picture', 'spec/fixtures/alice.jpg'
       #save_and_open_page # This method is from Launchy gem used here to allow debugging
       # click_link 'Choose a Grid'
       #       choose('col_1_2_3_b') 

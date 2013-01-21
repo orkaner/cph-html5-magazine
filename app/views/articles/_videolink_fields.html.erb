@@ -2,27 +2,25 @@
   <%= f.label :title,"Video Title", :class => "control-label" %>
   <div class="controls">
     <%= f.text_field :title %>
-     </div>
+  </div>
 </div>
 
 <div class="control-group">
   <%= f.label :embed_code,"Video Embed Code", :class => "control-label"%>
   <div class="controls">
     <%= f.text_area :embed_code, :rows => 3, :class => 'span6', :placeholder=>"Paste the code from YouTube to embed the video" %>
-     </div>
+  </div>
 </div>
 
 <div class="control-group">
   <%= f.label :embedded,"Embed", :class => "control-label" %>
   <div class="controls">
     <%= f.check_box :embedded,  :class => "checkbox"  %>
-     </div>
+  </div>
 </div>
 
 <div class="control-group">
   <div class="controls">
-    <%= f.link_to_remove "remove" %>
-     </div>
-</div>
-
+    <%= f.link_to_remove '<i class="icon-trash icon-white""></i>'.html_safe + ' Remove', class: " btn btn-danger" %>
+  </div>
 </div>
